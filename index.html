@@ -36,6 +36,7 @@
     .header-left, .header-right { display:flex; align-items:center; gap:12px; }
     .logo-btn{display:flex; align-items:center; gap:12px; text-decoration:none; color:white; font-weight:700; font-size:1.05rem;}
     .logo-mark{width:44px;height:44px;border-radius:10px;display:grid;place-items:center;color:white;font-weight:700;background:linear-gradient(135deg,#15EEDA,#6BC8E8)}
+    .logo-img{height:44px; width:auto; display:block; object-fit:contain}
     .icon-btn{background:transparent;border:none;color:white;padding:8px;border-radius:8px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
     .header-left .hamburger, .header-right .search-btn{background:transparent;border:none;color:white}
     /* initial header over hero: dark transparent */
@@ -180,39 +181,39 @@
         </button>
       </div>
 
-      <a href="/index.html" class="logo-btn" aria-label="Ana sayfa">
-        <span class="logo-mark" aria-hidden="true">G</span>
-        <span class="logo-text" style="display:none">Elsewhere Academics</span>
-      </a>
+       <a href="/index.html" class="logo-btn" aria-label="Ana sayfa" title="Elsewhere Academics" style="position:absolute; left:50%; transform:translateX(-50%);">
+         <img src="/logo.svg" alt="Elsewhere Academics" class="logo-img" style="height:44px; display:block; object-fit:contain;">
+       </a>
 
       <div class="header-right">
-        <button id="search-toggle" class="icon-btn" aria-label="Search" title="Ara">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="2"/></svg>
-        </button>
-      </div>
-    </div>
+        <div class="header-right">  
+          <button id="search-toggle" class="icon-btn" aria-label="Search" title="Ara">  
+            <svg ...>...</svg>  
+          </button>  
+        </div>
   </header>
 
   <!-- HERO -->
   <section class="hero" role="region" aria-label="Açılış ekranı">
     <div class="wrap">
-      <div class="brand-large" style="margin-top:20px">
-        <div class="logo-mark" aria-hidden="true">G</div>
-        <h1 style="margin:0;font-size:clamp(22px,4.2vw,38px);font-weight:700">Elsewhere Academics</h1>
-
-        <div class="program-buttons" role="list">
-          <a role="listitem" class="program-prep" href="/programs/prep.html">ElsewherePrep</a>
-          <a role="listitem" class="program-summer" href="/programs/summer.html">ElsewhereSummer</a>
-          <a role="listitem" class="program-campus" href="/programs/campus.html">ElsewhereCampus</a>
-          <a role="listitem" class="program-next" href="/programs/next-kariyer.html">ElsewhereNext</a>
-        </div>
-
-        <!-- search -->
-        <div class="site-search" aria-label="Site içi arama">
-          <input id="global-search" type="search" placeholder="Örn. Almanya, tıp, IELTS..." aria-label="Site içi arama">
-          <button id="global-search-btn" aria-label="Arama yap">Ara</button>
-        </div>
-      </div>
+      199|       <div class="brand-large" style="margin-top:20px">
+200|         <a href="/index.html" aria-label="Ana sayfa" style="text-decoration:none; display:flex; flex-direction:column; align-items:center; gap:16px">
+201|           <img src="/logo.svg" alt="Elsewhere Academics" style="height:120px; display:block; object-fit:contain;">
+202|           <h1 style="margin:0;font-size:clamp(22px,4.2vw,38px);font-weight:700">Elsewhere Academics</h1>
+203|         </a>
+204|
+205|         <div class="program-buttons" role="list" style="margin-top:10px">
+206|           <a class="program-prep" href="/programs/prep.html" style="display:inline-block;margin:6px;padding:10px 16px;border-radius:999px;color:white;background:#FF6B6B">ElsewherePrep</a>
+207|           <a class="program-summer" href="/programs/summer.html" style="display:inline-block;margin:6px;padding:10px 16px;border-radius:999px;color:white;background:#FFB86B">ElsewhereSummer</a>
+208|           <a class="program-campus" href="/programs/campus.html" style="display:inline-block;margin:6px;padding:10px 16px;border-radius:999px;color:white;background:#6BC8E8">ElsewhereCampus</a>
+209|           <a class="program-next" href="/programs/next-kariyer.html" style="display:inline-block;margin:6px;padding:10px 16px;border-radius:999px;color:white;background:#7C5CFF">ElsewhereNext</a>
+210|         </div>
+211|
+212|         <div class="site-search" aria-label="Site içi arama" style="margin:26px auto 0;max-width:760px;">
+213|           <input id="global-search" type="search" placeholder="Örn. Almanya, tıp, IELTS..." aria-label="Site içi arama" style="width:70%;padding:14px 16px;border-radius:999px;border:0;background:rgba(255,255,255,0.12);color:white;">
+214|           <button id="global-search-btn" aria-label="Arama yap" style="padding:12px 16px;border-radius:999px;border:0;background:var(--accent);color:white;margin-left:8px">Ara</button>
+215|         </div>
+216|       </div>
     </div>
   </section>
 
