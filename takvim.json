@@ -1,0 +1,3441 @@
+[
+ {
+  "id": 1,
+  "baslangic": "2026-10-16",
+  "bitis": "2027-01-15",
+  "etkinlik": "Chalmers yüksek lisans başvuru dönemi (Sonbahar 2027)",
+  "ulke": "İsveç",
+  "kurum": "Chalmers University of Technology",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Başvuru",
+  "not": "Son saat CET gece yarısı. Portfolyo isteyen programlarda portfolyo son günü de 15 January 2027. Chalmers sayfası tarihlerin değişebileceğini belirtiyor.",
+  "kaynak": "https://chalmers.se/en/education/application-and-admission/key-dates-for-masters-studies"
+ },
+ {
+  "id": 2,
+  "baslangic": "2026-10-16",
+  "bitis": "2027-01-15",
+  "etkinlik": "KTH yüksek lisans başvuru dönemi (Sonbahar 2027)",
+  "ulke": "İsveç",
+  "kurum": "KTH Royal Institute of Technology",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Başvuru",
+  "not": "KTH sayfasında 15 Ocak ve 1 Şubat için yıl yazmıyor ama başlık 2027 başlangıcını belirtiyor. Belge ve başvuru ücreti (SEK 900) son günü 1 Şubat, sonuç 1 Nisan. Programa özel belgeler her programın 'Entry requirements' sayfasında. Erasmus+, EIT Digital ve EIT InnoEnergy ortak programlarının ayrı başvuru süreci ve tarihleri var.",
+  "kaynak": "https://www.kth.se/studies/master/admissions/how-to-apply-for-masters-studies-1.68487"
+ },
+ {
+  "id": 3,
+  "baslangic": "2026-10-16",
+  "bitis": "2027-01-15",
+  "etkinlik": "Karolinska Institutet yüksek lisans başvuru dönemi (Sonbahar 2027)",
+  "ulke": "İsveç",
+  "kurum": "Karolinska Institutet",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Başvuru",
+  "not": "KI sayfası destek belgeleri için 1 February 2027, sonuçlar için 1 April 2027 veriyor. AB dışı başvuru ücreti ödenmeden başvuru işleme alınmıyor.",
+  "kaynak": "https://education.ki.se/apply-for-a-masters-programme"
+ },
+ {
+  "id": 4,
+  "baslangic": "2026-10-16",
+  "bitis": "2027-01-15",
+  "etkinlik": "Stockholm School of Economics lisans başvuru dönemi (uluslararası, tahmini notla)",
+  "ulke": "İsveç",
+  "kurum": "Stockholm School of Economics (SSE)",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "İki adımlı başvuru: önce universityadmissions.se, sonra SSE portalı (Full Fabric). Geç başvuru kabul edilmiyor. SAT, ACT veya ITB-Business sonucu gerekiyor.",
+  "kaynak": "https://www.hhs.se/education/bachelor/bachelor-admissions/international-applicant/"
+ },
+ {
+  "id": 5,
+  "baslangic": "2026-10-16",
+  "bitis": null,
+  "etkinlik": "İsveç: 2027 güz dönemi başvuruları açıldı",
+  "ulke": "İsveç",
+  "kurum": "",
+  "programlar": [
+   "Campus",
+   "Next"
+  ],
+  "tur": "Başvuru",
+  "not": "universityadmissions.se",
+  "kaynak": "https://www.universityadmissions.se/en/key-dates-and-deadlines/autumn-semester-dates/"
+ },
+ {
+  "id": 6,
+  "baslangic": "2026-10-23",
+  "bitis": "2026-10-24",
+  "etkinlik": "ACT sınavı (uluslararası, bilgisayarda)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "Kayıt kapandı. ABD içi tarihlerle karıştırılmamalı. Türkiye'de sınav merkezi olup olmadığı ayrıca kontrol edilmedi.",
+  "kaynak": "https://www.act.org/content/dam/act/unsecured/documents/pdfs/Test-Date-Schedule-International-2026-2027.pdf"
+ },
+ {
+  "id": 7,
+  "baslangic": "2026-10-23",
+  "bitis": null,
+  "etkinlik": "SAT kayıt son günü (7.11.2026 sınavı)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Saat: ABD Doğu saatiyle 23.59. Tarihler uluslararası öğrenciler için de geçerli.",
+  "kaynak": "https://satsuite.collegeboard.org/sat/dates-deadlines"
+ },
+ {
+  "id": 8,
+  "baslangic": "2026-10-23",
+  "bitis": null,
+  "etkinlik": "IE University lisans Early Round kararlarının en geç bildirilme tarihi (Eylül 2027 girişi)",
+  "ulke": "İspanya",
+  "kurum": "IE University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sonuç",
+  "not": "Early Round son başvuru günü 18 Eylül 2026'ydı (geçti). Karar bu tarihten önce de gelebilir.",
+  "kaynak": "https://www.ie.edu/university/admission/admission-process/admissions-rounds/"
+ },
+ {
+  "id": 9,
+  "baslangic": "2026-10-26",
+  "bitis": null,
+  "etkinlik": "HEC Paris Master in Management 1. tur ön kabul (admissibility) sonuçları",
+  "ulke": "Fransa",
+  "kurum": "HEC Paris",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Sonuç",
+  "not": "Doğrudan başvuru (uluslararası öğrenciler). Ön kabul alan adaylar 30 dakikalık online (Zoom) mülakata çağrılır. HEC sayfası tarihlerin değişebileceğini belirtiyor.",
+  "kaynak": "https://www.hec.edu/en/master-s-programs/master-management/admissions"
+ },
+ {
+  "id": 10,
+  "baslangic": "2026-10-26",
+  "bitis": "2026-12-21",
+  "etkinlik": "UAT-UK (ESAT, TMUA, TARA) Ocak 2027 oturumu sınav randevu dönemi",
+  "ulke": "İngiltere",
+  "kurum": "UAT-UK (ESAT / TMUA / TARA)",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Açılış 26 Ekim 2026 saat 15.00, kapanış 21 Aralık 2026 saat 18.00 (İngiltere saati). Özel düzenleme son günü 7 Aralık 2026, burs talebi son günü 14 Aralık 2026. Oxford ve Cambridge lisans başvuruları Ekim 2026 oturumunu gerektirir; Ocak oturumu diğer üniversiteler ve Oxford Astrophoria Foundation Year içindir.",
+  "kaynak": "https://www.ox.ac.uk/admissions/undergraduate/applying/guide-for-applicants/admissions-tests"
+ },
+ {
+  "id": 11,
+  "baslangic": "2026-10-27",
+  "bitis": null,
+  "etkinlik": "SAT geç kayıt son günü (7.11.2026 sınavı)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Saat: ABD Doğu saatiyle 23.59. Geç kayıt ek ücretlidir.",
+  "kaynak": "https://satsuite.collegeboard.org/sat/dates-deadlines"
+ },
+ {
+  "id": 12,
+  "baslangic": "2026-11-01",
+  "bitis": null,
+  "etkinlik": "Brown lisans Early Decision başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "Brown University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Resmi sayfada yıl yazmıyor; bağımsız kaynak tarihi 2026-27 döngüsü (Fall 2027 girişi, Class of 2031) için veriyor. Saat: adayın yerel saatiyle 23.59.",
+  "kaynak": "https://admission.brown.edu/first-year/application-checklist"
+ },
+ {
+  "id": 13,
+  "baslangic": "2026-11-01",
+  "bitis": null,
+  "etkinlik": "Columbia lisans Early Decision başvuru son günü (bağlayıcı)",
+  "ulke": "ABD",
+  "kurum": "Columbia University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "2026-2027 başvuru döngüsü. Early Decision bağlayıcıdır.",
+  "kaynak": "https://undergrad.admissions.columbia.edu/updates/first-year-app-available"
+ },
+ {
+  "id": 14,
+  "baslangic": "2026-11-01",
+  "bitis": null,
+  "etkinlik": "Cornell lisans Early Decision başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "Cornell University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Resmi sayfada yıl yazmıyor; bağımsız kaynak tarihi 2026-27 döngüsü (Fall 2027 girişi, Class of 2031) için veriyor. Diğer belgeler 13 Kasım'a kadar.",
+  "kaynak": "https://admissions.cornell.edu/how-to-apply/first-year-applicants"
+ },
+ {
+  "id": 15,
+  "baslangic": "2026-11-01",
+  "bitis": null,
+  "etkinlik": "Dartmouth lisans Early Decision başvuru ve finansal yardım son günü",
+  "ulke": "ABD",
+  "kurum": "Dartmouth College",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Resmi sayfada yıl yazmıyor; bağımsız kaynak tarihi 2026-27 döngüsü (Fall 2027 girişi, Class of 2031) için veriyor.",
+  "kaynak": "https://admissions.dartmouth.edu/apply-dartmouth"
+ },
+ {
+  "id": 16,
+  "baslangic": "2026-11-01",
+  "bitis": null,
+  "etkinlik": "Harvard lisans Restrictive Early Action başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "Harvard University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Resmi sayfada yıl yazmıyor; bağımsız kaynak tarihi 2026-27 döngüsü (Fall 2027 girişi, Class of 2031) için veriyor. Saat: adayın yerel saatiyle 23.59. Okul belgeleri bir hafta sonrasına kadar gönderilebilir.",
+  "kaynak": "https://college.harvard.edu/admissions/apply/first-year-applicants"
+ },
+ {
+  "id": 17,
+  "baslangic": "2026-11-01",
+  "bitis": null,
+  "etkinlik": "Johns Hopkins lisans Early Decision I başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "Johns Hopkins University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "2026-2027 döngüsü.",
+  "kaynak": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/"
+ },
+ {
+  "id": 18,
+  "baslangic": "2026-11-01",
+  "bitis": null,
+  "etkinlik": "MIT lisans Early Action başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "MIT",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Resmi sayfada yıl yazmıyor; bağımsız kaynak tarihi 2026-27 döngüsü (Fall 2027 girişi, Class of 2031) için veriyor. SAT/ACT 30 Kasım'dan önce alınmış olmalı.",
+  "kaynak": "https://mitadmissions.org/apply/firstyear/deadlines-requirements/"
+ },
+ {
+  "id": 19,
+  "baslangic": "2026-11-01",
+  "bitis": null,
+  "etkinlik": "NYU lisans Early Decision I başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "New York University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Resmi sayfada yıl yazmıyor; bağımsız kaynak tarihi 2026-27 döngüsü (Fall 2027 girişi, Class of 2031) için veriyor. Saat: adayın yerel saatiyle 23.59.",
+  "kaynak": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/all-freshmen-applicants.html"
+ },
+ {
+  "id": 20,
+  "baslangic": "2026-11-01",
+  "bitis": null,
+  "etkinlik": "Northeastern lisans Early Decision I ve Early Action başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "Northeastern University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Resmi sayfada yıl yazmıyor; bağımsız kaynak tarihi 2026-27 döngüsü (Fall 2027 girişi, Class of 2031) için veriyor.",
+  "kaynak": "https://admissions.northeastern.edu/academics/specialized-entry-programs/admissions-deadlines-decisions/"
+ },
+ {
+  "id": 21,
+  "baslangic": "2026-11-01",
+  "bitis": null,
+  "etkinlik": "Northwestern lisans Early Decision başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "Northwestern University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Saat: adayın yerel saatiyle 23.59. Finansal yardım belgeleri 1 Aralık 2026'ya kadar.",
+  "kaynak": "https://admissions.northwestern.edu/apply/application-deadlines.html"
+ },
+ {
+  "id": 22,
+  "baslangic": "2026-11-01",
+  "bitis": null,
+  "etkinlik": "Princeton lisans Single-Choice Early Action başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "Princeton University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Resmi sayfada yıl yazmıyor; bağımsız kaynak tarihi 2026-27 döngüsü (Fall 2027 girişi, Class of 2031) için veriyor. İngilizce sınavı da bu tarihe kadar tamamlanmış olmalı.",
+  "kaynak": "https://admission.princeton.edu/apply/first-year-application-dates-deadlines"
+ },
+ {
+  "id": 23,
+  "baslangic": "2026-11-01",
+  "bitis": null,
+  "etkinlik": "Purdue lisans Early Action başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "Purdue University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Resmi sayfada yıl yazmıyor; bağımsız kaynak tarihi 2026-27 döngüsü (Fall 2027 girişi, Class of 2031) için veriyor. Başvuru tüm belgelerle tamamlanmış olmalı.",
+  "kaynak": "https://admissions.purdue.edu/become-student/application-status/"
+ },
+ {
+  "id": 24,
+  "baslangic": "2026-11-01",
+  "bitis": null,
+  "etkinlik": "Stanford lisans Restrictive Early Action başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "Stanford University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Resmi sayfada yıl yazmıyor; bağımsız kaynak tarihi 2026-27 döngüsü (Fall 2027 girişi, Class of 2031) için veriyor. Sanat portfolyosu ile REA başvurusunun son günü 15 Ekim idi (dönem dışında).",
+  "kaynak": "https://admission.stanford.edu/apply/first-year/"
+ },
+ {
+  "id": 25,
+  "baslangic": "2026-11-01",
+  "bitis": null,
+  "etkinlik": "UIUC lisans Early Action başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "University of Illinois Urbana-Champaign",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Resmi sayfada yıl yazmıyor; bağımsız kaynak tarihi 2026-27 döngüsü (Fall 2027 girişi, Class of 2031) için veriyor. Saat: 23.59 Central Time. Tüm belgeler 7 Kasım'a kadar.",
+  "kaynak": "https://www.admissions.illinois.edu/apply/freshman/dates"
+ },
+ {
+  "id": 26,
+  "baslangic": "2026-11-01",
+  "bitis": null,
+  "etkinlik": "University of Michigan lisans Early Action ve Early Decision başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "University of Michigan",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Resmi sayfada yıl yazmıyor; bağımsız kaynak tarihi 2026-27 döngüsü (Fall 2027 girişi, Class of 2031) için veriyor. Bağımsız kaynaklar EA tarihini doğruluyor; ED tarihi yalnız resmi sayfada. Uluslararası öğrenciler genellikle başvuru ücreti muafiyetinden yararlanamıyor.",
+  "kaynak": "https://admissions.umich.edu/apply/first-year-applicants/first-year-application-plans"
+ },
+ {
+  "id": 27,
+  "baslangic": "2026-11-01",
+  "bitis": null,
+  "etkinlik": "University of Pennsylvania lisans Early Decision başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "University of Pennsylvania",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Fall 2027 girişi.",
+  "kaynak": "https://admissions.upenn.edu/how-to-apply/first-year-applicants"
+ },
+ {
+  "id": 28,
+  "baslangic": "2026-11-01",
+  "bitis": null,
+  "etkinlik": "Yale lisans Single-Choice Early Action başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "Yale University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Resmi sayfada yıl yazmıyor; bağımsız kaynak tarihi 2026-27 döngüsü (Fall 2027 girişi, Class of 2031) için veriyor.",
+  "kaynak": "https://admissions.yale.edu/timelines"
+ },
+ {
+  "id": 29,
+  "baslangic": "2026-11-05",
+  "bitis": null,
+  "etkinlik": "CAO 2027 başvuruları açılıyor",
+  "ulke": "İrlanda",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Saat 12.00. DİKKAT: AB dışından başvuranların çoğu üniversiteye doğrudan başvurur, CAO üzerinden değil. Sitede bu not yazılmalı.",
+  "kaynak": "https://www2.cao.ie/handbook/handbook2027/hb.pdf"
+ },
+ {
+  "id": 30,
+  "baslangic": "2026-11-06",
+  "bitis": null,
+  "etkinlik": "IE University lisans 1. tur (Round 1) başvuru son günü",
+  "ulke": "İspanya",
+  "kurum": "IE University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "IE sayfası turların hangi girişe ait olduğunu etiketlemiyor; bağımsız kaynak Eylül 2027 girişi diyor. Kararlar en geç 11 Aralık 2026.",
+  "kaynak": "https://www.ie.edu/university/admission/admission-process/admissions-rounds/"
+ },
+ {
+  "id": 31,
+  "baslangic": "2026-11-07",
+  "bitis": null,
+  "etkinlik": "SAT sınavı",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "Tüm dünyada aynı tarih.",
+  "kaynak": "https://satsuite.collegeboard.org/sat/dates-deadlines"
+ },
+ {
+  "id": 32,
+  "baslangic": "2026-11-07",
+  "bitis": null,
+  "etkinlik": "University of Toronto lisans erken değerlendirme için önerilen başvuru tarihi (Fall 2027)",
+  "ulke": "Kanada",
+  "kurum": "University of Toronto",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Son gün değil, ilk değerlendirme turları için önerilen tarih. Başvuru OUAC üzerinden yapılır. Uluslararası öğrenciler için ayrı tarih belirtilmemiş.",
+  "kaynak": "https://future.utoronto.ca/media/1080"
+ },
+ {
+  "id": 33,
+  "baslangic": "2026-11-07",
+  "bitis": null,
+  "etkinlik": "Westminster School 16+ (Sixth Form) giriş sınavları, Eylül 2027 girişi",
+  "ulke": "İngiltere",
+  "kurum": "Westminster School",
+  "programlar": [
+   "Prep"
+  ],
+  "tur": "Sınav",
+  "not": "Saat 9.00 ile 14.00 arası, okulda. Yurt dışındaki adaylar sınava kendi ülkelerindeki British Council'de girebilir. Kayıt 30 Eylül 2026'da kapandı. Westminster 16+ girişi kız ve erkek öğrencilere açık.",
+  "kaynak": "https://www.westminster.org.uk/?p=841"
+ },
+ {
+  "id": 34,
+  "baslangic": "2026-11-11",
+  "bitis": null,
+  "etkinlik": "SSAT kayıt son günü (14.11.2026 kâğıt sınavı)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Prep"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Son günlerden önce geç kayıt ve acele kayıt ücretleri başlar.",
+  "kaynak": "https://admission.org/assessments/ssat/paper"
+ },
+ {
+  "id": 35,
+  "baslangic": "2026-11-13",
+  "bitis": null,
+  "etkinlik": "ACT kayıt son günü (11–12.12.2026 sınavı)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Resmi tabloda son kayıt tarihleri yılsız yazılmış; yıl sınav tarihinden çıkarıldı. Türkiye'de sınav merkezi olup olmadığı ayrıca kontrol edilmedi.",
+  "kaynak": "https://www.act.org/content/dam/act/unsecured/documents/pdfs/Test-Date-Schedule-International-2026-2027.pdf"
+ },
+ {
+  "id": 36,
+  "baslangic": "2026-11-13",
+  "bitis": null,
+  "etkinlik": "AP sınav siparişi son günü (okullar ve sınav merkezleri için)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Saat: ABD Doğu saatiyle 23.59. Öğrenci kaydını okulu ya da yetkili AP sınav merkezi yapar; merkez daha erken bir iç tarih koyabilir. Sitede bu not mutlaka yazılmalı.",
+  "kaynak": "https://apcentral.collegeboard.org/about-ap/ap-coordinators/calendar-deadlines"
+ },
+ {
+  "id": 37,
+  "baslangic": "2026-11-14",
+  "bitis": null,
+  "etkinlik": "SSAT kâğıt sınavı (Upper, Middle ve Elementary)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Prep"
+  ],
+  "tur": "Sınav",
+  "not": "Sınav merkezinde, kâğıt üzerinde. Türkiye'de bu tarihlerde merkez olup olmadığı ayrıca kontrol edilmedi. Bilgisayarda (Prometric) SSAT ise neredeyse her gün yapılabiliyor.",
+  "kaynak": "https://admission.org/assessments/ssat/paper"
+ },
+ {
+  "id": 38,
+  "baslangic": "2026-11-16",
+  "bitis": "2026-11-20",
+  "etkinlik": "MEB birinci dönem ara tatili (2026-2027)",
+  "ulke": "Türkiye",
+  "kurum": "MEB",
+  "programlar": [
+   "Prep",
+   "Summer",
+   "Campus"
+  ],
+  "tur": "Bilgi",
+  "not": "Lise öğrencileriyle görüşme, sınav ve fuar planlaması için uygun hafta.",
+  "kaynak": "https://www.meb.gov.tr/2026-2027-egitim-ogretim-yili-takvimi-aciklandi/haber/41057/tr"
+ },
+ {
+  "id": 39,
+  "baslangic": "2026-11-18",
+  "bitis": null,
+  "etkinlik": "DELE 2027 sınavları için kayıtlar açılıyor",
+  "ulke": "Türkiye",
+  "kurum": "DELE (Instituto Cervantes)",
+  "programlar": [
+   "Campus",
+   "Next",
+   "Prep"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Instituto Cervantes'in dünya geneli DELE takvimi. Instituto Cervantes Estambul'un hangi oturumları açtığını ve kendi kayıt son tarihlerini bulamadım; merkez daha erken kapatabilir. Sözlü sınav aynı gün ya da yakın bir günde olabilir.",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 40,
+  "baslangic": "2026-11-18",
+  "bitis": null,
+  "etkinlik": "DELE 2027 sınavları için kayıtların açılması",
+  "ulke": "İspanya",
+  "kurum": "Instituto Cervantes (DELE)",
+  "programlar": [
+   "Campus",
+   "Next",
+   "Summer"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Resmî cümlede yıl yok, bağımsız kaynak 2026 yazıyor. Kayıt sınav merkezi üzerinden yapılır; her merkez her oturumu açmaz. Instituto Cervantes İstanbul ve Ankara'daki merkezlerin hangi 2027 oturumlarını açtığını bulamadım.",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 41,
+  "baslangic": "2026-11-19",
+  "bitis": null,
+  "etkinlik": "HEC Paris Master in Management 1. tur kabul sonuçları",
+  "ulke": "Fransa",
+  "kurum": "HEC Paris",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Sonuç",
+  "not": "Saat 18:00 Paris saati.",
+  "kaynak": "https://www.hec.edu/en/master-s-programs/master-management/admissions"
+ },
+ {
+  "id": 42,
+  "baslangic": "2026-11-20",
+  "bitis": null,
+  "etkinlik": "SAT kayıt son günü (5.12.2026 sınavı)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Saat: ABD Doğu saatiyle 23.59. Tarihler uluslararası öğrenciler için de geçerli.",
+  "kaynak": "https://satsuite.collegeboard.org/sat/dates-deadlines"
+ },
+ {
+  "id": 43,
+  "baslangic": "2026-11-24",
+  "bitis": null,
+  "etkinlik": "SAT geç kayıt son günü (5.12.2026 sınavı)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Saat: ABD Doğu saatiyle 23.59. Geç kayıt ek ücretlidir.",
+  "kaynak": "https://satsuite.collegeboard.org/sat/dates-deadlines"
+ },
+ {
+  "id": 44,
+  "baslangic": "2026-11-25",
+  "bitis": "2027-01-26",
+  "etkinlik": "Bocconi lisans Winter Session 2027-28 online başvuru dönemi",
+  "ulke": "İtalya",
+  "kurum": "Università Bocconi",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Son gün saat 15.00 İtalya saati. Bocconi, AB dışı öğrencilere vize süreleri nedeniyle erken başvuruyu öneriyor. İtalya'da yaşamayan AB dışı adaylardan 1 Eylül 2010 sonrası doğanlar kabul edilemiyor.",
+  "kaynak": "https://www.unibocconi.it/en/programs/bachelor-science/application-and-admission/timeline-and-selection"
+ },
+ {
+  "id": 45,
+  "baslangic": "2026-11-26",
+  "bitis": null,
+  "etkinlik": "HEC Paris Master in Management 2. tur başvuru son günü",
+  "ulke": "Fransa",
+  "kurum": "HEC Paris",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Başvuru",
+  "not": "Saat 12:00 (öğlen) Paris saati. Ön kabul sonuçları 21 Aralık 2026, kabul sonuçları 1 Şubat 2027 18:00 (yalnızca resmî sayfada). Başvuru ücreti 180 euro (bağımsız kaynak).",
+  "kaynak": "https://www.hec.edu/en/master-s-programs/master-management/admissions"
+ },
+ {
+  "id": 46,
+  "baslangic": "2026-11-27",
+  "bitis": null,
+  "etkinlik": "ACT geç kayıt son günü (11–12.12.2026 sınavı)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Geç kayıt ek ücretlidir. Fotoğraf yükleme son günü de aynı gün.",
+  "kaynak": "https://www.act.org/content/dam/act/unsecured/documents/pdfs/Test-Date-Schedule-International-2026-2027.pdf"
+ },
+ {
+  "id": 47,
+  "baslangic": "2026-11-28",
+  "bitis": null,
+  "etkinlik": "Westminster School 16+ mülakat günü, Eylül 2027 girişi",
+  "ulke": "İngiltere",
+  "kurum": "Westminster School",
+  "programlar": [
+   "Prep"
+  ],
+  "tur": "Bilgi",
+  "not": "Davet edilen adaylar mülakata okulda yüz yüze katılmak zorunda.",
+  "kaynak": "https://www.westminster.org.uk/?p=841"
+ },
+ {
+  "id": 48,
+  "baslangic": "2026-12-01",
+  "bitis": null,
+  "etkinlik": "NYU Stern Full-time MBA 1. tur ilk kararlar",
+  "ulke": "ABD",
+  "kurum": "NYU Stern School of Business",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Sonuç",
+  "not": "Fall 2027 girişi.",
+  "kaynak": "https://www.stern.nyu.edu/programs-admissions/full-time-mba/admissions/deadlines"
+ },
+ {
+  "id": 49,
+  "baslangic": "2026-12-02",
+  "bitis": null,
+  "etkinlik": "Oxford Master of Public Policy (MPP) başvuru son günü, 2027/28 girişi",
+  "ulke": "İngiltere",
+  "kurum": "University of Oxford (Blavatnik School of Government)",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Başvuru",
+  "not": "Saat 12.00 (İngiltere saati). Örnek program; diğer Oxford programlarının son günleri farklıdır.",
+  "kaynak": "https://www.ox.ac.uk/admissions/graduate/courses/master-public-policy"
+ },
+ {
+  "id": 50,
+  "baslangic": "2026-12-05",
+  "bitis": null,
+  "etkinlik": "SAT sınavı",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "Tüm dünyada aynı tarih.",
+  "kaynak": "https://satsuite.collegeboard.org/sat/dates-deadlines"
+ },
+ {
+  "id": 51,
+  "baslangic": "2026-12-07",
+  "bitis": "2027-01-05",
+  "etkinlik": "Aalto University yüksek lisans başvuru dönemi (Sonbahar 2027)",
+  "ulke": "Finlandiya",
+  "kurum": "Aalto University",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Başvuru",
+  "not": "Kapanış 5 Ocak 2027 saat 15.00 Finlandiya saati (UTC+2), Türkiye saatiyle 16.00. Burs başvurusu yalnızca bu dönemde, program başvurusuyla birlikte yapılabilir.",
+  "kaynak": "https://www.aalto.fi/en/admission-services/apply-to-masters-programmes"
+ },
+ {
+  "id": 52,
+  "baslangic": "2026-12-09",
+  "bitis": null,
+  "etkinlik": "SSAT kayıt son günü (12.12.2026 kâğıt sınavı)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Prep"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Son günlerden önce geç kayıt ve acele kayıt ücretleri başlar.",
+  "kaynak": "https://admission.org/assessments/ssat/paper"
+ },
+ {
+  "id": 53,
+  "baslangic": "2026-12-09",
+  "bitis": null,
+  "etkinlik": "Stanford GSB MBA 1. tur kararları",
+  "ulke": "ABD",
+  "kurum": "Stanford Graduate School of Business",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Sonuç",
+  "not": "",
+  "kaynak": "https://www.gsb.stanford.edu/programs/mba/admission/deadlines"
+ },
+ {
+  "id": 54,
+  "baslangic": "2026-12-10",
+  "bitis": null,
+  "etkinlik": "Harvard Business School MBA 1. tur kararları",
+  "ulke": "ABD",
+  "kurum": "Harvard Business School",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Sonuç",
+  "not": "MBA Class of 2029, Fall 2027 girişi.",
+  "kaynak": "https://www.hbs.edu/mba/admissions/application-dates"
+ },
+ {
+  "id": 55,
+  "baslangic": "2026-12-11",
+  "bitis": "2026-12-12",
+  "etkinlik": "ACT sınavı (uluslararası, bilgisayarda)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "ABD içi tarihlerle karıştırılmamalı.",
+  "kaynak": "https://www.act.org/content/dam/act/unsecured/documents/pdfs/Test-Date-Schedule-International-2026-2027.pdf"
+ },
+ {
+  "id": 56,
+  "baslangic": "2026-12-11",
+  "bitis": null,
+  "etkinlik": "IE University lisans 1. tur kararlarının en geç bildirilme tarihi",
+  "ulke": "İspanya",
+  "kurum": "IE University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sonuç",
+  "not": "Bağımsız kaynak bu cümlede yıl yazmıyor; aynı yazıda 1. tur 6 Kasım 2026'da kapanıyor.",
+  "kaynak": "https://www.ie.edu/university/admission/admission-process/admissions-rounds/"
+ },
+ {
+  "id": 57,
+  "baslangic": "2026-12-12",
+  "bitis": null,
+  "etkinlik": "SSAT kâğıt sınavı (Upper, Middle ve Elementary)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Prep"
+  ],
+  "tur": "Sınav",
+  "not": "Sınav merkezinde, kâğıt üzerinde. Türkiye'de bu tarihlerde merkez olup olmadığı ayrıca kontrol edilmedi. Bilgisayarda (Prometric) SSAT ise neredeyse her gün yapılabiliyor.",
+  "kaynak": "https://admission.org/assessments/ssat/paper"
+ },
+ {
+  "id": 58,
+  "baslangic": "2026-12-12",
+  "bitis": null,
+  "etkinlik": "Cambridge B2 First kâğıt sınav günü (dünya geneli takvim)",
+  "ulke": "Türkiye",
+  "kurum": "Cambridge English B2 First",
+  "programlar": [
+   "Prep",
+   "Campus",
+   "Next"
+  ],
+  "tur": "Sınav",
+  "not": "Cambridge'in dünya geneli kâğıt sınav günü. Türkiye'deki her yetkili merkez her tarihi açmaz; Speaking günü ve kayıt son günü merkeze göre değişir. Türkiye'deki yetkili merkezlerin 2027 takvimini bulamadım, öğrenci merkezle teyit etmeli. Dijital sınav yıl boyunca merkezlerde yapılır. İkinci kaynak Fransa'daki bir yetkili merkez; tarih dünya geneli takvimle aynı.",
+  "kaynak": "https://www.cambridgeenglish.org/exams-and-tests/first/exam-dates/"
+ },
+ {
+  "id": 59,
+  "baslangic": "2026-12-14",
+  "bitis": null,
+  "etkinlik": "Columbia Business School MBA 1. tur kararları (Ağustos 2027 girişi)",
+  "ulke": "ABD",
+  "kurum": "Columbia Business School",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Sonuç",
+  "not": "",
+  "kaynak": "https://academics.business.columbia.edu/admissions/mba/options-deadlines"
+ },
+ {
+  "id": 60,
+  "baslangic": "2026-12-15",
+  "bitis": null,
+  "etkinlik": "Fransa, Études en France: lisans 1. sınıf (DAP) başvuru son günü",
+  "ulke": "Fransa",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Campus France Türkiye ve Fransa Bakanlığı sayfaları; ikisi de resmi.",
+  "kaynak": "https://www.turquie.campusfrance.org/tr/node/107"
+ },
+ {
+  "id": 61,
+  "baslangic": "2026-12-17",
+  "bitis": null,
+  "etkinlik": "Wharton MBA 1. tur kararları",
+  "ulke": "ABD",
+  "kurum": "The Wharton School",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Sonuç",
+  "not": "",
+  "kaynak": "https://mba.wharton.upenn.edu/application-timeline-deadlines/"
+ },
+ {
+  "id": 62,
+  "baslangic": "2026-12-18",
+  "bitis": null,
+  "etkinlik": "Millbrook ve Holderness Early Decision kararları",
+  "ulke": "ABD",
+  "kurum": "Millbrook School; Holderness School",
+  "programlar": [
+   "Prep"
+  ],
+  "tur": "Sonuç",
+  "not": "İki farklı okulun resmi sayfası aynı tarihi veriyor. Kabul alan aileler 8 Ocak 2027'ye kadar sözleşme ve yüzde 30 depozito ile yanıt vermeli.",
+  "kaynak": "https://www.millbrook.org/admission/apply/how-to-apply"
+ },
+ {
+  "id": 63,
+  "baslangic": "2026-12-31",
+  "bitis": null,
+  "etkinlik": "LNAT son sınav günü: King's College London, LSE ve UCL hukuk başvuruları (2027 girişi)",
+  "ulke": "İngiltere",
+  "kurum": "LNAT (Pearson VUE)",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "Sadece KCL, LSE ve UCL için geçerli. UCAS başvurusu 13 Ocak 2027 saat 18.00 (İngiltere saati) son gününe tabidir.",
+  "kaynak": "https://lnat.ac.uk/registration/dates-and-deadlines/"
+ },
+ {
+  "id": 64,
+  "baslangic": "2027-01-01",
+  "bitis": null,
+  "etkinlik": "Columbia lisans Regular Decision başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "Columbia University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "2026-2027 başvuru döngüsü.",
+  "kaynak": "https://undergrad.admissions.columbia.edu/updates/first-year-app-available"
+ },
+ {
+  "id": 65,
+  "baslangic": "2027-01-01",
+  "bitis": null,
+  "etkinlik": "Dartmouth lisans Regular Decision başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "Dartmouth College",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Resmi sayfada yıl yazmıyor; bağımsız kaynak tarihi 2026-27 döngüsü (Fall 2027 girişi, Class of 2031) için veriyor. Finansal yardım belgeleri 1 Şubat'a kadar.",
+  "kaynak": "https://admissions.dartmouth.edu/apply-dartmouth"
+ },
+ {
+  "id": 66,
+  "baslangic": "2027-01-01",
+  "bitis": null,
+  "etkinlik": "Harvard lisans Regular Decision başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "Harvard University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Resmi sayfada yıl yazmıyor; bağımsız kaynak tarihi 2026-27 döngüsü (Fall 2027 girişi, Class of 2031) için veriyor. Saat: adayın yerel saatiyle 23.59.",
+  "kaynak": "https://college.harvard.edu/admissions/apply/first-year-applicants"
+ },
+ {
+  "id": 67,
+  "baslangic": "2027-01-01",
+  "bitis": null,
+  "etkinlik": "NYU Stern Full-time MBA 2. tur ilk kararlar",
+  "ulke": "ABD",
+  "kurum": "NYU Stern School of Business",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Sonuç",
+  "not": "",
+  "kaynak": "https://www.stern.nyu.edu/programs-admissions/full-time-mba/admissions/deadlines"
+ },
+ {
+  "id": 68,
+  "baslangic": "2027-01-01",
+  "bitis": null,
+  "etkinlik": "NYU lisans Early Decision II başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "New York University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Resmi sayfada yıl yazmıyor; bağımsız kaynak tarihi 2026-27 döngüsü (Fall 2027 girişi, Class of 2031) için veriyor.",
+  "kaynak": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/all-freshmen-applicants.html"
+ },
+ {
+  "id": 69,
+  "baslangic": "2027-01-01",
+  "bitis": null,
+  "etkinlik": "Northeastern Early Decision I kararları (en geç)",
+  "ulke": "ABD",
+  "kurum": "Northeastern University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sonuç",
+  "not": "",
+  "kaynak": "https://admissions.northeastern.edu/academics/specialized-entry-programs/admissions-deadlines-decisions/"
+ },
+ {
+  "id": 70,
+  "baslangic": "2027-01-01",
+  "bitis": null,
+  "etkinlik": "Northeastern lisans Early Decision II ve Regular Decision başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "Northeastern University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Resmi sayfada yıl yazmıyor; bağımsız kaynak tarihi 2026-27 döngüsü (Fall 2027 girişi, Class of 2031) için veriyor.",
+  "kaynak": "https://admissions.northeastern.edu/academics/specialized-entry-programs/admissions-deadlines-decisions/"
+ },
+ {
+  "id": 71,
+  "baslangic": "2027-01-01",
+  "bitis": null,
+  "etkinlik": "Princeton lisans Regular Decision başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "Princeton University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Resmi sayfada yıl yazmıyor; bağımsız kaynak tarihi 2026-27 döngüsü (Fall 2027 girişi, Class of 2031) için veriyor.",
+  "kaynak": "https://admission.princeton.edu/apply/first-year-application-dates-deadlines"
+ },
+ {
+  "id": 72,
+  "baslangic": "2027-01-02",
+  "bitis": null,
+  "etkinlik": "Cornell lisans Regular Decision başvuru ve uluslararası finansal yardım son günü",
+  "ulke": "ABD",
+  "kurum": "Cornell University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Resmi sayfada yıl yazmıyor; bağımsız kaynak tarihi 2026-27 döngüsü (Fall 2027 girişi, Class of 2031) için veriyor. Diğer belgeler 19 Ocak'a kadar.",
+  "kaynak": "https://admissions.cornell.edu/how-to-apply/first-year-applicants"
+ },
+ {
+  "id": 73,
+  "baslangic": "2027-01-02",
+  "bitis": null,
+  "etkinlik": "Johns Hopkins Early Decision II ve Regular Decision başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "Johns Hopkins University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "",
+  "kaynak": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/"
+ },
+ {
+  "id": 74,
+  "baslangic": "2027-01-02",
+  "bitis": null,
+  "etkinlik": "Yale lisans Regular Decision başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "Yale University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Resmi sayfada yıl yazmıyor; bağımsız kaynak tarihi 2026-27 döngüsü (Fall 2027 girişi, Class of 2031) için veriyor. College Essay Advisors RD listesinde Yale yer almıyor.",
+  "kaynak": "https://admissions.yale.edu/timelines"
+ },
+ {
+  "id": 75,
+  "baslangic": "2027-01-04",
+  "bitis": "2027-01-08",
+  "etkinlik": "UAT-UK (ESAT, TMUA, TARA) Ocak 2027 sınav oturumu",
+  "ulke": "İngiltere",
+  "kurum": "UAT-UK (ESAT / TMUA / TARA)",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "2027 girişi için. Oxford ve Cambridge lisans adayları bu oturumu kullanamaz (istisnalar: Oxford Astrophoria Foundation Year ve Cambridge mature adaylar).",
+  "kaynak": "https://www.ox.ac.uk/admissions/undergraduate/applying/guide-for-applicants/admissions-tests"
+ },
+ {
+  "id": 76,
+  "baslangic": "2027-01-05",
+  "bitis": null,
+  "etkinlik": "Boston University lisans Regular Decision başvuru ve CSS Profile son günü",
+  "ulke": "ABD",
+  "kurum": "Boston University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Resmi sayfada yıl yazmıyor; bağımsız kaynak tarihi 2026-27 döngüsü (Fall 2027 girişi, Class of 2031) için veriyor. Bazı merit burslar için başvuru 1 Aralık'a kadar yapılmalı.",
+  "kaynak": "https://www.bu.edu/admissions/apply/deadlines/"
+ },
+ {
+  "id": 77,
+  "baslangic": "2027-01-05",
+  "bitis": null,
+  "etkinlik": "Brown lisans Regular Decision başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "Brown University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Resmi sayfada yıl yazmıyor; bağımsız kaynak tarihi 2026-27 döngüsü (Fall 2027 girişi, Class of 2031) için veriyor. Not: Oriel Admissions 3 Ocak yazıyor; resmi sayfa ve College Essay Advisors 5 Ocak diyor.",
+  "kaynak": "https://admission.brown.edu/first-year/regular-decision"
+ },
+ {
+  "id": 78,
+  "baslangic": "2027-01-05",
+  "bitis": null,
+  "etkinlik": "Columbia Business School MBA 2. tur başvuru son günü (Ağustos 2027 girişi)",
+  "ulke": "ABD",
+  "kurum": "Columbia Business School",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Başvuru",
+  "not": "Saat: 12.00 ET (Türkiye saatiyle 20.00).",
+  "kaynak": "https://academics.business.columbia.edu/admissions/mba/options-deadlines"
+ },
+ {
+  "id": 79,
+  "baslangic": "2027-01-05",
+  "bitis": null,
+  "etkinlik": "Harvard Business School MBA 2. tur başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "Harvard Business School",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Başvuru",
+  "not": "Saat: 12.00 ET (Türkiye saatiyle 20.00). HBS'de 3. tur yok; bu son tur.",
+  "kaynak": "https://www.hbs.edu/mba/admissions/application-dates"
+ },
+ {
+  "id": 80,
+  "baslangic": "2027-01-05",
+  "bitis": null,
+  "etkinlik": "NYU lisans Regular Decision başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "New York University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Resmi sayfada yıl yazmıyor; bağımsız kaynak tarihi 2026-27 döngüsü (Fall 2027 girişi, Class of 2031) için veriyor.",
+  "kaynak": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/all-freshmen-applicants.html"
+ },
+ {
+  "id": 81,
+  "baslangic": "2027-01-05",
+  "bitis": null,
+  "etkinlik": "Stanford lisans Regular Decision başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "Stanford University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Resmi sayfada yıl yazmıyor; bağımsız kaynak tarihi 2026-27 döngüsü (Fall 2027 girişi, Class of 2031) için veriyor.",
+  "kaynak": "https://admission.stanford.edu/apply/first-year/"
+ },
+ {
+  "id": 82,
+  "baslangic": "2027-01-05",
+  "bitis": null,
+  "etkinlik": "University of Pennsylvania lisans Regular Decision başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "University of Pennsylvania",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Fall 2027 girişi.",
+  "kaynak": "https://admissions.upenn.edu/how-to-apply/first-year-applicants"
+ },
+ {
+  "id": 83,
+  "baslangic": "2027-01-05",
+  "bitis": null,
+  "etkinlik": "Wharton MBA 2. tur başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "The Wharton School",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Başvuru",
+  "not": "Saat: 17.00 ET (Türkiye saatiyle 01.00, 6 Ocak).",
+  "kaynak": "https://mba.wharton.upenn.edu/application-timeline-deadlines/"
+ },
+ {
+  "id": 84,
+  "baslangic": "2027-01-06",
+  "bitis": null,
+  "etkinlik": "SSAT kayıt son günü (9.01.2027 kâğıt sınavı)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Prep"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Son günlerden önce geç kayıt ve acele kayıt ücretleri başlar.",
+  "kaynak": "https://admission.org/assessments/ssat/paper"
+ },
+ {
+  "id": 85,
+  "baslangic": "2027-01-06",
+  "bitis": null,
+  "etkinlik": "Stanford GSB MBA 2. tur başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "Stanford Graduate School of Business",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Başvuru",
+  "not": "Saat: 16.00 Pacific Time (Türkiye saatiyle 03.00, 7 Ocak).",
+  "kaynak": "https://www.gsb.stanford.edu/programs/mba/admission/deadlines"
+ },
+ {
+  "id": 86,
+  "baslangic": "2027-01-07",
+  "bitis": "2027-01-21",
+  "etkinlik": "Finlandiya ortak başvuru dönemi (İngilizce lisans ve yüksek lisans, Ağustos/Eylül 2027 başlangıç)",
+  "ulke": "Finlandiya",
+  "kurum": "",
+  "programlar": [
+   "Campus",
+   "Next"
+  ],
+  "tur": "Başvuru",
+  "not": "Son gün saat 15.00 (Finlandiya saati). Bazı programlar ortak başvurunun dışında ayrıca başvuru alıyor. Lisans programları için de geçerli.",
+  "kaynak": "https://www.studyinfinland.fi/news-events/joint-application-autumn-2026"
+ },
+ {
+  "id": 87,
+  "baslangic": "2027-01-07",
+  "bitis": null,
+  "etkinlik": "DELE kayıt son günü (12.02.2027 sınavı için)",
+  "ulke": "Türkiye",
+  "kurum": "DELE (Instituto Cervantes)",
+  "programlar": [
+   "Campus",
+   "Next"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Instituto Cervantes'in dünya geneli DELE takvimi. Instituto Cervantes Estambul'un hangi oturumları açtığını ve kendi kayıt son tarihlerini bulamadım; merkez daha erken kapatabilir. Sözlü sınav aynı gün ya da yakın bir günde olabilir.",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 88,
+  "baslangic": "2027-01-07",
+  "bitis": null,
+  "etkinlik": "DELE Şubat 2027 oturumu (yalnızca A2) kayıt son günü",
+  "ulke": "İspanya",
+  "kurum": "Instituto Cervantes (DELE)",
+  "programlar": [
+   "Campus",
+   "Next",
+   "Summer"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Merkezlere göre değişebilir; her merkez her oturumu açmaz.",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 89,
+  "baslangic": "2027-01-08",
+  "bitis": null,
+  "etkinlik": "Millbrook ve Holderness Early Decision kayıt yanıtı son günü",
+  "ulke": "ABD",
+  "kurum": "Millbrook School; Holderness School",
+  "programlar": [
+   "Prep"
+  ],
+  "tur": "Kabul yanıtı",
+  "not": "Yüzde 30 depozito gerekir.",
+  "kaynak": "https://www.millbrook.org/admission/apply/how-to-apply"
+ },
+ {
+  "id": 90,
+  "baslangic": "2027-01-09",
+  "bitis": null,
+  "etkinlik": "SSAT kâğıt sınavı (Upper ve Middle)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Prep"
+  ],
+  "tur": "Sınav",
+  "not": "Sınav merkezinde, kâğıt üzerinde. Türkiye'de bu tarihlerde merkez olup olmadığı ayrıca kontrol edilmedi. Bilgisayarda (Prometric) SSAT ise neredeyse her gün yapılabiliyor.",
+  "kaynak": "https://admission.org/assessments/ssat/paper"
+ },
+ {
+  "id": 91,
+  "baslangic": "2027-01-10",
+  "bitis": null,
+  "etkinlik": "USC lisans son başvuru günü (tüm bölümler)",
+  "ulke": "ABD",
+  "kurum": "University of Southern California",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Resmi sayfada yıl yazmıyor; bağımsız kaynak tarihi 2026-27 döngüsü (Fall 2027 girişi, Class of 2031) için veriyor. Merit burs için 1 Kasım'a kadar başvurmak gerekir.",
+  "kaynak": "https://admission.usc.edu/prospective-students/for-parents-and-families/"
+ },
+ {
+  "id": 92,
+  "baslangic": "2027-01-12",
+  "bitis": null,
+  "etkinlik": "MIT Sloan MBA 2. tur başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "MIT Sloan School of Management",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Başvuru",
+  "not": "MIT Sloan'da bu döngüde 3. tur listelenmemiş.",
+  "kaynak": "https://mitsloan.mit.edu/mba/admissions"
+ },
+ {
+  "id": 93,
+  "baslangic": "2027-01-12",
+  "bitis": null,
+  "etkinlik": "Aalto yüksek lisans belge ve GMAT/GRE sonuç son günü",
+  "ulke": "Finlandiya",
+  "kurum": "Aalto University",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Belge",
+  "not": "Saat 15.00 Finlandiya saati (UTC+2). GMAT/GRE yalnızca bunu isteyen programlar için.",
+  "kaynak": "https://www.aalto.fi/en/admission-services/apply-to-masters-programmes"
+ },
+ {
+  "id": 94,
+  "baslangic": "2027-01-12",
+  "bitis": null,
+  "etkinlik": "Oxford lisans sonuçları UCAS üzerinden açıklanır (mülakata çağrılan adaylar, 2027 girişi)",
+  "ulke": "İngiltere",
+  "kurum": "University of Oxford",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sonuç",
+  "not": "Mülakata çağrılan adaylar sonucu UCAS üzerinden öğrenir; kolejler aynı gün daha sonra ayrıca bilgi verir.",
+  "kaynak": "https://www.ox.ac.uk/admissions/undergraduate/applying/guide-for-applicants/admissions-tests"
+ },
+ {
+  "id": 95,
+  "baslangic": "2027-01-13",
+  "bitis": null,
+  "etkinlik": "LNAT son sınav günü: Bristol ve Durham hukuk başvuruları (2027 girişi)",
+  "ulke": "İngiltere",
+  "kurum": "LNAT (Pearson VUE)",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "Bristol ve Durham için rezervasyon, UCAS başvurusu ve sınav aynı güne, 13 Ocak 2027 tarihine denk gelir.",
+  "kaynak": "https://lnat.ac.uk/registration/dates-and-deadlines/"
+ },
+ {
+  "id": 96,
+  "baslangic": "2027-01-13",
+  "bitis": null,
+  "etkinlik": "UCAS 2027 girişi: eşit değerlendirme son tarihi",
+  "ulke": "İngiltere",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Saat: İngiltere saatiyle 18.00. Bu tarihe kadar yapılan başvurular eşit değerlendirilir.",
+  "kaynak": "https://www.ucas.com/ucas/undergraduate/getting-started/when-apply"
+ },
+ {
+  "id": 97,
+  "baslangic": "2027-01-15",
+  "bitis": null,
+  "etkinlik": "ACT kayıt son günü (12–13.02.2027 sınavı)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Resmi tabloda son kayıt tarihleri yılsız yazılmış; yıl sınav tarihinden çıkarıldı. Türkiye'de sınav merkezi olup olmadığı ayrıca kontrol edilmedi.",
+  "kaynak": "https://www.act.org/content/dam/act/unsecured/documents/pdfs/Test-Date-Schedule-International-2026-2027.pdf"
+ },
+ {
+  "id": 98,
+  "baslangic": "2027-01-15",
+  "bitis": null,
+  "etkinlik": "NYU Stern Full-time MBA 3. başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "NYU Stern School of Business",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Başvuru",
+  "not": "Saat: 23.59 ET. İlk kararlar 1 Nisan 2027.",
+  "kaynak": "https://www.stern.nyu.edu/programs-admissions/full-time-mba/admissions/deadlines"
+ },
+ {
+  "id": 99,
+  "baslangic": "2027-01-15",
+  "bitis": null,
+  "etkinlik": "Phillips Exeter Academy başvuru ve finansal yardım son günü",
+  "ulke": "ABD",
+  "kurum": "Phillips Exeter Academy",
+  "programlar": [
+   "Prep"
+  ],
+  "tur": "Başvuru",
+  "not": "Resmi sayfa 2027-28 öğretim yılı girişi için yıl belirtmeden 15 Ocak diyor. Sınavlar 15 Ocak'tan en fazla bir yıl önce alınmış olmalı. TOEFL/IELTS/Duolingo şiddetle öneriliyor ama zorunlu değil.",
+  "kaynak": "https://exeter.edu/admissions/apply/"
+ },
+ {
+  "id": 100,
+  "baslangic": "2027-01-15",
+  "bitis": null,
+  "etkinlik": "Purdue Early Action kararları ve Regular Decision başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "Purdue University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Resmi sayfada yıl yazmıyor; bağımsız kaynak tarihi 2026-27 döngüsü (Fall 2027 girişi, Class of 2031) için veriyor. RD kararları 15 Ocak ile 31 Mart arasında.",
+  "kaynak": "https://admissions.purdue.edu/become-student/application-status/"
+ },
+ {
+  "id": 101,
+  "baslangic": "2027-01-15",
+  "bitis": null,
+  "etkinlik": "Almanya yaz dönemi 2027 için çoğu üniversitede genel başvuru son günü",
+  "ulke": "Almanya",
+  "kurum": "uni-assist / Alman üniversiteleri",
+  "programlar": [
+   "Campus",
+   "Next"
+  ],
+  "tur": "Başvuru",
+  "not": "Genel kuraldır, her üniversite ve program için kendi sayfası kontrol edilmeli. Resmî uni-assist sayfası yıl belirtmiyor (\"often\" diyor). TUM, RWTH, TU Berlin ve KIT gibi teknik üniversitelerde birçok mühendislik yüksek lisans programı yaz döneminde uluslararası öğrenci almıyor.",
+  "kaynak": "https://uni-assist.de/en/how-to-apply/plan-your-application/deadlines-processing-time"
+ },
+ {
+  "id": 102,
+  "baslangic": "2027-01-15",
+  "bitis": null,
+  "etkinlik": "Hollanda numerus fixus lisans programları için Studielink başvuru son günü (2027-28)",
+  "ulke": "Hollanda",
+  "kurum": "Studielink / Hollanda üniversiteleri",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Saat 23:59 CET. Tıp, diş hekimliği, psikoloji, International Business gibi kontenjanlı (numerus fixus) programlar için geçerlidir; AB dışı öğrenciler için de aynı tarihtir. 15 Ocak sonrasında aktif kalan başvuru bir seçim hakkı sayılır (Erasmus Rotterdam sayfası). Groningen 2027-28 tablosu da numerus fixus için 15 Ocak verir. Radboud ve TU Delft sayfaları 2027 yılını açıkça yazıyor.",
+  "kaynak": "https://www.ru.nl/en/education/bachelors/psychology/admission-and-application"
+ },
+ {
+  "id": 103,
+  "baslangic": "2027-01-15",
+  "bitis": null,
+  "etkinlik": "McGill lisans başvuru son günü (Fall 2027, yurt dışında veya ABD'de okuyan adaylar)",
+  "ulke": "Kanada",
+  "kurum": "McGill University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Tarih Cuma 15 Ocak 2027. Agricultural & Environmental Sciences, Architecture, Arts, B.A.&Sc., Education, Engineering, Management, Nursing, Occupational Therapy, Physical Therapy ve Science için geçerli. Resmi sayfada ayrı belge son günü yok.",
+  "kaynak": "https://www.mcgill.ca/importantdates/channels/event/application-deadline-fall-2027-admission-undergraduate-programs-applicants-studying-or-who-last-370820"
+ },
+ {
+  "id": 104,
+  "baslangic": "2027-01-15",
+  "bitis": null,
+  "etkinlik": "UBC (Vancouver) lisans başvuru son günü (2027/28 Winter Session, Eylül 2027)",
+  "ulke": "Kanada",
+  "kurum": "University of British Columbia",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Saat 23.59 Pasifik saati (bağımsız kaynakta belirtilmiş). Belge son günleri sabit değil, adaya e-posta ve Applicant Service Centre üzerinden bildirilir.",
+  "kaynak": "https://vancouver.calendar.ubc.ca/academic-year-202627/january-2027"
+ },
+ {
+  "id": 105,
+  "baslangic": "2027-01-15",
+  "bitis": null,
+  "etkinlik": "University of Toronto lisans son başvuru günü (Fall 2027)",
+  "ulke": "Kanada",
+  "kurum": "University of Toronto",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Başvuru OUAC 105 ile yapılır. Uluslararası öğrenciler için farklı tarih yok. Bazı programların ek başvuru (supplementary) tarihleri ayrıca bildirilir. Applied Science & Engineering için belge son günü de bu tarihtir.",
+  "kaynak": "https://future.utoronto.ca/media/1080"
+ },
+ {
+  "id": 106,
+  "baslangic": "2027-01-15",
+  "bitis": null,
+  "etkinlik": "IE University lisans 2. tur (Round 2) başvuru son günü",
+  "ulke": "İspanya",
+  "kurum": "IE University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Kararlar en geç 19 Şubat 2027.",
+  "kaynak": "https://www.ie.edu/university/admission/admission-process/admissions-rounds/"
+ },
+ {
+  "id": 107,
+  "baslangic": "2027-01-15",
+  "bitis": null,
+  "etkinlik": "Göteborg Üniversitesi School of Business, Economics and Law yüksek lisans başvuru son günü (tüm başvurular tek tur)",
+  "ulke": "İsveç",
+  "kurum": "University of Gothenburg, School of Business, Economics and Law",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Başvuru",
+  "not": "Haber 5 Ekim 2026 tarihli. 2027'den itibaren bu fakültenin yüksek lisans programlarında 15 Nisan'daki ikinci tur kalkıyor; AB ve AB dışı herkes Ocak turunda başvuruyor. İsveççe Matix programı istisna.",
+  "kaynak": "https://www.gu.se/en/news/the-school-introduces-a-single-application-round-for-masters-programmes-apply-by-15-january"
+ },
+ {
+  "id": 108,
+  "baslangic": "2027-01-15",
+  "bitis": null,
+  "etkinlik": "İsveç: 2027 güz dönemi başvuru son günü",
+  "ulke": "İsveç",
+  "kurum": "",
+  "programlar": [
+   "Campus",
+   "Next"
+  ],
+  "tur": "Başvuru",
+  "not": "Saat: Orta Avrupa saatiyle gece yarısı. Lisans ve yüksek lisans için geçerli.",
+  "kaynak": "https://www.universityadmissions.se/en/key-dates-and-deadlines/autumn-semester-dates/"
+ },
+ {
+  "id": 109,
+  "baslangic": "2027-01-20",
+  "bitis": null,
+  "etkinlik": "LNAT kayıt ve sınav randevusu son günü (diğer üniversiteler, 2027 girişi)",
+  "ulke": "İngiltere",
+  "kurum": "LNAT (Pearson VUE)",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Oxford, Cambridge, KCL, LSE, UCL, Bristol ve Durham dışındaki LNAT kullanan üniversiteler için.",
+  "kaynak": "https://lnat.ac.uk/registration/dates-and-deadlines/"
+ },
+ {
+  "id": 110,
+  "baslangic": "2027-01-20",
+  "bitis": null,
+  "etkinlik": "CAO düşük başvuru ücretiyle (35 €) son gün",
+  "ulke": "İrlanda",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Saat 17.00. DİKKAT: AB dışından başvuranların çoğu üniversiteye doğrudan başvurur, CAO üzerinden değil. Sitede bu not yazılmalı.",
+  "kaynak": "https://www2.cao.ie/handbook/handbook2027/hb.pdf"
+ },
+ {
+  "id": 111,
+  "baslangic": "2027-01-21",
+  "bitis": null,
+  "etkinlik": "Bocconi online test için son sınav günü (Winter Session)",
+  "ulke": "İtalya",
+  "kurum": "Università Bocconi",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "Yer durumuna bağlı. Test online yapılıyor.",
+  "kaynak": "https://www.unibocconi.it/en/programs/bachelor-science/application-and-admission/timeline-and-selection"
+ },
+ {
+  "id": 112,
+  "baslangic": "2027-01-22",
+  "bitis": null,
+  "etkinlik": "MEB birinci dönem sonu (2026-2027)",
+  "ulke": "Türkiye",
+  "kurum": "MEB",
+  "programlar": [
+   "Prep",
+   "Summer",
+   "Campus"
+  ],
+  "tur": "Bilgi",
+  "not": "Kaynaklar karne gününü ayrıca yazmıyor; karneler genellikle dönemin son günü verilir ama bu teyit edilmedi. Yurt dışı başvurularında birinci dönem notları bu tarihten sonra kesinleşir.",
+  "kaynak": "https://www.meb.gov.tr/2026-2027-egitim-ogretim-yili-takvimi-aciklandi/haber/41057/tr"
+ },
+ {
+  "id": 113,
+  "baslangic": "2027-01-23",
+  "bitis": null,
+  "etkinlik": "Cambridge C1 Advanced kâğıt sınav günü (dünya geneli takvim)",
+  "ulke": "Türkiye",
+  "kurum": "Cambridge English C1 Advanced",
+  "programlar": [
+   "Prep",
+   "Campus",
+   "Next"
+  ],
+  "tur": "Sınav",
+  "not": "Cambridge'in dünya geneli kâğıt sınav günü. Türkiye'deki her yetkili merkez her tarihi açmaz; Speaking günü ve kayıt son günü merkeze göre değişir. Türkiye'deki yetkili merkezlerin 2027 takvimini bulamadım, öğrenci merkezle teyit etmeli. Dijital sınav yıl boyunca merkezlerde yapılır. İkinci kaynak Fransa'daki bir yetkili merkez; tarih dünya geneli takvimle aynı.",
+  "kaynak": "https://www.cambridgeenglish.org/Images/743891-examination-dates-2027.pdf"
+ },
+ {
+  "id": 114,
+  "baslangic": "2027-01-25",
+  "bitis": "2027-02-05",
+  "etkinlik": "MEB yarıyıl (sömestr) tatili (2026-2027)",
+  "ulke": "Türkiye",
+  "kurum": "MEB",
+  "programlar": [
+   "Prep",
+   "Summer",
+   "Campus"
+  ],
+  "tur": "Bilgi",
+  "not": "Kış okulları, okul ziyaretleri ve sınavlar için uygun dönem.",
+  "kaynak": "https://www.meb.gov.tr/2026-2027-egitim-ogretim-yili-takvimi-aciklandi/haber/41057/tr"
+ },
+ {
+  "id": 115,
+  "baslangic": "2027-01-25",
+  "bitis": null,
+  "etkinlik": "LNAT son sınav günü (diğer üniversiteler, 2027 girişi)",
+  "ulke": "İngiltere",
+  "kurum": "LNAT (Pearson VUE)",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "Örneğin Glasgow ve SOAS. UniAdmissions'a göre 26 Ocak sonrası sınava girenler sonucu Ağustos ortasında alır.",
+  "kaynak": "https://lnat.ac.uk/registration/dates-and-deadlines/"
+ },
+ {
+  "id": 116,
+  "baslangic": "2027-01-27",
+  "bitis": null,
+  "etkinlik": "SSAT kayıt son günü (30.01.2027 kâğıt sınavı)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Prep"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Son günlerden önce geç kayıt ve acele kayıt ücretleri başlar.",
+  "kaynak": "https://admission.org/assessments/ssat/paper"
+ },
+ {
+  "id": 117,
+  "baslangic": "2027-01-28",
+  "bitis": "2027-03-25",
+  "etkinlik": "Victoria devlet okulları 2027 1. dönem (öğrenciler için)",
+  "ulke": "Avustralya",
+  "kurum": "Victoria Department of Education",
+  "programlar": [
+   "Prep"
+  ],
+  "tur": "Dönem başlangıcı",
+  "not": "Dönem 27 Ocak'ta başlar, devlet okullarında öğrenciler 28 Ocak'ta başlar. 2. dönem 12 Nisan ile 25 Haziran, 3. dönem 12 Temmuz ile 17 Eylül, 4. dönem 4 Ekim ile 17 Aralık 2027 (iki kaynak aynı).",
+  "kaynak": "https://www.vic.gov.au/school-term-dates-and-holidays-victoria"
+ },
+ {
+  "id": 118,
+  "baslangic": "2027-01-28",
+  "bitis": null,
+  "etkinlik": "Finlandiya ortak başvuru (Ocak 2027) ek belge yükleme son günü",
+  "ulke": "Finlandiya",
+  "kurum": "Finlandiya ortak başvuru (Studyinfo)",
+  "programlar": [
+   "Campus",
+   "Next"
+  ],
+  "tur": "Belge",
+  "not": "Saat 15.00 Finlandiya saati (UTC+2), Türkiye saatiyle 16.00. University of Helsinki ve Aalto kendi takvimlerini uyguluyor (ayrı satırlara bakınız).",
+  "kaynak": "https://www.jyu.fi/en/study-with-us/bachelors-degree-programmes/how-to-apply-for-international-bachelors-programmes-2026"
+ },
+ {
+  "id": 119,
+  "baslangic": "2027-01-29",
+  "bitis": null,
+  "etkinlik": "ACT geç kayıt son günü (12–13.02.2027 sınavı)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Geç kayıt ek ücretlidir. Fotoğraf yükleme son günü de aynı gün.",
+  "kaynak": "https://www.act.org/content/dam/act/unsecured/documents/pdfs/Test-Date-Schedule-International-2026-2027.pdf"
+ },
+ {
+  "id": 120,
+  "baslangic": "2027-01-30",
+  "bitis": null,
+  "etkinlik": "SSAT kâğıt sınavı (Upper ve Middle)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Prep"
+  ],
+  "tur": "Sınav",
+  "not": "Sınav merkezinde, kâğıt üzerinde. Türkiye'de bu tarihlerde merkez olup olmadığı ayrıca kontrol edilmedi. Bilgisayarda (Prometric) SSAT ise neredeyse her gün yapılabiliyor.",
+  "kaynak": "https://admission.org/assessments/ssat/paper"
+ },
+ {
+  "id": 121,
+  "baslangic": "2027-02-01",
+  "bitis": null,
+  "etkinlik": "Phillips Academy Andover başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "Phillips Academy Andover",
+  "programlar": [
+   "Prep"
+  ],
+  "tur": "Başvuru",
+  "not": "Cardinal Education finansal yardım son gününü de 1 Şubat 2027, bildirim gününü 10 Mart 2027 olarak veriyor; bunlar Andover resmi sayfasında görülmedi.",
+  "kaynak": "https://www.andover.edu/admission"
+ },
+ {
+  "id": 122,
+  "baslangic": "2027-02-01",
+  "bitis": null,
+  "etkinlik": "University of Michigan lisans Regular Decision başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "University of Michigan",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Resmi sayfada yıl yazmıyor; bağımsız kaynak tarihi 2026-27 döngüsü (Fall 2027 girişi, Class of 2031) için veriyor.",
+  "kaynak": "https://admissions.umich.edu/apply/first-year-applicants/first-year-application-plans"
+ },
+ {
+  "id": 123,
+  "baslangic": "2027-02-01",
+  "bitis": null,
+  "etkinlik": "University of Toronto belge son günü (çoğu program) ve Awards Profile son günü",
+  "ulke": "Kanada",
+  "kurum": "University of Toronto",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Belge",
+  "not": "Mühendislik (Applied Science & Engineering) için belge son günü 15 Ocak 2027. Çoğu giriş bursu için başvuru ile otomatik değerlendirme yapılır, Awards Profile ayrı bir formdur.",
+  "kaynak": "https://future.utoronto.ca/media/1080"
+ },
+ {
+  "id": 124,
+  "baslangic": "2027-02-01",
+  "bitis": null,
+  "etkinlik": "CAO normal başvuru son günü",
+  "ulke": "İrlanda",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Saat 17.00. DİKKAT: AB dışından başvuranların çoğu üniversiteye doğrudan başvurur, CAO üzerinden değil. Sitede bu not yazılmalı.",
+  "kaynak": "https://www2.cao.ie/handbook/handbook2027/hb.pdf"
+ },
+ {
+  "id": 125,
+  "baslangic": "2027-02-01",
+  "bitis": null,
+  "etkinlik": "İsveç: başvuru ücreti ve belgeler için son gün",
+  "ulke": "İsveç",
+  "kurum": "",
+  "programlar": [
+   "Campus",
+   "Next"
+  ],
+  "tur": "Başvuru",
+  "not": "",
+  "kaynak": "https://www.universityadmissions.se/en/key-dates-and-deadlines/autumn-semester-dates/"
+ },
+ {
+  "id": 126,
+  "baslangic": "2027-02-08",
+  "bitis": null,
+  "etkinlik": "MEB ikinci dönem başlangıcı (2026-2027)",
+  "ulke": "Türkiye",
+  "kurum": "MEB",
+  "programlar": [
+   "Prep",
+   "Campus"
+  ],
+  "tur": "Dönem başlangıcı",
+  "not": "",
+  "kaynak": "https://www.meb.gov.tr/2026-2027-egitim-ogretim-yili-takvimi-aciklandi/haber/41057/tr"
+ },
+ {
+  "id": 127,
+  "baslangic": "2027-02-08",
+  "bitis": null,
+  "etkinlik": "UAT-UK Ocak 2027 oturumu sonuçları",
+  "ulke": "İngiltere",
+  "kurum": "UAT-UK (ESAT / TMUA / TARA)",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sonuç",
+  "not": "",
+  "kaynak": "https://www.ox.ac.uk/admissions/undergraduate/applying/guide-for-applicants/admissions-tests"
+ },
+ {
+  "id": 128,
+  "baslangic": "2027-02-10",
+  "bitis": null,
+  "etkinlik": "DELE kayıt son günü (2.04.2027 sınavı için)",
+  "ulke": "Türkiye",
+  "kurum": "DELE (Instituto Cervantes)",
+  "programlar": [
+   "Campus",
+   "Next"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Instituto Cervantes'in dünya geneli DELE takvimi. Instituto Cervantes Estambul'un hangi oturumları açtığını ve kendi kayıt son tarihlerini bulamadım; merkez daha erken kapatabilir. Sözlü sınav aynı gün ya da yakın bir günde olabilir.",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 129,
+  "baslangic": "2027-02-10",
+  "bitis": null,
+  "etkinlik": "DELE Nisan 2027 oturumu (A1, A2, B1, B2, C1) kayıt son günü",
+  "ulke": "İspanya",
+  "kurum": "Instituto Cervantes (DELE)",
+  "programlar": [
+   "Campus",
+   "Next",
+   "Summer"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Merkezlere göre değişebilir.",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 130,
+  "baslangic": "2027-02-12",
+  "bitis": "2027-02-13",
+  "etkinlik": "ACT sınavı (uluslararası, bilgisayarda)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "ABD içi tarihlerle karıştırılmamalı.",
+  "kaynak": "https://www.act.org/content/dam/act/unsecured/documents/pdfs/Test-Date-Schedule-International-2026-2027.pdf"
+ },
+ {
+  "id": 131,
+  "baslangic": "2027-02-12",
+  "bitis": null,
+  "etkinlik": "DELE A2 sınavı",
+  "ulke": "Türkiye",
+  "kurum": "DELE (Instituto Cervantes)",
+  "programlar": [
+   "Campus",
+   "Next"
+  ],
+  "tur": "Sınav",
+  "not": "Instituto Cervantes'in dünya geneli DELE takvimi. Instituto Cervantes Estambul'un hangi oturumları açtığını ve kendi kayıt son tarihlerini bulamadım; merkez daha erken kapatabilir. Sözlü sınav aynı gün ya da yakın bir günde olabilir.",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 132,
+  "baslangic": "2027-02-12",
+  "bitis": null,
+  "etkinlik": "DELE Şubat 2027 sınavı (yalnızca A2)",
+  "ulke": "İspanya",
+  "kurum": "Instituto Cervantes (DELE)",
+  "programlar": [
+   "Campus",
+   "Next",
+   "Summer"
+  ],
+  "tur": "Sınav",
+  "not": "Yazılı sınav tarihi; sözlü sınav merkezin belirlediği farklı bir günde olabilir.",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 133,
+  "baslangic": "2027-02-15",
+  "bitis": null,
+  "etkinlik": "Northeastern Early Action kararları (en geç)",
+  "ulke": "ABD",
+  "kurum": "Northeastern University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sonuç",
+  "not": "",
+  "kaynak": "https://admissions.northeastern.edu/academics/specialized-entry-programs/admissions-deadlines-decisions/"
+ },
+ {
+  "id": 134,
+  "baslangic": "2027-02-17",
+  "bitis": null,
+  "etkinlik": "HEC Paris Master in Management 3. tur başvuru son günü",
+  "ulke": "Fransa",
+  "kurum": "HEC Paris",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Başvuru",
+  "not": "Saat 12:00 (öğlen) Paris saati. Ön kabul sonuçları 16 Mart 2027, kabul sonuçları 12 Nisan 2027 18:00 (yalnızca resmî sayfada).",
+  "kaynak": "https://www.hec.edu/en/master-s-programs/master-management/admissions"
+ },
+ {
+  "id": 135,
+  "baslangic": "2027-02-19",
+  "bitis": null,
+  "etkinlik": "SAT kayıt son günü (6.03.2027 sınavı)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Saat: ABD Doğu saatiyle 23.59. Tarihler uluslararası öğrenciler için de geçerli.",
+  "kaynak": "https://satsuite.collegeboard.org/sat/dates-deadlines"
+ },
+ {
+  "id": 136,
+  "baslangic": "2027-02-19",
+  "bitis": null,
+  "etkinlik": "IE University lisans 2. tur kararlarının en geç bildirilme tarihi",
+  "ulke": "İspanya",
+  "kurum": "IE University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sonuç",
+  "not": "",
+  "kaynak": "https://www.ie.edu/university/admission/admission-process/admissions-rounds/"
+ },
+ {
+  "id": 137,
+  "baslangic": "2027-02-23",
+  "bitis": null,
+  "etkinlik": "SAT geç kayıt son günü (6.03.2027 sınavı)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Saat: ABD Doğu saatiyle 23.59. Geç kayıt ek ücretlidir.",
+  "kaynak": "https://satsuite.collegeboard.org/sat/dates-deadlines"
+ },
+ {
+  "id": 138,
+  "baslangic": "2027-02-25",
+  "bitis": null,
+  "etkinlik": "UCAS Extra açılıyor",
+  "ulke": "İngiltere",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "",
+  "kaynak": "https://www.ucas.com/ucas/undergraduate/getting-started/when-apply"
+ },
+ {
+  "id": 139,
+  "baslangic": "2027-03-01",
+  "bitis": null,
+  "etkinlik": "Northeastern Early Decision II kararları (en geç)",
+  "ulke": "ABD",
+  "kurum": "Northeastern University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sonuç",
+  "not": "",
+  "kaynak": "https://admissions.northeastern.edu/academics/specialized-entry-programs/admissions-deadlines-decisions/"
+ },
+ {
+  "id": 140,
+  "baslangic": "2027-03-05",
+  "bitis": null,
+  "etkinlik": "ACT kayıt son günü (2–3.04.2027 sınavı)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Resmi tabloda son kayıt tarihleri yılsız yazılmış; yıl sınav tarihinden çıkarıldı. Türkiye'de sınav merkezi olup olmadığı ayrıca kontrol edilmedi.",
+  "kaynak": "https://www.act.org/content/dam/act/unsecured/documents/pdfs/Test-Date-Schedule-International-2026-2027.pdf"
+ },
+ {
+  "id": 141,
+  "baslangic": "2027-03-05",
+  "bitis": null,
+  "etkinlik": "IE University lisans 3. tur (Round 3) başvuru son günü",
+  "ulke": "İspanya",
+  "kurum": "IE University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Kararlar en geç 23 Nisan 2027.",
+  "kaynak": "https://www.ie.edu/university/admission/admission-process/admissions-rounds/"
+ },
+ {
+  "id": 142,
+  "baslangic": "2027-03-06",
+  "bitis": null,
+  "etkinlik": "SAT sınavı",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "Tüm dünyada aynı tarih.",
+  "kaynak": "https://satsuite.collegeboard.org/sat/dates-deadlines"
+ },
+ {
+  "id": 143,
+  "baslangic": "2027-03-08",
+  "bitis": "2027-03-12",
+  "etkinlik": "MEB ikinci dönem ara tatili (2026-2027)",
+  "ulke": "Türkiye",
+  "kurum": "MEB",
+  "programlar": [
+   "Prep",
+   "Summer",
+   "Campus"
+  ],
+  "tur": "Bilgi",
+  "not": "",
+  "kaynak": "https://www.meb.gov.tr/2026-2027-egitim-ogretim-yili-takvimi-aciklandi/haber/41057/tr"
+ },
+ {
+  "id": 144,
+  "baslangic": "2027-03-10",
+  "bitis": null,
+  "etkinlik": "SSAT kayıt son günü (13.03.2027 kâğıt sınavı)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Prep"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Son günlerden önce geç kayıt ve acele kayıt ücretleri başlar.",
+  "kaynak": "https://admission.org/assessments/ssat/paper"
+ },
+ {
+  "id": 145,
+  "baslangic": "2027-03-10",
+  "bitis": null,
+  "etkinlik": "Yatılı okullarda ortak karar günü (M10)",
+  "ulke": "ABD",
+  "kurum": "Exeter, Hotchkiss, Lawrenceville, Taft, Groton, St. Paul's, Milton, Middlesex, Mercersburg, Hill, Millbrook, Holderness, Cate, Thacher, Westminster, Deerfield",
+  "programlar": [
+   "Prep"
+  ],
+  "tur": "Sonuç",
+  "not": "Listelenen okulların resmi sayfaları 10 Mart diyor (bazılarında yıl yok). Andover için 10 Mart yalnız bağımsız kaynakta (Cardinal) görüldü.",
+  "kaynak": "https://www.hotchkiss.org/admission/how-to-apply"
+ },
+ {
+  "id": 146,
+  "baslangic": "2027-03-13",
+  "bitis": null,
+  "etkinlik": "SSAT kâğıt sınavı (Upper ve Middle)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Prep"
+  ],
+  "tur": "Sınav",
+  "not": "Sınav merkezinde, kâğıt üzerinde. Türkiye'de bu tarihlerde merkez olup olmadığı ayrıca kontrol edilmedi. Bilgisayarda (Prometric) SSAT ise neredeyse her gün yapılabiliyor.",
+  "kaynak": "https://admission.org/assessments/ssat/paper"
+ },
+ {
+  "id": 147,
+  "baslangic": "2027-03-19",
+  "bitis": null,
+  "etkinlik": "ACT geç kayıt son günü (2–3.04.2027 sınavı)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Geç kayıt ek ücretlidir. Fotoğraf yükleme son günü de aynı gün.",
+  "kaynak": "https://www.act.org/content/dam/act/unsecured/documents/pdfs/Test-Date-Schedule-International-2026-2027.pdf"
+ },
+ {
+  "id": 148,
+  "baslangic": "2027-03-23",
+  "bitis": null,
+  "etkinlik": "International UAS Exam (Finlandiya uygulamalı bilimler üniversiteleri ortak giriş sınavı, çevrim içi)",
+  "ulke": "Finlandiya",
+  "kurum": "International UAS Exam (UAS Info)",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "Saat 12.00 Finlandiya saati (UTC+2), Türkiye saatiyle 13.00. Sınava girmek için Ocak 2027 ortak başvurusunda UAS programına başvurmuş olmak gerekir. Dil yeterlilik belgesi ve kimlik kopyası son günü 28 Ocak 2027 saat 15.00. Davet en geç 22 Mart 2027'de gönderilir.",
+  "kaynak": "https://www.uasinfo.fi/international-uas-exam/"
+ },
+ {
+  "id": 149,
+  "baslangic": "2027-03-25",
+  "bitis": null,
+  "etkinlik": "Harvard Business School MBA 2. tur kararları",
+  "ulke": "ABD",
+  "kurum": "Harvard Business School",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Sonuç",
+  "not": "",
+  "kaynak": "https://www.hbs.edu/mba/admissions/application-dates"
+ },
+ {
+  "id": 150,
+  "baslangic": "2027-03-29",
+  "bitis": null,
+  "etkinlik": "Columbia Business School MBA 3. tur başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "Columbia Business School",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Başvuru",
+  "not": "Kararlar 12 Mayıs 2027 (resmi).",
+  "kaynak": "https://academics.business.columbia.edu/admissions/mba/options-deadlines"
+ },
+ {
+  "id": 151,
+  "baslangic": "2027-03-30",
+  "bitis": null,
+  "etkinlik": "Aalto yüksek lisans kabul sonuçları",
+  "ulke": "Finlandiya",
+  "kurum": "Aalto University",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Sonuç",
+  "not": "Sanat, tasarım ve mimarlık programlarında ilk aşama sonuçları 12 Mart 2027.",
+  "kaynak": "https://www.aalto.fi/en/admission-services/apply-to-masters-programmes"
+ },
+ {
+  "id": 152,
+  "baslangic": "2027-03-31",
+  "bitis": null,
+  "etkinlik": "Wharton MBA 2. tur kararları ve 3. tur başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "The Wharton School",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Başvuru",
+  "not": "Aynı gün hem 2. tur kararları açıklanıyor hem 3. tur kapanıyor.",
+  "kaynak": "https://mba.wharton.upenn.edu/application-timeline-deadlines/"
+ },
+ {
+  "id": 153,
+  "baslangic": "2027-04-01",
+  "bitis": null,
+  "etkinlik": "NYU Stern Full-time MBA 3. tur ilk kararlar",
+  "ulke": "ABD",
+  "kurum": "NYU Stern School of Business",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Sonuç",
+  "not": "",
+  "kaynak": "https://www.stern.nyu.edu/programs-admissions/full-time-mba/admissions/deadlines"
+ },
+ {
+  "id": 154,
+  "baslangic": "2027-04-01",
+  "bitis": null,
+  "etkinlik": "Stanford GSB MBA 2. tur kararları",
+  "ulke": "ABD",
+  "kurum": "Stanford Graduate School of Business",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Sonuç",
+  "not": "",
+  "kaynak": "https://www.gsb.stanford.edu/programs/mba/admission/deadlines"
+ },
+ {
+  "id": 155,
+  "baslangic": "2027-04-01",
+  "bitis": null,
+  "etkinlik": "Almanya yaz dönemi 2027 (Sommersemester 2027) resmî başlangıcı",
+  "ulke": "Almanya",
+  "kurum": "Alman üniversiteleri (TUM, FU Berlin)",
+  "programlar": [
+   "Campus",
+   "Next"
+  ],
+  "tur": "Dönem başlangıcı",
+  "not": "Bu, idari dönem başlangıcıdır. Derslerin başladığı tarih üniversiteye göre değişir (ör. Heidelberg'de dersler 12 Nisan 2027'de başlar). Dönem 30 Eylül 2027'de biter.",
+  "kaynak": "https://www.tum.de/en/studies/application/application-info-portal/dates-periods-and-deadlines/"
+ },
+ {
+  "id": 156,
+  "baslangic": "2027-04-01",
+  "bitis": null,
+  "etkinlik": "İsveç: yüksek lisans sonuçları açıklanıyor",
+  "ulke": "İsveç",
+  "kurum": "",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Sonuç",
+  "not": "",
+  "kaynak": "https://www.universityadmissions.se/en/key-dates-and-deadlines/autumn-semester-dates/"
+ },
+ {
+  "id": 157,
+  "baslangic": "2027-04-02",
+  "bitis": "2027-04-03",
+  "etkinlik": "ACT sınavı (uluslararası, bilgisayarda)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "ABD içi tarihlerle karıştırılmamalı.",
+  "kaynak": "https://www.act.org/content/dam/act/unsecured/documents/pdfs/Test-Date-Schedule-International-2026-2027.pdf"
+ },
+ {
+  "id": 158,
+  "baslangic": "2027-04-02",
+  "bitis": null,
+  "etkinlik": "DELE A1, A2, B1, B2, C1 sınavı",
+  "ulke": "Türkiye",
+  "kurum": "DELE (Instituto Cervantes)",
+  "programlar": [
+   "Campus",
+   "Next"
+  ],
+  "tur": "Sınav",
+  "not": "Instituto Cervantes'in dünya geneli DELE takvimi. Instituto Cervantes Estambul'un hangi oturumları açtığını ve kendi kayıt son tarihlerini bulamadım; merkez daha erken kapatabilir. Sözlü sınav aynı gün ya da yakın bir günde olabilir.",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 159,
+  "baslangic": "2027-04-02",
+  "bitis": null,
+  "etkinlik": "DELE Nisan 2027 sınavı (A1, A2, B1, B2, C1)",
+  "ulke": "İspanya",
+  "kurum": "Instituto Cervantes (DELE)",
+  "programlar": [
+   "Campus",
+   "Next",
+   "Summer"
+  ],
+  "tur": "Sınav",
+  "not": "Yazılı sınav tarihi.",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 160,
+  "baslangic": "2027-04-07",
+  "bitis": null,
+  "etkinlik": "Stanford GSB MBA 3. tur başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "Stanford Graduate School of Business",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Başvuru",
+  "not": "Saat: 16.00 Pacific Time. Uluslararası adaylar için 3. tur vize süreci açısından risklidir.",
+  "kaynak": "https://www.gsb.stanford.edu/programs/mba/admission/deadlines"
+ },
+ {
+  "id": 161,
+  "baslangic": "2027-04-07",
+  "bitis": null,
+  "etkinlik": "DELE kayıt son günü (21.05.2027 ve 22.05.2027 sınavı için)",
+  "ulke": "Türkiye",
+  "kurum": "DELE (Instituto Cervantes)",
+  "programlar": [
+   "Campus",
+   "Next",
+   "Prep"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Instituto Cervantes'in dünya geneli DELE takvimi. Instituto Cervantes Estambul'un hangi oturumları açtığını ve kendi kayıt son tarihlerini bulamadım; merkez daha erken kapatabilir. Sözlü sınav aynı gün ya da yakın bir günde olabilir.",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 162,
+  "baslangic": "2027-04-07",
+  "bitis": null,
+  "etkinlik": "DELE Mayıs 2027 oturumu (genel ve okul DELE'si) kayıt son günü",
+  "ulke": "İspanya",
+  "kurum": "Instituto Cervantes (DELE)",
+  "programlar": [
+   "Prep",
+   "Campus",
+   "Next",
+   "Summer"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Resmî sayfa 7 Nisan'ı okul (escolar) satırında veriyor, 22 Mayıs genel oturumu için ayrı bir tarih yazmıyor; bağımsız kaynak 7 Nisan'ı Mayıs oturumunun tamamı için veriyor.",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 163,
+  "baslangic": "2027-04-08",
+  "bitis": null,
+  "etkinlik": "SSE lisans seçim sonuçları",
+  "ulke": "İsveç",
+  "kurum": "Stockholm School of Economics (SSE)",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sonuç",
+  "not": "Dijital mülakatlar Şubat 2027 ortasında (davetten sonra 1 hafta süre).",
+  "kaynak": "https://www.hhs.se/education/bachelor/bachelor-admissions/international-applicant/"
+ },
+ {
+  "id": 164,
+  "baslangic": "2027-04-08",
+  "bitis": null,
+  "etkinlik": "İsveç: lisans sonuçları açıklanıyor",
+  "ulke": "İsveç",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sonuç",
+  "not": "",
+  "kaynak": "https://www.universityadmissions.se/en/key-dates-and-deadlines/autumn-semester-dates/"
+ },
+ {
+  "id": 165,
+  "baslangic": "2027-04-10",
+  "bitis": null,
+  "etkinlik": "Yatılı okullarda kabul yanıtı ve sözleşme son günü",
+  "ulke": "ABD",
+  "kurum": "Hotchkiss, Lawrenceville, Taft, Milton, Mercersburg, Hill, Millbrook, Holderness, Cate, Thacher, Westminster, Deerfield",
+  "programlar": [
+   "Prep"
+  ],
+  "tur": "Kabul yanıtı",
+  "not": "Exeter resmi sayfası yanıt tarihini vermiyor; Cardinal Education Exeter ve Andover için 10 Nisan 2027 diyor.",
+  "kaynak": "https://www.hotchkiss.org/admission/how-to-apply"
+ },
+ {
+  "id": 166,
+  "baslangic": "2027-04-15",
+  "bitis": null,
+  "etkinlik": "ABD yüksek lisans: finansman teklifleri için 15 Nisan kararı (CGS)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Kabul yanıtı",
+  "not": "Kabul tarihi değildir. Yalnızca kararı imzalamış okulların burs, asistanlık gibi finansman teklifleri için geçerli. Next'in dili burs olmadığı için sitede yer alıp almayacağına siz karar verin.",
+  "kaynak": "https://cgsnet.org/resources/for-current-prospective-graduate-students/april-15-resolution"
+ },
+ {
+  "id": 167,
+  "baslangic": "2027-04-15",
+  "bitis": null,
+  "etkinlik": "Columbia Business School Deferred Enrollment Program son başvuru günü",
+  "ulke": "ABD",
+  "kurum": "Columbia Business School",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Başvuru",
+  "not": "Lisans son sınıf öğrencileri ve yeni mezunlar için ertelemeli MBA kabulü.",
+  "kaynak": "https://academics.business.columbia.edu/admissions/mba/options-deadlines"
+ },
+ {
+  "id": 168,
+  "baslangic": "2027-04-15",
+  "bitis": null,
+  "etkinlik": "NYU Stern Full-time MBA 4. başvuru son günü",
+  "ulke": "ABD",
+  "kurum": "NYU Stern School of Business",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Başvuru",
+  "not": "Stern'ün Luxury & Retail ve Tech MBA programlarında son tur yalnızca ABD vatandaşları içindir; Full-time MBA sayfasında böyle bir kısıt görülmedi, ancak uluslararası adaylara 3. turu önermek daha güvenli.",
+  "kaynak": "https://www.stern.nyu.edu/programs-admissions/full-time-mba/admissions/deadlines"
+ },
+ {
+  "id": 169,
+  "baslangic": "2027-04-15",
+  "bitis": null,
+  "etkinlik": "Numerus fixus programlarında sıralama numaralarının Studielink üzerinden açıklanması",
+  "ulke": "Hollanda",
+  "kurum": "Studielink / Hollanda üniversiteleri",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sonuç",
+  "not": "Radboud ve VU sayfalarında yıl yazmıyor (Radboud sayfası 2027-28 dönemine ait); bağımsız kaynak 2027 yazıyor. VU sayfasına göre teklif gelen öğrencinin yeri kabul etmek için iki haftası vardır.",
+  "kaynak": "https://www.ru.nl/en/education/bachelors/psychology/admission-and-application"
+ },
+ {
+  "id": 170,
+  "baslangic": "2027-04-16",
+  "bitis": null,
+  "etkinlik": "SAT kayıt son günü (1.05.2027 sınavı)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Saat: ABD Doğu saatiyle 23.59. Tarihler uluslararası öğrenciler için de geçerli.",
+  "kaynak": "https://satsuite.collegeboard.org/sat/dates-deadlines"
+ },
+ {
+  "id": 171,
+  "baslangic": "2027-04-20",
+  "bitis": null,
+  "etkinlik": "SAT geç kayıt son günü (1.05.2027 sınavı)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Saat: ABD Doğu saatiyle 23.59. Geç kayıt ek ücretlidir.",
+  "kaynak": "https://satsuite.collegeboard.org/sat/dates-deadlines"
+ },
+ {
+  "id": 172,
+  "baslangic": "2027-04-21",
+  "bitis": null,
+  "etkinlik": "Aalto yüksek lisans öğrenim yerini kabul son günü",
+  "ulke": "Finlandiya",
+  "kurum": "Aalto University",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Kabul yanıtı",
+  "not": "Saat 15.00 Finlandiya saati (UTC+3), Türkiye saatiyle de 15.00. 30 Mart ile 4 Nisan arası kabul alanlar için onaylı belge son günü 13 Mayıs 2027.",
+  "kaynak": "https://www.aalto.fi/en/admission-services/apply-to-masters-programmes"
+ },
+ {
+  "id": 173,
+  "baslangic": "2027-04-23",
+  "bitis": null,
+  "etkinlik": "IE University lisans 3. tur kararlarının en geç bildirilme tarihi",
+  "ulke": "İspanya",
+  "kurum": "IE University",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sonuç",
+  "not": "",
+  "kaynak": "https://www.ie.edu/university/admission/admission-process/admissions-rounds/"
+ },
+ {
+  "id": 174,
+  "baslangic": "2027-04-30",
+  "bitis": null,
+  "etkinlik": "Fransa, Études en France: üniversitelerin yanıt vermesi için son gün",
+  "ulke": "Fransa",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sonuç",
+  "not": "Lisans 1. sınıf ve L2/L3/yüksek lisans prosedürlerinin ikisinde de aynı tarih.",
+  "kaynak": "https://www.turquie.campusfrance.org/system/files/medias/documents/2026-10/Proc%C3%A9dure%20de%20candidature%20L2%2C%20L3%2C%20BUT%20et%20Master%202027.pdf"
+ },
+ {
+  "id": 175,
+  "baslangic": "2027-05-01",
+  "bitis": null,
+  "etkinlik": "Lisans kabul yanıtı son günü (National College Decision Day; çoğu üniversite)",
+  "ulke": "ABD",
+  "kurum": "Çok sayıda ABD üniversitesi",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Kabul yanıtı",
+  "not": "Regular Decision ve Early Action ile kabul alan öğrenciler için. Early Decision kabulünde süre çok daha kısa (ör. Michigan 6 Ocak, CMU 1 Şubat, JHU 15 Ocak 2027).",
+  "kaynak": "https://apply.jhu.edu/how-to-apply/application-deadlines-requirements/"
+ },
+ {
+  "id": 176,
+  "baslangic": "2027-05-01",
+  "bitis": null,
+  "etkinlik": "SAT sınavı",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "Tüm dünyada aynı tarih.",
+  "kaynak": "https://satsuite.collegeboard.org/sat/dates-deadlines"
+ },
+ {
+  "id": 177,
+  "baslangic": "2027-05-01",
+  "bitis": null,
+  "etkinlik": "Numerus fixus dışındaki lisans programları için genel Studielink son tarihi",
+  "ulke": "Hollanda",
+  "kurum": "Studielink / Hollanda üniversiteleri",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Dikkat: 1 Mayıs her üniversite için geçerli değildir. AB dışı ve vize gereken öğrenciler için UvA, VU, Leiden, Radboud ve TU Delft gibi birçok üniversitede son gün 1 Nisan 2027'dir. Bağımsız kaynak da '1 May is not a universal fallback deadline' diye uyarıyor. Groningen sayfasında yıl yok, başlık 'Studiejaar 2027-2028'.",
+  "kaynak": "https://www.rug.nl/education/application-enrolment-tuition-fees/admission/application-deadlines/bachelor-application-deadlines"
+ },
+ {
+  "id": 178,
+  "baslangic": "2027-05-01",
+  "bitis": null,
+  "etkinlik": "CAO geç başvuru son günü",
+  "ulke": "İrlanda",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Saat 17.00. DİKKAT: AB dışından başvuranların çoğu üniversiteye doğrudan başvurur, CAO üzerinden değil. Sitede bu not yazılmalı.",
+  "kaynak": "https://www2.cao.ie/handbook/handbook2027/hb.pdf"
+ },
+ {
+  "id": 179,
+  "baslangic": "2027-05-03",
+  "bitis": null,
+  "etkinlik": "AP sınavları. 1. oturum: Human Geography; Physics C: Mechanics. 2. oturum: Biology; Italian Language and Culture",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "Resmi sayfa 1. ve 2. oturumu \"genellikle sabah ve öğleden sonra\" diye tanımlıyor; ABD dışında başlama saatleri farklı, saati AP koordinatörü bildirir. Ders adları resmi İngilizce adlarıyla yazıldı.",
+  "kaynak": "https://apstudents.collegeboard.org/ap-exams-overview/exam-calendar"
+ },
+ {
+  "id": 180,
+  "baslangic": "2027-05-04",
+  "bitis": null,
+  "etkinlik": "AP sınavları. 1. oturum: Business with Personal Finance; United States Government and Politics. 2. oturum: European History; Microeconomics",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "Resmi sayfa 1. ve 2. oturumu \"genellikle sabah ve öğleden sonra\" diye tanımlıyor; ABD dışında başlama saatleri farklı, saati AP koordinatörü bildirir. Ders adları resmi İngilizce adlarıyla yazıldı.",
+  "kaynak": "https://apstudents.collegeboard.org/ap-exams-overview/exam-calendar"
+ },
+ {
+  "id": 181,
+  "baslangic": "2027-05-05",
+  "bitis": null,
+  "etkinlik": "AP sınavları. 1. oturum: Cybersecurity; English Literature and Composition. 2. oturum: Physics 1: Algebra-Based; Physics C: Electricity and Magnetism",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "Resmi sayfa 1. ve 2. oturumu \"genellikle sabah ve öğleden sonra\" diye tanımlıyor; ABD dışında başlama saatleri farklı, saati AP koordinatörü bildirir. Ders adları resmi İngilizce adlarıyla yazıldı.",
+  "kaynak": "https://apstudents.collegeboard.org/ap-exams-overview/exam-calendar"
+ },
+ {
+  "id": 182,
+  "baslangic": "2027-05-06",
+  "bitis": null,
+  "etkinlik": "AP sınavları. 1. oturum: French Language and Culture; Physics 2: Algebra-Based; World History: Modern. 2. oturum: African American Studies; Chemistry",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "Resmi sayfa 1. ve 2. oturumu \"genellikle sabah ve öğleden sonra\" diye tanımlıyor; ABD dışında başlama saatleri farklı, saati AP koordinatörü bildirir. Ders adları resmi İngilizce adlarıyla yazıldı.",
+  "kaynak": "https://apstudents.collegeboard.org/ap-exams-overview/exam-calendar"
+ },
+ {
+  "id": 183,
+  "baslangic": "2027-05-07",
+  "bitis": null,
+  "etkinlik": "AP sınavları. 1. oturum: German Language and Culture; United States History. 2. oturum: Macroeconomics; Networking (yalnızca pilot okullar)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "Resmi sayfa 1. ve 2. oturumu \"genellikle sabah ve öğleden sonra\" diye tanımlıyor; ABD dışında başlama saatleri farklı, saati AP koordinatörü bildirir. Ders adları resmi İngilizce adlarıyla yazıldı.",
+  "kaynak": "https://apstudents.collegeboard.org/ap-exams-overview/exam-calendar"
+ },
+ {
+  "id": 184,
+  "baslangic": "2027-05-10",
+  "bitis": null,
+  "etkinlik": "AP sınavları. 1. oturum: Calculus AB; Calculus BC. 2. oturum: Music Theory; Seminar",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "Resmi sayfa 1. ve 2. oturumu \"genellikle sabah ve öğleden sonra\" diye tanımlıyor; ABD dışında başlama saatleri farklı, saati AP koordinatörü bildirir. Ders adları resmi İngilizce adlarıyla yazıldı.",
+  "kaynak": "https://apstudents.collegeboard.org/ap-exams-overview/exam-calendar"
+ },
+ {
+  "id": 185,
+  "baslangic": "2027-05-11",
+  "bitis": null,
+  "etkinlik": "AP sınavları. 1. oturum: Japanese Language and Culture; Precalculus. 2. oturum: Statistics",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "Resmi sayfa 1. ve 2. oturumu \"genellikle sabah ve öğleden sonra\" diye tanımlıyor; ABD dışında başlama saatleri farklı, saati AP koordinatörü bildirir. Ders adları resmi İngilizce adlarıyla yazıldı.",
+  "kaynak": "https://apstudents.collegeboard.org/ap-exams-overview/exam-calendar"
+ },
+ {
+  "id": 186,
+  "baslangic": "2027-05-11",
+  "bitis": null,
+  "etkinlik": "Wharton MBA 3. tur kararları",
+  "ulke": "ABD",
+  "kurum": "The Wharton School",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Sonuç",
+  "not": "",
+  "kaynak": "https://mba.wharton.upenn.edu/application-timeline-deadlines/"
+ },
+ {
+  "id": 187,
+  "baslangic": "2027-05-12",
+  "bitis": null,
+  "etkinlik": "AP sınavları. 1. oturum: English Language and Composition. 2. oturum: Art History; Computer Science A",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "Resmi sayfa 1. ve 2. oturumu \"genellikle sabah ve öğleden sonra\" diye tanımlıyor; ABD dışında başlama saatleri farklı, saati AP koordinatörü bildirir. Ders adları resmi İngilizce adlarıyla yazıldı.",
+  "kaynak": "https://apstudents.collegeboard.org/ap-exams-overview/exam-calendar"
+ },
+ {
+  "id": 188,
+  "baslangic": "2027-05-12",
+  "bitis": null,
+  "etkinlik": "DELE kayıt son günü (9.07.2027 sınavı için)",
+  "ulke": "Türkiye",
+  "kurum": "DELE (Instituto Cervantes)",
+  "programlar": [
+   "Campus",
+   "Next"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Instituto Cervantes'in dünya geneli DELE takvimi. Instituto Cervantes Estambul'un hangi oturumları açtığını ve kendi kayıt son tarihlerini bulamadım; merkez daha erken kapatabilir. Sözlü sınav aynı gün ya da yakın bir günde olabilir.",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 189,
+  "baslangic": "2027-05-12",
+  "bitis": null,
+  "etkinlik": "DELE Temmuz 2027 oturumu (A2, B1, B2, C1) kayıt son günü",
+  "ulke": "İspanya",
+  "kurum": "Instituto Cervantes (DELE)",
+  "programlar": [
+   "Campus",
+   "Next",
+   "Summer"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 190,
+  "baslangic": "2027-05-13",
+  "bitis": null,
+  "etkinlik": "AP sınavları. 1. oturum: Spanish Language and Culture. 2. oturum: Chinese Language and Culture; Environmental Science",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "Resmi sayfa 1. ve 2. oturumu \"genellikle sabah ve öğleden sonra\" diye tanımlıyor; ABD dışında başlama saatleri farklı, saati AP koordinatörü bildirir. Ders adları resmi İngilizce adlarıyla yazıldı.",
+  "kaynak": "https://apstudents.collegeboard.org/ap-exams-overview/exam-calendar"
+ },
+ {
+  "id": 191,
+  "baslangic": "2027-05-14",
+  "bitis": null,
+  "etkinlik": "ACT kayıt son günü (11–12.06.2027 sınavı)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Resmi tabloda son kayıt tarihleri yılsız yazılmış; yıl sınav tarihinden çıkarıldı. Türkiye'de sınav merkezi olup olmadığı ayrıca kontrol edilmedi.",
+  "kaynak": "https://www.act.org/content/dam/act/unsecured/documents/pdfs/Test-Date-Schedule-International-2026-2027.pdf"
+ },
+ {
+  "id": 192,
+  "baslangic": "2027-05-14",
+  "bitis": null,
+  "etkinlik": "AP sınavları. 1. oturum: Comparative Government and Politics; Computer Science Principles; Spanish Literature and Culture. 2. oturum: Latin; Psychology",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "Resmi sayfa 1. ve 2. oturumu \"genellikle sabah ve öğleden sonra\" diye tanımlıyor; ABD dışında başlama saatleri farklı, saati AP koordinatörü bildirir. Ders adları resmi İngilizce adlarıyla yazıldı.",
+  "kaynak": "https://apstudents.collegeboard.org/ap-exams-overview/exam-calendar"
+ },
+ {
+  "id": 193,
+  "baslangic": "2027-05-17",
+  "bitis": "2027-05-21",
+  "etkinlik": "AP geç sınav haftası",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "Derslere göre geç sınav programı henüz teyit edilmedi; sitede yalnızca hafta olarak gösterilmeli.",
+  "kaynak": "https://apcentral.collegeboard.org/about-ap/ap-coordinators/calendar-deadlines"
+ },
+ {
+  "id": 194,
+  "baslangic": "2027-05-21",
+  "bitis": null,
+  "etkinlik": "SAT kayıt son günü (5.06.2027 sınavı)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Saat: ABD Doğu saatiyle 23.59. Tarihler uluslararası öğrenciler için de geçerli.",
+  "kaynak": "https://satsuite.collegeboard.org/sat/dates-deadlines"
+ },
+ {
+  "id": 195,
+  "baslangic": "2027-05-21",
+  "bitis": null,
+  "etkinlik": "DELE para escolares A1, A2/B1, B2/C1 sınavı",
+  "ulke": "Türkiye",
+  "kurum": "DELE (Instituto Cervantes)",
+  "programlar": [
+   "Prep"
+  ],
+  "tur": "Sınav",
+  "not": "Instituto Cervantes'in dünya geneli DELE takvimi. Instituto Cervantes Estambul'un hangi oturumları açtığını ve kendi kayıt son tarihlerini bulamadım; merkez daha erken kapatabilir. Sözlü sınav aynı gün ya da yakın bir günde olabilir.",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 196,
+  "baslangic": "2027-05-21",
+  "bitis": null,
+  "etkinlik": "DELE para escolares Mayıs 2027 sınavı (A1, A2/B1, B2/C1)",
+  "ulke": "İspanya",
+  "kurum": "Instituto Cervantes (DELE)",
+  "programlar": [
+   "Prep"
+  ],
+  "tur": "Sınav",
+  "not": "Okul çağındaki öğrenciler için DELE.",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 197,
+  "baslangic": "2027-05-22",
+  "bitis": null,
+  "etkinlik": "DELE A1, A2, B1, B2, C1, C2 sınavı",
+  "ulke": "Türkiye",
+  "kurum": "DELE (Instituto Cervantes)",
+  "programlar": [
+   "Campus",
+   "Next"
+  ],
+  "tur": "Sınav",
+  "not": "Instituto Cervantes'in dünya geneli DELE takvimi. Instituto Cervantes Estambul'un hangi oturumları açtığını ve kendi kayıt son tarihlerini bulamadım; merkez daha erken kapatabilir. Sözlü sınav aynı gün ya da yakın bir günde olabilir.",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 198,
+  "baslangic": "2027-05-22",
+  "bitis": null,
+  "etkinlik": "DELE Mayıs 2027 genel sınavı (A1, A2, B1, B2, C1, C2)",
+  "ulke": "İspanya",
+  "kurum": "Instituto Cervantes (DELE)",
+  "programlar": [
+   "Campus",
+   "Next",
+   "Summer"
+  ],
+  "tur": "Sınav",
+  "not": "Tüm seviyelerin sunulduğu oturum; en geniş merkez katılımı genelde Mayıs ve Kasım'da olur (merkez listesi kontrol edilmeli).",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 199,
+  "baslangic": "2027-05-25",
+  "bitis": null,
+  "etkinlik": "SAT geç kayıt son günü (5.06.2027 sınavı)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Saat: ABD Doğu saatiyle 23.59. Geç kayıt ek ücretlidir.",
+  "kaynak": "https://satsuite.collegeboard.org/sat/dates-deadlines"
+ },
+ {
+  "id": 200,
+  "baslangic": "2027-05-27",
+  "bitis": null,
+  "etkinlik": "Stanford GSB MBA 3. tur kararları",
+  "ulke": "ABD",
+  "kurum": "Stanford Graduate School of Business",
+  "programlar": [
+   "Next"
+  ],
+  "tur": "Sonuç",
+  "not": "",
+  "kaynak": "https://www.gsb.stanford.edu/programs/mba/admission/deadlines"
+ },
+ {
+  "id": 201,
+  "baslangic": "2027-05-28",
+  "bitis": null,
+  "etkinlik": "ACT geç kayıt son günü (11–12.06.2027 sınavı)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Geç kayıt ek ücretlidir. Fotoğraf yükleme son günü de aynı gün.",
+  "kaynak": "https://www.act.org/content/dam/act/unsecured/documents/pdfs/Test-Date-Schedule-International-2026-2027.pdf"
+ },
+ {
+  "id": 202,
+  "baslangic": "2027-05-31",
+  "bitis": null,
+  "etkinlik": "Fransa, Études en France: öğrencinin kesin tercihini onaylaması için son gün",
+  "ulke": "Fransa",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Lisans 1. sınıf ve L2/L3/yüksek lisans prosedürlerinin ikisinde de aynı tarih.",
+  "kaynak": "https://www.turquie.campusfrance.org/system/files/medias/documents/2026-10/Proc%C3%A9dure%20de%20candidature%20L2%2C%20L3%2C%20BUT%20et%20Master%202027.pdf"
+ },
+ {
+  "id": 203,
+  "baslangic": "2027-06-02",
+  "bitis": null,
+  "etkinlik": "UCAS: tüm yanıtlar 12 Mayıs'a kadar geldiyse teklif yanıtı için son gün",
+  "ulke": "İngiltere",
+  "kurum": "UCAS",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Kabul yanıtı",
+  "not": "",
+  "kaynak": "https://www.ucas.com"
+ },
+ {
+  "id": 204,
+  "baslangic": "2027-06-05",
+  "bitis": null,
+  "etkinlik": "SAT sınavı",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "Tüm dünyada aynı tarih.",
+  "kaynak": "https://satsuite.collegeboard.org/sat/dates-deadlines"
+ },
+ {
+  "id": 205,
+  "baslangic": "2027-06-08",
+  "bitis": null,
+  "etkinlik": "Cambridge B2 First kâğıt sınav günü (dünya geneli takvim)",
+  "ulke": "Türkiye",
+  "kurum": "Cambridge English B2 First",
+  "programlar": [
+   "Prep",
+   "Campus",
+   "Next"
+  ],
+  "tur": "Sınav",
+  "not": "Cambridge'in dünya geneli kâğıt sınav günü. Türkiye'deki her yetkili merkez her tarihi açmaz; Speaking günü ve kayıt son günü merkeze göre değişir. Türkiye'deki yetkili merkezlerin 2027 takvimini bulamadım, öğrenci merkezle teyit etmeli. Dijital sınav yıl boyunca merkezlerde yapılır. İkinci kaynak Fransa'daki bir yetkili merkez; tarih dünya geneli takvimle aynı. Fransız merkez bu günü Mercredi (Çarşamba) yazmış, doğrusu Salı.",
+  "kaynak": "https://www.cambridgeenglish.org/Images/743891-examination-dates-2027.pdf"
+ },
+ {
+  "id": 206,
+  "baslangic": "2027-06-09",
+  "bitis": null,
+  "etkinlik": "Cambridge C1 Advanced kâğıt sınav günü (dünya geneli takvim)",
+  "ulke": "Türkiye",
+  "kurum": "Cambridge English C1 Advanced",
+  "programlar": [
+   "Prep",
+   "Campus",
+   "Next"
+  ],
+  "tur": "Sınav",
+  "not": "Cambridge'in dünya geneli kâğıt sınav günü. Türkiye'deki her yetkili merkez her tarihi açmaz; Speaking günü ve kayıt son günü merkeze göre değişir. Türkiye'deki yetkili merkezlerin 2027 takvimini bulamadım, öğrenci merkezle teyit etmeli. Dijital sınav yıl boyunca merkezlerde yapılır. İkinci kaynak Fransa'daki bir yetkili merkez; tarih dünya geneli takvimle aynı.",
+  "kaynak": "https://www.cambridgeenglish.org/Images/743891-examination-dates-2027.pdf"
+ },
+ {
+  "id": 207,
+  "baslangic": "2027-06-11",
+  "bitis": null,
+  "etkinlik": "ACT kayıt son günü (9–10.07.2027 sınavı)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Resmi tabloda son kayıt tarihleri yılsız yazılmış; yıl sınav tarihinden çıkarıldı. Türkiye'de sınav merkezi olup olmadığı ayrıca kontrol edilmedi.",
+  "kaynak": "https://www.act.org/content/dam/act/unsecured/documents/pdfs/Test-Date-Schedule-International-2026-2027.pdf"
+ },
+ {
+  "id": 208,
+  "baslangic": "2027-06-11",
+  "bitis": "2027-06-12",
+  "etkinlik": "ACT sınavı (uluslararası, bilgisayarda)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "ABD içi tarihlerle karıştırılmamalı.",
+  "kaynak": "https://www.act.org/content/dam/act/unsecured/documents/pdfs/Test-Date-Schedule-International-2026-2027.pdf"
+ },
+ {
+  "id": 209,
+  "baslangic": "2027-06-25",
+  "bitis": null,
+  "etkinlik": "ACT geç kayıt son günü (9–10.07.2027 sınavı)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Geç kayıt ek ücretlidir. Fotoğraf yükleme son günü de aynı gün.",
+  "kaynak": "https://www.act.org/content/dam/act/unsecured/documents/pdfs/Test-Date-Schedule-International-2026-2027.pdf"
+ },
+ {
+  "id": 210,
+  "baslangic": "2027-06-25",
+  "bitis": null,
+  "etkinlik": "MEB 2026-2027 ders yılının sonu",
+  "ulke": "Türkiye",
+  "kurum": "MEB",
+  "programlar": [
+   "Prep",
+   "Summer",
+   "Campus"
+  ],
+  "tur": "Bilgi",
+  "not": "Yaz okulu programlarının başlangıcı bu tarihe göre planlanmalı. Karne günü kaynaklarda ayrıca yazmıyor. 2027-2028 ders yılı başlangıcı henüz yayınlanmadı.",
+  "kaynak": "https://www.meb.gov.tr/2026-2027-egitim-ogretim-yili-takvimi-aciklandi/haber/41057/tr"
+ },
+ {
+  "id": 211,
+  "baslangic": "2027-06-30",
+  "bitis": null,
+  "etkinlik": "UCAS son başvuru (bundan sonra başvurular Clearing'e gider)",
+  "ulke": "İngiltere",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Saat: İngiltere saatiyle 18.00.",
+  "kaynak": "https://www.ucas.com/ucas/undergraduate/getting-started/when-apply"
+ },
+ {
+  "id": 212,
+  "baslangic": "2027-07-01",
+  "bitis": null,
+  "etkinlik": "CAO tercih değişikliği (Change of Mind) son günü",
+  "ulke": "İrlanda",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Saat 17.00. Kitapçık tarihlerin değişebileceğini belirtiyor. DİKKAT: AB dışından başvuranların çoğu üniversiteye doğrudan başvurur, CAO üzerinden değil. Sitede bu not yazılmalı.",
+  "kaynak": "https://www2.cao.ie/handbook/handbook2027/hb.pdf"
+ },
+ {
+  "id": 213,
+  "baslangic": "2027-07-02",
+  "bitis": null,
+  "etkinlik": "UCAS Clearing açılıyor",
+  "ulke": "İngiltere",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "",
+  "kaynak": "https://www.ucas.com/ucas/undergraduate/getting-started/when-apply"
+ },
+ {
+  "id": 214,
+  "baslangic": "2027-07-09",
+  "bitis": "2027-07-10",
+  "etkinlik": "ACT sınavı (uluslararası, bilgisayarda)",
+  "ulke": "ABD",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "ABD içi tarihlerle karıştırılmamalı.",
+  "kaynak": "https://www.act.org/content/dam/act/unsecured/documents/pdfs/Test-Date-Schedule-International-2026-2027.pdf"
+ },
+ {
+  "id": 215,
+  "baslangic": "2027-07-09",
+  "bitis": null,
+  "etkinlik": "DELE A2, B1, B2, C1 sınavı",
+  "ulke": "Türkiye",
+  "kurum": "DELE (Instituto Cervantes)",
+  "programlar": [
+   "Campus",
+   "Next"
+  ],
+  "tur": "Sınav",
+  "not": "Instituto Cervantes'in dünya geneli DELE takvimi. Instituto Cervantes Estambul'un hangi oturumları açtığını ve kendi kayıt son tarihlerini bulamadım; merkez daha erken kapatabilir. Sözlü sınav aynı gün ya da yakın bir günde olabilir.",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 216,
+  "baslangic": "2027-07-09",
+  "bitis": null,
+  "etkinlik": "DELE Temmuz 2027 sınavı (A2, B1, B2, C1)",
+  "ulke": "İspanya",
+  "kurum": "Instituto Cervantes (DELE)",
+  "programlar": [
+   "Campus",
+   "Next",
+   "Summer"
+  ],
+  "tur": "Sınav",
+  "not": "Yaz okulu döneminde İspanya'daki merkezlerde de alınabilir.",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 217,
+  "baslangic": "2027-07-13",
+  "bitis": null,
+  "etkinlik": "Finlandiya ortak başvuru: öğrenim yerini kabul son günü",
+  "ulke": "Finlandiya",
+  "kurum": "Finlandiya ortak başvuru (Studyinfo)",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Kabul yanıtı",
+  "not": "Saat 15.00 Finlandiya saati (UTC+3, yaz saati), Türkiye saatiyle de 15.00. Lisans programları için. Bir dönemde Finlandiya'da yalnızca bir yükseköğretim yeri kabul edilebilir.",
+  "kaynak": "https://www.novia.fi/en/study/admission/application-bachelor/bachelor-application-process"
+ },
+ {
+  "id": 218,
+  "baslangic": "2027-07-14",
+  "bitis": null,
+  "etkinlik": "DELE kayıt son günü (10.09.2027 sınavı için)",
+  "ulke": "Türkiye",
+  "kurum": "DELE (Instituto Cervantes)",
+  "programlar": [
+   "Campus",
+   "Next"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Instituto Cervantes'in dünya geneli DELE takvimi. Instituto Cervantes Estambul'un hangi oturumları açtığını ve kendi kayıt son tarihlerini bulamadım; merkez daha erken kapatabilir. Sözlü sınav aynı gün ya da yakın bir günde olabilir.",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 219,
+  "baslangic": "2027-07-14",
+  "bitis": null,
+  "etkinlik": "DELE Eylül 2027 oturumu (yalnızca A2) kayıt son günü",
+  "ulke": "İspanya",
+  "kurum": "Instituto Cervantes (DELE)",
+  "programlar": [
+   "Campus",
+   "Next",
+   "Summer"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 220,
+  "baslangic": "2027-08-03",
+  "bitis": null,
+  "etkinlik": "Finlandiya ortak başvuru: yedek listeden kabulün son günü",
+  "ulke": "Finlandiya",
+  "kurum": "Finlandiya ortak başvuru (Studyinfo)",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sonuç",
+  "not": "Saat 15.00 Finlandiya saati.",
+  "kaynak": "https://www.novia.fi/en/study/admission/application-bachelor/bachelor-application-process"
+ },
+ {
+  "id": 221,
+  "baslangic": "2027-08-12",
+  "bitis": null,
+  "etkinlik": "A Level sonuç günü 2027 (İngiltere, JCQ)",
+  "ulke": "İngiltere",
+  "kurum": "JCQ (Joint Council for Qualifications)",
+  "programlar": [
+   "Campus",
+   "Prep"
+  ],
+  "tur": "Sonuç",
+  "not": "Koşullu UCAS tekliflerinin kesinleştiği gün. Cognito bu tarihi 2027 için tahmin olarak veriyor; JCQ'nun Haziran 2027 resmi takvimi aynı tarihi teyit ediyor.",
+  "kaynak": "https://www.jcq.org.uk/wp-content/uploads/sites/2/2026/05/Key_Dates_June2027_FINAL.pdf"
+ },
+ {
+  "id": 222,
+  "baslangic": "2027-08-28",
+  "bitis": null,
+  "etkinlik": "SAT sınavı (öngörülen tarih)",
+  "ulke": "ABD",
+  "kurum": "College Board",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "College Board 2027-28 tarihlerini \"öngörülen\" olarak yazıyor; kayıt son günleri açıklanmadı. Sitede \"öngörülen\" ibaresiyle verilmeli.",
+  "kaynak": "https://satsuite.collegeboard.org/sat/dates-deadlines"
+ },
+ {
+  "id": 223,
+  "baslangic": "2027-09-01",
+  "bitis": null,
+  "etkinlik": "DELE kayıt son günü (15.10.2027 sınavı için)",
+  "ulke": "Türkiye",
+  "kurum": "DELE (Instituto Cervantes)",
+  "programlar": [
+   "Campus",
+   "Next"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Instituto Cervantes'in dünya geneli DELE takvimi. Instituto Cervantes Estambul'un hangi oturumları açtığını ve kendi kayıt son tarihlerini bulamadım; merkez daha erken kapatabilir. Sözlü sınav aynı gün ya da yakın bir günde olabilir.",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 224,
+  "baslangic": "2027-09-01",
+  "bitis": null,
+  "etkinlik": "DELE Ekim 2027 oturumu (A2, B1, B2) kayıt son günü",
+  "ulke": "İspanya",
+  "kurum": "Instituto Cervantes (DELE)",
+  "programlar": [
+   "Campus",
+   "Next",
+   "Summer"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 225,
+  "baslangic": "2027-09-10",
+  "bitis": null,
+  "etkinlik": "DELE A2 sınavı",
+  "ulke": "Türkiye",
+  "kurum": "DELE (Instituto Cervantes)",
+  "programlar": [
+   "Campus",
+   "Next"
+  ],
+  "tur": "Sınav",
+  "not": "Instituto Cervantes'in dünya geneli DELE takvimi. Instituto Cervantes Estambul'un hangi oturumları açtığını ve kendi kayıt son tarihlerini bulamadım; merkez daha erken kapatabilir. Sözlü sınav aynı gün ya da yakın bir günde olabilir.",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 226,
+  "baslangic": "2027-09-10",
+  "bitis": null,
+  "etkinlik": "DELE Eylül 2027 sınavı (yalnızca A2)",
+  "ulke": "İspanya",
+  "kurum": "Instituto Cervantes (DELE)",
+  "programlar": [
+   "Campus",
+   "Next",
+   "Summer"
+  ],
+  "tur": "Sınav",
+  "not": "",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 227,
+  "baslangic": "2027-09-18",
+  "bitis": null,
+  "etkinlik": "SAT sınavı (öngörülen tarih)",
+  "ulke": "ABD",
+  "kurum": "College Board",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "College Board 2027-28 tarihlerini \"öngörülen\" olarak yazıyor; kayıt son günleri açıklanmadı. Sitede \"öngörülen\" ibaresiyle verilmeli.",
+  "kaynak": "https://satsuite.collegeboard.org/sat/dates-deadlines"
+ },
+ {
+  "id": 228,
+  "baslangic": "2027-09-23",
+  "bitis": null,
+  "etkinlik": "UCAS 2027 girişi için son başvuru tarihi",
+  "ulke": "İngiltere",
+  "kurum": "",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Başvuru",
+  "not": "Saat: İngiltere saatiyle 18.00.",
+  "kaynak": "https://www.ucas.com/ucas/undergraduate/getting-started/when-apply"
+ },
+ {
+  "id": 229,
+  "baslangic": "2027-09-29",
+  "bitis": null,
+  "etkinlik": "DELE kayıt son günü (12.11.2027 ve 13.11.2027 sınavı için)",
+  "ulke": "Türkiye",
+  "kurum": "DELE (Instituto Cervantes)",
+  "programlar": [
+   "Campus",
+   "Next",
+   "Prep"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Instituto Cervantes'in dünya geneli DELE takvimi. Instituto Cervantes Estambul'un hangi oturumları açtığını ve kendi kayıt son tarihlerini bulamadım; merkez daha erken kapatabilir. Sözlü sınav aynı gün ya da yakın bir günde olabilir.",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 230,
+  "baslangic": "2027-09-29",
+  "bitis": null,
+  "etkinlik": "DELE Kasım 2027 oturumu (genel ve okul DELE'si) kayıt son günü",
+  "ulke": "İspanya",
+  "kurum": "Instituto Cervantes (DELE)",
+  "programlar": [
+   "Prep",
+   "Campus",
+   "Next",
+   "Summer"
+  ],
+  "tur": "Sınav kaydı",
+  "not": "Resmî sayfa 29 Eylül'ü okul (escolar) satırında veriyor, 13 Kasım genel oturumu için ayrı tarih yazmıyor; bağımsız kaynak Kasım oturumunun tamamı için 29 Eylül veriyor.",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 231,
+  "baslangic": "2027-10-01",
+  "bitis": null,
+  "etkinlik": "Almanya kış dönemi 2027/28 (Wintersemester 2027/28) resmî başlangıcı",
+  "ulke": "Almanya",
+  "kurum": "Alman üniversiteleri (TUM ve genel)",
+  "programlar": [
+   "Campus",
+   "Next"
+  ],
+  "tur": "Dönem başlangıcı",
+  "not": "İdari dönem başlangıcıdır; dönem 31 Mart 2028'de biter. Derslerin başlama günü üniversiteye göre değişir (ör. Heidelberg'de 11 Ekim 2027).",
+  "kaynak": "https://www.tum.de/en/studies/application/application-info-portal/dates-periods-and-deadlines/"
+ },
+ {
+  "id": 232,
+  "baslangic": "2027-10-15",
+  "bitis": null,
+  "etkinlik": "DELE A2, B1, B2 sınavı",
+  "ulke": "Türkiye",
+  "kurum": "DELE (Instituto Cervantes)",
+  "programlar": [
+   "Campus",
+   "Next"
+  ],
+  "tur": "Sınav",
+  "not": "Instituto Cervantes'in dünya geneli DELE takvimi. Instituto Cervantes Estambul'un hangi oturumları açtığını ve kendi kayıt son tarihlerini bulamadım; merkez daha erken kapatabilir. Sözlü sınav aynı gün ya da yakın bir günde olabilir.",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 233,
+  "baslangic": "2027-10-15",
+  "bitis": null,
+  "etkinlik": "DELE Ekim 2027 sınavı (A2, B1, B2)",
+  "ulke": "İspanya",
+  "kurum": "Instituto Cervantes (DELE)",
+  "programlar": [
+   "Campus",
+   "Next",
+   "Summer"
+  ],
+  "tur": "Sınav",
+  "not": "",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 234,
+  "baslangic": "2027-10-31",
+  "bitis": null,
+  "etkinlik": "İtalya: 2027/28 öğrenci vizesi başvurusu için son gün",
+  "ulke": "İtalya",
+  "kurum": "",
+  "programlar": [
+   "Campus",
+   "Next"
+  ],
+  "tur": "Vize",
+  "not": "Bakanlık genelgesi. Üniversiteler daha erken tarih koyabilir.",
+  "kaynak": "https://www.universitaly.it/it/studenti-stranieri"
+ },
+ {
+  "id": 235,
+  "baslangic": "2027-11-06",
+  "bitis": null,
+  "etkinlik": "SAT sınavı (öngörülen tarih)",
+  "ulke": "ABD",
+  "kurum": "College Board",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "College Board 2027-28 tarihlerini \"öngörülen\" olarak yazıyor; kayıt son günleri açıklanmadı. Sitede \"öngörülen\" ibaresiyle verilmeli.",
+  "kaynak": "https://satsuite.collegeboard.org/sat/dates-deadlines"
+ },
+ {
+  "id": 236,
+  "baslangic": "2027-11-12",
+  "bitis": null,
+  "etkinlik": "DELE para escolares A1, A2/B1, B2/C1 sınavı",
+  "ulke": "Türkiye",
+  "kurum": "DELE (Instituto Cervantes)",
+  "programlar": [
+   "Prep"
+  ],
+  "tur": "Sınav",
+  "not": "Instituto Cervantes'in dünya geneli DELE takvimi. Instituto Cervantes Estambul'un hangi oturumları açtığını ve kendi kayıt son tarihlerini bulamadım; merkez daha erken kapatabilir. Sözlü sınav aynı gün ya da yakın bir günde olabilir.",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 237,
+  "baslangic": "2027-11-12",
+  "bitis": null,
+  "etkinlik": "DELE para escolares Kasım 2027 sınavı (A1, A2/B1, B2/C1)",
+  "ulke": "İspanya",
+  "kurum": "Instituto Cervantes (DELE)",
+  "programlar": [
+   "Prep"
+  ],
+  "tur": "Sınav",
+  "not": "Okul çağındaki öğrenciler için DELE.",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 238,
+  "baslangic": "2027-11-13",
+  "bitis": null,
+  "etkinlik": "DELE A1, A2, B1, B2, C1, C2 sınavı",
+  "ulke": "Türkiye",
+  "kurum": "DELE (Instituto Cervantes)",
+  "programlar": [
+   "Campus",
+   "Next"
+  ],
+  "tur": "Sınav",
+  "not": "Instituto Cervantes'in dünya geneli DELE takvimi. Instituto Cervantes Estambul'un hangi oturumları açtığını ve kendi kayıt son tarihlerini bulamadım; merkez daha erken kapatabilir. Sözlü sınav aynı gün ya da yakın bir günde olabilir.",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 239,
+  "baslangic": "2027-11-13",
+  "bitis": null,
+  "etkinlik": "DELE Kasım 2027 genel sınavı (A1, A2, B1, B2, C1, C2)",
+  "ulke": "İspanya",
+  "kurum": "Instituto Cervantes (DELE)",
+  "programlar": [
+   "Campus",
+   "Next",
+   "Summer"
+  ],
+  "tur": "Sınav",
+  "not": "",
+  "kaynak": "https://examenes.cervantes.es/es/dele/cuando"
+ },
+ {
+  "id": 240,
+  "baslangic": "2027-12-04",
+  "bitis": null,
+  "etkinlik": "SAT sınavı (öngörülen tarih)",
+  "ulke": "ABD",
+  "kurum": "College Board",
+  "programlar": [
+   "Campus"
+  ],
+  "tur": "Sınav",
+  "not": "College Board 2027-28 tarihlerini \"öngörülen\" olarak yazıyor; kayıt son günleri açıklanmadı. Sitede \"öngörülen\" ibaresiyle verilmeli.",
+  "kaynak": "https://satsuite.collegeboard.org/sat/dates-deadlines"
+ }
+]
