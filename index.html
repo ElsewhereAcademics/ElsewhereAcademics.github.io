@@ -5,272 +5,48 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Elsewhere Academics · Study elsewhere.</title>
 <meta name="description" content="Elsewhere Academics, yurt dışı eğitim danışmanlığı. Lise, yaz okulu, dil okulu, lisans ve yüksek lisans.">
-<meta property="og:title" content="Elsewhere Academics">
-<meta property="og:description" content="Study elsewhere.">
+<meta property="og:title" content="Elsewhere Academics · Study elsewhere.">
+<meta property="og:description" content="Elsewhere Academics, yurt dışı eğitim danışmanlığı. Lise, yaz okulu, dil okulu, lisans ve yüksek lisans.">
 <meta name="theme-color" content="#080E36">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap&subset=latin-ext" rel="stylesheet">
-<style>
-:root{
-  --ea-navy:#080E36; --ea-white:#FFFFFF;
-  --ea-prep:#C13BFF; --ea-summer:#FFA51E; --ea-campus:#FF3B30; --ea-next:#00B4D8;
-  --ea-on-prep:#FFFFFF; --ea-on-summer:#080E36; --ea-on-campus:#FFFFFF; --ea-on-next:#080E36;
-  --ea-line-on-white:rgba(8,14,54,.12); --ea-line-on-navy:rgba(255,255,255,.14);
-  --ea-muted-on-white:rgba(8,14,54,.65); --ea-muted-on-navy:rgba(255,255,255,.75);
-  --wrap:1180px; --pad:clamp(20px,5vw,56px);
-  --fs-display:clamp(3rem,8vw,7.5rem); --fs-h1:clamp(2.25rem,5vw,4.5rem); --fs-h2:clamp(1.75rem,3.2vw,3rem);
-  --fs-h3:clamp(1.25rem,2vw,1.75rem); --fs-lead:clamp(1.125rem,1.6vw,1.5rem); --fs-body:1.0625rem;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:'Outfit',system-ui,sans-serif;background:var(--ea-white);color:var(--ea-navy);font-size:var(--fs-body);line-height:1.6;-webkit-font-smoothing:antialiased}
-img{display:block;max-width:100%}
-a{color:inherit}
-h1,.display{font-weight:900;letter-spacing:-.035em;line-height:.95}
-h2{font-weight:800;letter-spacing:-.025em;line-height:1.05}
-h3{font-weight:700;letter-spacing:-.015em;line-height:1.15}
-.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad)}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-:focus-visible{outline:3px solid var(--ea-summer);outline-offset:3px;border-radius:4px}
-section{scroll-margin-top:72px}
-
-/* Üst şerit */
-.top{position:fixed;inset:0 0 auto 0;height:68px;z-index:50;display:flex;align-items:center;justify-content:center;transition:background .35s,box-shadow .35s}
-.top .brand{display:block;width:clamp(170px,22vw,220px);opacity:0;transform:translateY(-6px);transition:opacity .35s,transform .35s;pointer-events:none}
-.top.on{background:var(--ea-white);box-shadow:0 1px 0 var(--ea-line-on-white)}
-.top.on .brand{opacity:1;transform:none;pointer-events:auto}
-.burger{position:absolute;left:var(--pad);top:50%;transform:translateY(-50%);width:44px;height:44px;border:0;background:none;cursor:pointer;color:var(--ea-white);display:flex;align-items:center;justify-content:center}
-.top.on .burger{color:var(--ea-navy)}
-.burger svg{width:28px;height:28px}
-
-/* Açılış */
-.hero{min-height:100svh;background:var(--ea-navy);color:var(--ea-white);display:flex;flex-direction:column;align-items:center;padding:96px var(--pad) 56px;position:relative}
-.hero-logo{width:min(80vw,720px)}
-.hero-progs{display:flex;gap:clamp(6px,1.5vw,10px);margin-top:26px;flex-wrap:wrap;justify-content:center}
-.hero-progs a{text-decoration:none;font-weight:800;font-size:clamp(.85rem,1.4vw,1.1rem);padding:clamp(7px,1vw,9px) clamp(12px,2.4vw,20px);border-radius:999px;transition:transform .2s}
-.hero-progs a:hover{transform:translateY(-2px)}
-.hero-mid{flex:1;display:flex;flex-direction:column;justify-content:center;width:min(100%,680px);padding:40px 0}
-.search{position:relative}
-.search input{width:100%;font:inherit;font-size:clamp(1.05rem,2vw,1.3rem);padding:20px 24px 20px 58px;border-radius:999px;border:2px solid var(--ea-line-on-navy);background:rgba(255,255,255,.06);color:var(--ea-white);outline:none}
-.search input::placeholder{color:var(--ea-muted-on-navy)}
-.search input:focus{border-color:var(--ea-white)}
-.search .ico{position:absolute;left:22px;top:50%;transform:translateY(-50%);width:22px;height:22px;opacity:.8}
-.results{position:absolute;left:0;right:0;top:calc(100% + 10px);background:var(--ea-white);color:var(--ea-navy);border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,.35);display:none;z-index:5;max-height:60vh;overflow-y:auto}
-.results.show{display:block}
-.results a{display:block;padding:14px 22px;text-decoration:none;border-top:1px solid var(--ea-line-on-white)}
-.results a:first-child{border-top:0}
-.results a:hover,.results a:focus{background:rgba(8,14,54,.05)}
-.results small{display:block;color:var(--ea-muted-on-white);font-size:.85rem}
-.results .none{padding:16px 22px;color:var(--ea-muted-on-white)}
-.slogan{font-weight:300;font-size:clamp(1.2rem,2.2vw,1.6rem);letter-spacing:-.01em;text-align:center;opacity:.9}
-.scroll-hint{margin-top:18px;display:flex;justify-content:center;opacity:.6}
-.scroll-hint svg{width:26px;height:26px;animation:bob 2s infinite}
-@keyframes bob{50%{transform:translateY(6px)}}
-
-/* Akan şerit */
-.strip{background:var(--ea-navy);color:var(--ea-white);border-top:1px solid var(--ea-line-on-navy);overflow:hidden;white-space:nowrap}
-.strip-in{display:inline-flex;gap:56px;padding:16px 0;animation:marq 60s linear infinite}
-.strip:hover .strip-in{animation-play-state:paused}
-.strip span,.strip a{font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:14px}
-.strip i{width:8px;height:8px;border-radius:50%;display:inline-block}
-@keyframes marq{to{transform:translateX(-50%)}}
-
-/* Bloklar */
-.blk{padding:clamp(72px,10vw,128px) 0}
-.navy{background:var(--ea-navy);color:var(--ea-white)}
-.bars{display:flex;gap:8px;max-width:360px}
-.bars i{flex:1;height:8px;display:block}
-.sec-head{margin-bottom:clamp(32px,5vw,56px)}
-.sec-head h2{font-size:var(--fs-h1);font-weight:900;letter-spacing:-.035em;line-height:.95}
-.sec-head p{font-size:var(--fs-lead);margin-top:18px;max-width:760px}
-.muted{color:var(--ea-muted-on-white)}
-.navy .muted{color:var(--ea-muted-on-navy)}
-
-/* Biz kimiz */
-.biz{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,64px);align-items:center}
-.biz p{font-size:var(--fs-lead)}
-.ph{border-radius:24px;overflow:hidden;background:var(--ea-navy);aspect-ratio:16/11}
-.ph img{width:100%;height:100%;object-fit:cover}
-.pbox{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:32px}
-.pbox a{text-decoration:none;font-weight:800;text-align:center;padding:16px 0;border-radius:14px;font-size:1.1rem}
-
-/* Programlar */
-.prog{position:relative;color:var(--c-on);background:var(--c)}
-.prog-photo{height:clamp(260px,46vw,560px);background:var(--c) center/cover no-repeat;position:relative}
-.prog-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 0%,transparent 40%,var(--c) 100%)}
-.prog-body{max-width:var(--wrap);margin:0 auto;padding:0 var(--pad) clamp(64px,9vw,112px)}
-.pname{font-size:clamp(2.6rem,8vw,6.5rem);letter-spacing:-.03em;line-height:1;white-space:nowrap;margin-top:-.4em;position:relative}
-.pname b{font-weight:800}.pname span{font-weight:300}
-.ptr{font-size:var(--fs-h3);font-weight:600;margin-top:10px}
-.pgrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,5vw,72px);margin-top:clamp(36px,5vw,64px)}
-.pgrid h3{font-size:var(--fs-h2);font-weight:800;letter-spacing:-.025em;line-height:1.02}
-.items>div{display:flex;gap:22px;padding:20px 0;border-top:1.5px solid var(--line)}
-.items b{font-weight:800;opacity:.55;min-width:28px}
-.items p{font-size:1.15rem;font-weight:500;line-height:1.4}
-.items .cta{flex-wrap:wrap;gap:16px 28px;align-items:center;margin-top:16px;padding-top:28px}
-.cta strong{font-size:var(--fs-h3);font-weight:800}
-.cta p{flex:1;min-width:220px;font-size:1.1rem}
-.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font:inherit;font-weight:700;padding:14px 26px;border-radius:999px;border:2px solid currentColor;background:transparent;color:inherit;cursor:pointer;transition:transform .2s}
-.btn:hover{transform:translateY(-2px)}
-.btn.solid{background:var(--ea-navy);color:var(--ea-white);border-color:var(--ea-navy)}
-
-/* İnançlar */
-.beliefs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.belief{border-radius:24px;overflow:hidden;background:var(--c);color:var(--c-on);display:flex;flex-direction:column;min-height:520px}
-.belief .bp{height:230px;background:var(--c) center/cover no-repeat;position:relative}
-.belief .bp::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,var(--c) 100%)}
-.belief .num{position:absolute;right:22px;top:6px;font-weight:900;font-size:7rem;line-height:1;letter-spacing:-.05em;color:#fff;z-index:2;text-shadow:0 6px 30px rgba(0,0,0,.18)}
-.belief .bt{padding:8px 28px 32px}
-.belief h3{font-size:clamp(1.5rem,2.3vw,2rem);font-weight:800;letter-spacing:-.025em;line-height:1.08}
-.belief p{margin-top:14px;font-size:1.1rem}
-
-/* Adımlar */
-.steps{display:grid;grid-template-columns:repeat(2,1fr);gap:0 clamp(28px,5vw,72px)}
-.step{display:flex;gap:22px;padding:28px 0;border-top:1.5px solid var(--ea-line-on-white)}
-.step .dot{width:64px;height:64px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.7rem}
-.step h3{font-size:1.5rem;font-weight:800}
-.step p{margin-top:8px}
-
-/* Takvim */
-.filters{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:28px}
-.filters select{font:inherit;font-weight:500;padding:11px 18px;border-radius:999px;border:2px solid var(--ea-line-on-white);background:var(--ea-white);color:var(--ea-navy)}
-.chip{font:inherit;font-weight:700;padding:9px 18px;border-radius:999px;border:2px solid var(--c,var(--ea-navy));background:transparent;color:var(--ea-navy);cursor:pointer}
-.chip[aria-pressed="true"]{background:var(--c,var(--ea-navy));color:var(--c-on,var(--ea-white))}
-.month{font-weight:800;font-size:1.25rem;margin:28px 0 6px;letter-spacing:-.01em}
-.ev{display:grid;grid-template-columns:86px 1fr;gap:18px;padding:18px 0;border-top:1.5px solid var(--ea-line-on-white);transition:background .6s}
-.ev .d{font-weight:900;font-size:2rem;line-height:1;letter-spacing:-.03em}
-.ev .d small{display:block;font-size:.8rem;font-weight:600;letter-spacing:.06em;margin-top:6px;color:var(--ea-muted-on-white)}
-.ev h3{font-size:1.12rem;font-weight:700;line-height:1.3}
-.ev .meta{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin-top:6px;font-size:.92rem;color:var(--ea-muted-on-white)}
-.ev .pd{display:inline-flex;gap:5px}.ev .pd i{width:12px;height:12px;border-radius:50%;display:inline-block}
-.ev.open{background:rgba(255,165,30,.14);border-radius:12px;padding-left:12px;padding-right:12px}
-.empty{padding:24px 0;color:var(--ea-muted-on-white)}
-
-/* Ülkeler */
-.flags{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
-.flags button{font:inherit;display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:14px;border:1.5px solid var(--ea-line-on-navy);background:rgba(255,255,255,.04);color:var(--ea-white);cursor:pointer;text-align:left;font-weight:600}
-.flags button:hover{border-color:var(--ea-white)}
-.flags img{width:32px;height:22px;object-fit:cover;border-radius:3px;flex:none}
-
-/* Hazırlanan bölümler */
-.ph-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-.ph-card{border-radius:24px;padding:28px;border:1.5px solid var(--ea-line-on-white)}
-.ph-card h3{font-size:1.5rem;font-weight:800}
-.ph-card p{margin-top:8px;color:var(--ea-muted-on-white)}
-
-/* Mektup */
-.letter{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:center}
-.letter h2{font-size:var(--fs-h1);font-weight:900;letter-spacing:-.035em;line-height:.98}
-.letter p{font-size:var(--fs-lead);margin-top:22px}
-
-/* Tanışalım mı */
-.meet{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:end}
-.meet h2{font-size:var(--fs-display);font-weight:900;letter-spacing:-.035em;line-height:.95}
-.meet p{font-size:var(--fs-lead);margin-top:22px}
-.card{background:var(--ea-white);color:var(--ea-navy);border-radius:26px;padding:30px 34px 18px}
-.card .tel{display:flex;align-items:center;gap:16px;padding-bottom:16px;text-decoration:none}
-.card .tel svg{width:34px;height:34px;flex:none}
-.card .tel span{font-weight:800;font-size:clamp(1.6rem,3.4vw,2.4rem);letter-spacing:-.01em;line-height:1}
-.card .row{display:flex;align-items:center;gap:14px;padding:14px 0;border-top:1.5px solid var(--ea-line-on-white);text-decoration:none;font-weight:500;font-size:1.1rem;word-break:break-word}
-.card .row svg{width:22px;height:22px;flex:none;opacity:.85}
-
-/* Alt bilgi */
-footer{background:var(--ea-navy);color:var(--ea-white);padding:64px 0 32px;border-top:1px solid var(--ea-line-on-navy)}
-.fgrid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:32px}
-.flogo{width:220px}
-.fslogan{font-weight:300;font-size:1.3rem;margin-top:14px}
-footer h4{font-size:.8125rem;font-weight:600;letter-spacing:.14em;color:var(--ea-muted-on-navy);margin-bottom:12px}
-footer ul{list-style:none}
-footer li{padding:5px 0}
-footer a{text-decoration:none}
-footer a:hover{text-decoration:underline}
-.copy{margin-top:48px;padding-top:22px;border-top:1px solid var(--ea-line-on-navy);font-size:.9rem;color:var(--ea-muted-on-navy)}
-
-/* Menü */
-.menu{position:fixed;inset:0;z-index:80;background:var(--ea-navy);color:var(--ea-white);overflow-y:auto;transform:translateY(-100%);transition:transform .45s cubic-bezier(.7,0,.2,1);visibility:hidden}
-.menu.open{transform:none;visibility:visible}
-.menu-top{height:68px;display:flex;align-items:center;justify-content:center;position:relative}
-.menu-top .brand{width:clamp(170px,22vw,220px)}
-.menu-close{position:absolute;left:var(--pad);top:50%;transform:translateY(-50%);width:44px;height:44px;border:0;background:none;color:var(--ea-white);cursor:pointer;display:flex;align-items:center;justify-content:center}
-.menu-close svg{width:28px;height:28px}
-.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:36px 28px;padding:40px var(--pad);max-width:var(--wrap);margin:0 auto}
-.menu h3{font-size:1.6rem;font-weight:800;margin-bottom:10px}
-.menu h3 a{text-decoration:none}
-.menu ul{list-style:none}
-.menu li a{display:block;padding:6px 0;text-decoration:none;color:var(--ea-muted-on-navy);font-weight:500;font-size:1.1rem}
-.menu li a:hover{color:var(--ea-white)}
-.menu .mp a{color:var(--ea-white);display:flex;align-items:center;gap:10px}
-.menu .mp i{width:10px;height:10px;border-radius:50%}
-.menu-foot{max-width:var(--wrap);margin:0 auto;padding:24px var(--pad) 48px;border-top:1px solid var(--ea-line-on-navy);display:flex;flex-wrap:wrap;gap:10px 28px;color:var(--ea-muted-on-navy);font-size:.95rem}
-
-/* Sağ alt düğme */
-.fab{position:fixed;right:20px;bottom:20px;z-index:60;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
-.fab-btn{width:60px;height:60px;border-radius:50%;background:var(--ea-navy);color:var(--ea-white);box-shadow:0 10px 30px rgba(8,14,54,.35);cursor:pointer;display:flex;align-items:center;justify-content:center;border:2px solid var(--ea-white)}
-.fab-btn svg{width:28px;height:28px}
-.fab-menu{display:none;background:var(--ea-white);border-radius:18px;box-shadow:0 14px 40px rgba(8,14,54,.25);overflow:hidden}
-.fab.open .fab-menu{display:block}
-.fab-menu a{display:flex;align-items:center;gap:12px;padding:14px 20px;text-decoration:none;font-weight:700;color:var(--ea-navy)}
-.fab-menu a svg{width:22px;height:22px}
-
-/* Mobil */
-@media (max-width:900px){
-  .biz,.pgrid,.letter,.meet{grid-template-columns:1fr}
-  .beliefs{grid-template-columns:1fr}
-  .belief{min-height:0}
-  .steps{grid-template-columns:1fr}
-  .fgrid{grid-template-columns:1fr}
-  .pbox{grid-template-columns:repeat(2,1fr)}
-  .pname{white-space:normal}
-}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .strip-in,.scroll-hint svg{animation:none}
-  .menu{transition:none}
-}
-</style>
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
-
-<!-- Sabit üst şerit -->
 <header class="top" id="top">
   <button class="burger" id="openMenu" aria-label="Menüyü aç" aria-expanded="false" aria-controls="menu">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
   </button>
-  <a href="#" class="brand" aria-label="Elsewhere Academics ana sayfa"><img src="elsewhere-logo-lacivert.svg" alt="Elsewhere Academics"></a>
+  <a href="index.html" class="brand" aria-label="Elsewhere Academics ana sayfa"><img src="elsewhere-logo-lacivert.svg" alt="Elsewhere Academics"></a>
 </header>
-
-<!-- Menü -->
 <nav class="menu" id="menu" aria-label="Ana menü" aria-hidden="true">
   <div class="menu-top">
-    <button class="menu-close" id="closeMenu" aria-label="Menüyü kapat">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg>
-    </button>
-    <a href="#" class="brand" aria-label="Ana sayfa"><img src="elsewhere-logo-beyaz.svg" alt="Elsewhere Academics"></a>
+    <button class="menu-close" id="closeMenu" aria-label="Menüyü kapat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+    <a href="index.html" class="brand" aria-label="Ana sayfa"><img src="elsewhere-logo-beyaz.svg" alt="Elsewhere Academics"></a>
   </div>
+  <div class="menu-search"><div class="search" role="search"><label for="mq" class="sr">Sitede ara</label><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="mq" data-search type="search" placeholder="Ülke, bölüm, sınav ara: Almanya, tıp, IELTS" autocomplete="off"><div class="results"></div></div></div>
   <div class="menu-grid">
     <div><h3>Elsewhere?</h3><ul>
-      <li><a href="#biz-kimiz">Biz kimiz?</a></li>
-      <li><a href="#inandiklarimiz">İnandıklarımız</a></li>
-      <li><a href="#nasil-calisiriz">Nasıl çalışırız?</a></li>
-      <li><a href="#tanisalim">Tanışalım mı?</a></li></ul></div>
+      <li><a href="index.html#biz-kimiz">Biz kimiz?</a></li>
+      <li><a href="index.html#inandiklarimiz">İnandıklarımız</a></li>
+      <li><a href="index.html#nasil-calisiriz">Nasıl çalışırız?</a></li>
+      <li><a href="index.html#tanisalim">Tanışalım mı?</a></li></ul></div>
     <div><h3>Programlar</h3><ul class="mp">
-      <li><a href="#prep"><i style="background:var(--ea-prep)"></i>ElsewherePrep</a></li>
-      <li><a href="#summer"><i style="background:var(--ea-summer)"></i>ElsewhereSummer</a></li>
-      <li><a href="#campus"><i style="background:var(--ea-campus)"></i>ElsewhereCampus</a></li>
-      <li><a href="#next"><i style="background:var(--ea-next)"></i>ElsewhereNext</a></li></ul></div>
-    <div><h3><a href="#takvim">Takvim</a></h3><h3><a href="#ulkeler">Ülkeler</a></h3><h3><a href="#kariyer">Kariyer</a></h3></div>
-    <div><h3><a href="#seviye-tespiti">İngilizce Seviye Tespiti</a></h3><h3><a href="#sss">SSS</a></h3><h3><a href="#blog">Blog</a></h3><h3><a href="#tanisalim">İletişim</a></h3></div>
+      <li><a href="index.html#prep"><i style="background:var(--ea-prep)"></i>ElsewherePrep</a></li>
+      <li><a href="index.html#summer"><i style="background:var(--ea-summer)"></i>ElsewhereSummer</a></li>
+      <li><a href="index.html#campus"><i style="background:var(--ea-campus)"></i>ElsewhereCampus</a></li>
+      <li><a href="index.html#next"><i style="background:var(--ea-next)"></i>ElsewhereNext</a></li></ul></div>
+    <div><h3><a href="kariyer.html">Kariyer</a></h3><h3><a href="ulkeler.html">Ülkeler</a></h3><h3><a href="index.html#takvim">Takvim</a></h3></div>
+    <div><h3><a href="seviye-tespiti.html">İngilizce Seviye Tespiti</a></h3><h3><a href="sss.html">SSS</a></h3><h3><a href="blog.html">Blog</a></h3><h3><a href="index.html#tanisalim">İletişim</a></h3></div>
   </div>
   <div class="menu-foot">
     <span>+90 501 566 08 08</span><span>hello@elsewhereacademics.com</span><span>@elsewhereacademics</span>
-    <span>KVKK aydınlatma metni</span><span>Çerez politikası</span><span>Açık rıza metni</span>
+    <a href="kvkk.html">KVKK aydınlatma metni</a><a href="cerez.html">Çerez politikası</a><a href="acik-riza.html">Açık rıza metni</a>
     <span>© 2026 Elsewhere Academics. Tüm hakları saklıdır.</span>
   </div>
 </nav>
-
 <main>
-<!-- 1. Açılış -->
 <section class="hero" id="giris">
   <h1 class="sr">Elsewhere Academics</h1>
   <img class="hero-logo" src="elsewhere-logo-beyaz.svg" alt="Elsewhere Academics">
@@ -281,21 +57,12 @@ footer a:hover{text-decoration:underline}
     <a href="#next" style="background:var(--ea-next);color:var(--ea-on-next)">Next</a>
   </div>
   <div class="hero-mid">
-    <div class="search" role="search">
-      <label for="q" class="sr">Sitede ara</label>
-      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-      <input id="q" type="search" placeholder="Ülke, bölüm, sınav ara: Almanya, tıp, IELTS" autocomplete="off">
-      <div class="results" id="results"></div>
-    </div>
+    <div class="search" role="search"><label for="q" class="sr">Sitede ara</label><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="q" data-search type="search" placeholder="Ülke, bölüm, sınav ara: Almanya, tıp, IELTS" autocomplete="off"><div class="results"></div></div>
   </div>
   <p class="slogan">Study elsewhere.</p>
   <a href="#akis" class="scroll-hint" aria-label="Aşağı kaydır"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></a>
 </section>
-
-<!-- 2. Akan şerit: blog yazıları gelince başlıklar akar; şimdilik yaklaşan tarihler -->
-<div class="strip" id="akis" aria-label="Son yazılar ve yaklaşan tarihler"><div class="strip-in" id="stripIn"><span>Study elsewhere.</span></div></div>
-
-<!-- Biz kimiz -->
+<div class="strip" id="akis" aria-label="Yaklaşan tarihler"><div class="strip-in" id="stripIn"><span>Study elsewhere.</span></div></div>
 <section class="blk" id="biz-kimiz">
   <div class="wrap biz">
     <div>
@@ -311,8 +78,6 @@ footer a:hover{text-decoration:underline}
     <div class="ph"><img src="foto-biz.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
   </div>
 </section>
-
-<!-- Programlar -->
 <section class="prog" id="prep" style="--c:var(--ea-prep);--c-on:var(--ea-on-prep);--line:rgba(255,255,255,.22)">
   <div class="prog-photo" style="background-image:url(foto-prep.jpg)"></div>
   <div class="prog-body">
@@ -328,9 +93,7 @@ footer a:hover{text-decoration:underline}
       </div>
     </div>
   </div>
-</section>
-
-<section class="prog" id="summer" style="--c:var(--ea-summer);--c-on:var(--ea-on-summer);--line:rgba(8,14,54,.18)">
+</section><section class="prog" id="summer" style="--c:var(--ea-summer);--c-on:var(--ea-on-summer);--line:rgba(8,14,54,.18)">
   <div class="prog-photo" style="background-image:url(foto-summer.jpg)"></div>
   <div class="prog-body">
     <div class="pname"><b>Elsewhere</b><span>Summer</span></div>
@@ -345,9 +108,7 @@ footer a:hover{text-decoration:underline}
       </div>
     </div>
   </div>
-</section>
-
-<section class="prog" id="campus" style="--c:var(--ea-campus);--c-on:var(--ea-on-campus);--line:rgba(255,255,255,.25)">
+</section><section class="prog" id="campus" style="--c:var(--ea-campus);--c-on:var(--ea-on-campus);--line:rgba(255,255,255,.25)">
   <div class="prog-photo" style="background-image:url(foto-campus.jpg)"></div>
   <div class="prog-body">
     <div class="pname"><b>Elsewhere</b><span>Campus</span></div>
@@ -362,9 +123,7 @@ footer a:hover{text-decoration:underline}
       </div>
     </div>
   </div>
-</section>
-
-<section class="prog" id="next" style="--c:var(--ea-next);--c-on:var(--ea-on-next);--line:rgba(8,14,54,.18)">
+</section><section class="prog" id="next" style="--c:var(--ea-next);--c-on:var(--ea-on-next);--line:rgba(8,14,54,.18)">
   <div class="prog-photo" style="background-image:url(foto-next.jpg)"></div>
   <div class="prog-body">
     <div class="pname"><b>Elsewhere</b><span>Next</span></div>
@@ -380,8 +139,6 @@ footer a:hover{text-decoration:underline}
     </div>
   </div>
 </section>
-
-<!-- İnandıklarımız -->
 <section class="blk navy" id="inandiklarimiz">
   <div class="wrap">
     <div class="sec-head"><h2>Neye inanıyoruz?</h2><div class="bars" style="margin-top:28px"><i style="background:var(--ea-prep)"></i><i style="background:var(--ea-summer)"></i><i style="background:var(--ea-campus)"></i><i style="background:var(--ea-next)"></i></div></div>
@@ -401,54 +158,24 @@ footer a:hover{text-decoration:underline}
     </div>
   </div>
 </section>
-
-<!-- Nasıl çalışırız -->
 <section class="blk" id="nasil-calisiriz">
   <div class="wrap">
     <div class="sec-head"><h2>Nasıl çalışırız?</h2><p>İlk görüşmeden, öğrenci vardıktan sonraki ilk haftaya kadar sekiz adım.</p></div>
-    <div class="steps" id="steps"></div>
+    <div class="steps"><div class="step"><div class="dot" style="background:var(--ea-prep);color:var(--ea-on-prep)">1</div><div><h3>İlk görüşme</h3><p>Önce dinliyoruz. Öğrencinin ilgi alanlarını, hedeflerini ve ailenin beklentilerini anlamadan okul konuşmuyoruz.</p></div></div><div class="step"><div class="dot" style="background:var(--ea-summer);color:var(--ea-on-summer)">2</div><div><h3>Yol haritası</h3><p>Hedefi belirledikten sonra ona giden yolu çiziyoruz. Ülke, bölüm ve okul seçeneklerini, her birini neden önerdiğimizle birlikte sizinle paylaşıyoruz.</p></div></div><div class="step"><div class="dot" style="background:var(--ea-campus);color:var(--ea-on-campus)">3</div><div><h3>Bütçe planı</h3><p>Aynı hedefe farklı bütçelerle giden yolları yan yana koyuyoruz. Hangi ödemenin ne zaman yapılacağını en baştan netleştiriyoruz.</p></div></div><div class="step"><div class="dot" style="background:var(--ea-next);color:var(--ea-on-next)">4</div><div><h3>Sınavlar ve belgeler</h3><p>Okulların istediği sınavların takvimini kuruyor, belgeleri adım adım hazırlıyoruz.</p></div></div><div class="step"><div class="dot" style="background:var(--ea-prep);color:var(--ea-on-prep)">5</div><div><h3>Başvuru</h3><p>Her okulun istediği dosyayı eksiksiz hazırlıyor, başvuruları kendi takvimine göre tamamlıyoruz. Her okula hangi belgenin ne zaman gönderildiğini sizinle düzenli olarak paylaşıyoruz.</p></div></div><div class="step"><div class="dot" style="background:var(--ea-summer);color:var(--ea-on-summer)">6</div><div><h3>Karar</h3><p>Kabuller geldiğinde seçenekleri yan yana getiriyor, öğrencinin hedefini göz önünde tutarak birlikte son kararı veriyoruz.</p></div></div><div class="step"><div class="dot" style="background:var(--ea-campus);color:var(--ea-on-campus)">7</div><div><h3>Oryantasyon</h3><p>Kabulle birlikte oryantasyon başlıyor. Öğrenciyi yeni şehrine, okul kültürüne ve ilk haftalarına hazırlıyoruz. Paketinize göre vize, konaklama ve yolculuk planlamaları da bu aşamada yer almaktadır.</p></div></div><div class="step"><div class="dot" style="background:var(--ea-next);color:var(--ea-on-next)">8</div><div><h3>Vardıktan sonra</h3><p>Yeni bir şehrin ilk sabahları biraz yabancıdır. İlk haftanın sonunda öğrencimizle bir toplantı yapıyoruz: dersler, ev, yeni arkadaşlar, öneriler.</p></div></div></div>
   </div>
 </section>
-
-<!-- Takvim -->
-<section class="blk" id="takvim" style="border-top:1.5px solid var(--ea-line-on-white)">
-  <div class="wrap">
-    <div class="sec-head"><h2>Takvim</h2><p class="muted">Sınav günleri, başvuru ve son başvuru tarihleri.</p></div>
-    <div class="filters">
-      <label class="sr" for="fCountry">Ülke</label>
-      <select id="fCountry"><option value="">Tüm ülkeler</option></select>
-      <button class="chip" data-p="Prep" style="--c:var(--ea-prep);--c-on:var(--ea-on-prep)" aria-pressed="false">Prep</button>
-      <button class="chip" data-p="Summer" style="--c:var(--ea-summer);--c-on:var(--ea-on-summer)" aria-pressed="false">Summer</button>
-      <button class="chip" data-p="Campus" style="--c:var(--ea-campus);--c-on:var(--ea-on-campus)" aria-pressed="false">Campus</button>
-      <button class="chip" data-p="Next" style="--c:var(--ea-next);--c-on:var(--ea-on-next)" aria-pressed="false">Next</button>
-    </div>
-    <div id="cal"><p class="empty">Takvim yükleniyor.</p></div>
-    <div style="margin-top:24px"><button class="btn" id="calMore" hidden>Daha fazla tarih göster</button></div>
-  </div>
-</section>
-
-<!-- Ülkeler -->
-<section class="blk navy" id="ulkeler">
-  <div class="wrap">
-    <div class="sec-head"><h2>Ülkeler</h2><p class="muted">Bir ülkeye dokunduğunuzda takvim o ülkenin tarihlerini gösterir.</p></div>
-    <div class="flags" id="flags"></div>
-  </div>
-</section>
-
-<!-- İçeriği hazırlanan bölümler -->
-<section class="blk" id="kariyer">
-  <div class="wrap">
-    <div class="sec-head"><h2>Hazırlanan bölümler</h2></div>
-    <div class="ph-grid">
-      <div class="ph-card"><h3>Kariyer</h3><p>Bu bölüm hazırlanıyor.</p></div>
-      <div class="ph-card" id="seviye-tespiti"><h3>İngilizce Seviye Tespiti</h3><p>Bu bölüm hazırlanıyor.</p></div>
-      <div class="ph-card" id="sss"><h3>SSS</h3><p>Bu bölüm hazırlanıyor.</p></div>
-      <div class="ph-card" id="blog"><h3>Blog</h3><p>Bu bölüm hazırlanıyor.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- Yola çıkış mektubu -->
+<section class="blk line-top" id="takvim"><div class="wrap">
+  <div class="sec-head"><h2>Takvim</h2><p class="muted">Sınav günleri, başvuru ve son başvuru tarihleri.</p></div>
+  <div class="filters"><label class="sr" for="fCountry">Ülke</label><select id="fCountry"><option value="">Tüm ülkeler</option><option>ABD</option><option>Kanada</option><option>İngiltere</option><option>İrlanda</option><option>Hollanda</option><option>Belçika</option><option>Fransa</option><option>İspanya</option><option>Almanya</option><option>Avusturya</option><option>İsviçre</option><option>İtalya</option><option>Macaristan</option><option>Polonya</option><option>Çekya</option><option>Estonya</option><option>Letonya</option><option>Litvanya</option><option>İsveç</option><option>Finlandiya</option><option>Danimarka</option><option>Japonya</option><option>Avustralya</option><option>Yeni Zelanda</option><option>Malta</option><option>Dubai</option><option>Türkiye</option></select><button class="chip" data-p="Prep" style="--c:var(--ea-prep);--c-on:var(--ea-on-prep)" aria-pressed="false">Prep</button><button class="chip" data-p="Summer" style="--c:var(--ea-summer);--c-on:var(--ea-on-summer)" aria-pressed="false">Summer</button><button class="chip" data-p="Campus" style="--c:var(--ea-campus);--c-on:var(--ea-on-campus)" aria-pressed="false">Campus</button><button class="chip" data-p="Next" style="--c:var(--ea-next);--c-on:var(--ea-on-next)" aria-pressed="false">Next</button></div>
+  <div id="cal" data-mode="full"><p class="empty">Takvim yükleniyor.</p></div>
+  <div style="margin-top:24px"><button class="btn" id="calMore" hidden>Daha fazla tarih göster</button></div>
+</div></section>
+<section class="blk navy" id="ulkeler"><div class="wrap">
+  <div class="sec-head"><h2>Ülkeler</h2><p class="muted">Bir ülkeye dokunduğunuzda o ülkenin sayfası açılır: eğitim sistemi, başvuru yolu, vize kuralları ve yaklaşan tarihler.</p></div>
+  <div class="flags"><a href="ulke-abd.html"><img src="https://flagcdn.com/w80/us.png" alt="" loading="lazy">ABD</a><a href="ulke-kanada.html"><img src="https://flagcdn.com/w80/ca.png" alt="" loading="lazy">Kanada</a><a href="ulke-ingiltere.html"><img src="https://flagcdn.com/w80/gb.png" alt="" loading="lazy">İngiltere</a><a href="ulke-irlanda.html"><img src="https://flagcdn.com/w80/ie.png" alt="" loading="lazy">İrlanda</a><a href="ulke-hollanda.html"><img src="https://flagcdn.com/w80/nl.png" alt="" loading="lazy">Hollanda</a><a href="ulke-belcika.html"><img src="https://flagcdn.com/w80/be.png" alt="" loading="lazy">Belçika</a><a href="ulke-fransa.html"><img src="https://flagcdn.com/w80/fr.png" alt="" loading="lazy">Fransa</a><a href="ulke-ispanya.html"><img src="https://flagcdn.com/w80/es.png" alt="" loading="lazy">İspanya</a><a href="ulke-almanya.html"><img src="https://flagcdn.com/w80/de.png" alt="" loading="lazy">Almanya</a><a href="ulke-avusturya.html"><img src="https://flagcdn.com/w80/at.png" alt="" loading="lazy">Avusturya</a><a href="ulke-isvicre.html"><img src="https://flagcdn.com/w80/ch.png" alt="" loading="lazy">İsviçre</a><a href="ulke-italya.html"><img src="https://flagcdn.com/w80/it.png" alt="" loading="lazy">İtalya</a><a href="ulke-macaristan.html"><img src="https://flagcdn.com/w80/hu.png" alt="" loading="lazy">Macaristan</a><a href="ulke-polonya.html"><img src="https://flagcdn.com/w80/pl.png" alt="" loading="lazy">Polonya</a><a href="ulke-cekya.html"><img src="https://flagcdn.com/w80/cz.png" alt="" loading="lazy">Çekya</a><a href="ulke-estonya.html"><img src="https://flagcdn.com/w80/ee.png" alt="" loading="lazy">Estonya</a><a href="ulke-letonya.html"><img src="https://flagcdn.com/w80/lv.png" alt="" loading="lazy">Letonya</a><a href="ulke-litvanya.html"><img src="https://flagcdn.com/w80/lt.png" alt="" loading="lazy">Litvanya</a><a href="ulke-isvec.html"><img src="https://flagcdn.com/w80/se.png" alt="" loading="lazy">İsveç</a><a href="ulke-finlandiya.html"><img src="https://flagcdn.com/w80/fi.png" alt="" loading="lazy">Finlandiya</a><a href="ulke-danimarka.html"><img src="https://flagcdn.com/w80/dk.png" alt="" loading="lazy">Danimarka</a><a href="ulke-japonya.html"><img src="https://flagcdn.com/w80/jp.png" alt="" loading="lazy">Japonya</a><a href="ulke-avustralya.html"><img src="https://flagcdn.com/w80/au.png" alt="" loading="lazy">Avustralya</a><a href="ulke-yeni-zelanda.html"><img src="https://flagcdn.com/w80/nz.png" alt="" loading="lazy">Yeni Zelanda</a><a href="ulke-malta.html"><img src="https://flagcdn.com/w80/mt.png" alt="" loading="lazy">Malta</a><a href="ulke-dubai.html"><img src="https://flagcdn.com/w80/ae.png" alt="" loading="lazy">Dubai</a></div>
+  <div style="margin-top:28px"><a class="btn white" href="ulkeler.html">Haritada gör</a></div>
+</div></section>
+<section class="blk" id="kesfet"><div class="wrap"><div class="cards"><a class="cardx" href="kariyer.html"><span style="display:block;width:44px;height:8px;border-radius:4px;margin-bottom:16px;background:var(--ea-campus)"></span><h3>Kariyer</h3><p>Bölümlerin ne okuttuğu, mezunların neler yaptığı ve alanında öne çıkan okullar.</p></a><a class="cardx" href="seviye-tespiti.html"><span style="display:block;width:44px;height:8px;border-radius:4px;margin-bottom:16px;background:var(--ea-summer)"></span><h3>İngilizce Seviye Tespiti</h3><p>Dilbilgisi, kelime, okuma, dinleme ve konuşma bölümlerinden oluşan çevrim içi sınav.</p></a><a class="cardx" href="sss.html"><span style="display:block;width:44px;height:8px;border-radius:4px;margin-bottom:16px;background:var(--ea-prep)"></span><h3>SSS</h3><p>Denklik, vize, dil sınavları ve başvuru zamanlaması hakkında sık sorulanlar.</p></a><a class="cardx" href="blog.html"><span style="display:block;width:44px;height:8px;border-radius:4px;margin-bottom:16px;background:var(--ea-next)"></span><h3>Blog</h3><p>Sınav ve başvuru takvimleri, ülke rehberleri ve güncel gelişmeler.</p></a></div></div></section>
 <section class="blk" id="mektup" style="border-top:1.5px solid var(--ea-line-on-white)">
   <div class="wrap letter">
     <div class="ph"><img src="foto-mektup.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
@@ -458,26 +185,13 @@ footer a:hover{text-decoration:underline}
     </div>
   </div>
 </section>
-
-<!-- Tanışalım mı -->
-<section class="blk navy" id="tanisalim">
-  <div class="wrap meet">
-    <div>
-      <h2>Tanışalım mı?</h2>
-      <p>Her öğrencinin başka bir yeri var. Lise, yaz okulu, dil okulu, lisans ya da yüksek lisans; o yer neresi olursa olsun, yolculuk bir görüşmeyle başlar.</p>
-      <div class="bars" style="margin-top:32px"><i style="background:var(--ea-prep)"></i><i style="background:var(--ea-summer)"></i><i style="background:var(--ea-campus)"></i><i style="background:var(--ea-next)"></i></div>
-    </div>
-    <div class="card">
+<section class="blk navy" id="tanisalim"><div class="wrap meet"><div><h2>Tanışalım mı?</h2><p>Her öğrencinin başka bir yeri var. Lise, yaz okulu, dil okulu, lisans ya da yüksek lisans; o yer neresi olursa olsun, yolculuk bir görüşmeyle başlar.</p><div style="margin-top:32px"><div class="bars"><i style="background:var(--ea-prep)"></i><i style="background:var(--ea-summer)"></i><i style="background:var(--ea-campus)"></i><i style="background:var(--ea-next)"></i></div></div></div><div class="card">
       <a class="tel" href="tel:+905015660808"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>+90 501 566 08 08</span></a>
       <a class="row" href="mailto:hello@elsewhereacademics.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 6.5l9 6.5 9-6.5"/></svg>hello@elsewhereacademics.com</a>
       <a class="row" href="https://elsewhereacademics.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.6 2.8 3.9 6 3.9 9.5s-1.3 6.7-3.9 9.5c-2.6-2.8-3.9-6-3.9-9.5S9.4 5.3 12 2.5z"/></svg>elsewhereacademics.com</a>
       <a class="row" href="https://instagram.com/elsewhereacademics" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.6" cy="6.4" r=".6" fill="currentColor"/></svg>@elsewhereacademics</a>
-    </div>
-  </div>
-</section>
+    </div></div></section>
 </main>
-
-<!-- Alt bilgi -->
 <footer>
   <div class="wrap">
     <div class="fgrid">
@@ -486,135 +200,18 @@ footer a:hover{text-decoration:underline}
         <li><a href="tel:+905015660808">+90 501 566 08 08</a></li>
         <li><a href="mailto:hello@elsewhereacademics.com">hello@elsewhereacademics.com</a></li>
         <li><a href="https://instagram.com/elsewhereacademics" target="_blank" rel="noopener">@elsewhereacademics</a></li></ul></div>
+      <div><h4>KEŞFET</h4><ul>
+        <li><a href="ulkeler.html">Ülkeler</a></li><li><a href="kariyer.html">Kariyer</a></li><li><a href="seviye-tespiti.html">İngilizce Seviye Tespiti</a></li><li><a href="sss.html">SSS</a></li><li><a href="blog.html">Blog</a></li></ul></div>
       <div><h4>YASAL</h4><ul>
-        <!-- Metinler hazırlanınca bağlantı verilecek -->
-        <li>KVKK aydınlatma metni</li><li>Çerez politikası</li><li>Açık rıza metni</li></ul></div>
+        <li><a href="kvkk.html">KVKK aydınlatma metni</a></li><li><a href="cerez.html">Çerez politikası</a></li><li><a href="acik-riza.html">Açık rıza metni</a></li></ul></div>
     </div>
     <p class="copy">© 2026 Elsewhere Academics. Tüm hakları saklıdır.</p>
   </div>
 </footer>
-
-<!-- Sağ alttaki tek düğme (şimdilik yalnızca WhatsApp) -->
 <div class="fab" id="fab">
-  <div class="fab-menu" id="fabMenu">
-    <a href="https://wa.me/905015660808" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>WhatsApp</a>
-  </div>
-  <button class="fab-btn" id="fabBtn" aria-label="İletişim seçenekleri" aria-expanded="false" aria-controls="fabMenu">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>
-  </button>
+  <div class="fab-menu" id="fabMenu"><a href="https://wa.me/905015660808" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>WhatsApp</a></div>
+  <button class="fab-btn" id="fabBtn" aria-label="İletişim seçenekleri" aria-expanded="false" aria-controls="fabMenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg></button>
 </div>
-
-<script>
-/* ===== Veriler ===== */
-const PC={Prep:'var(--ea-prep)',Summer:'var(--ea-summer)',Campus:'var(--ea-campus)',Next:'var(--ea-next)'};
-const PON={Prep:'var(--ea-on-prep)',Summer:'var(--ea-on-summer)',Campus:'var(--ea-on-campus)',Next:'var(--ea-on-next)'};
-const ORDER=['Prep','Summer','Campus','Next'];
-const STEPS=[
- ["İlk görüşme","Önce dinliyoruz. Öğrencinin ilgi alanlarını, hedeflerini ve ailenin beklentilerini anlamadan okul konuşmuyoruz."],
- ["Yol haritası","Hedefi belirledikten sonra ona giden yolu çiziyoruz. Ülke, bölüm ve okul seçeneklerini, her birini neden önerdiğimizle birlikte sizinle paylaşıyoruz."],
- ["Bütçe planı","Aynı hedefe farklı bütçelerle giden yolları yan yana koyuyoruz. Hangi ödemenin ne zaman yapılacağını en baştan netleştiriyoruz."],
- ["Sınavlar ve belgeler","Okulların istediği sınavların takvimini kuruyor, belgeleri adım adım hazırlıyoruz."],
- ["Başvuru","Her okulun istediği dosyayı eksiksiz hazırlıyor, başvuruları kendi takvimine göre tamamlıyoruz. Her okula hangi belgenin ne zaman gönderildiğini sizinle düzenli olarak paylaşıyoruz."],
- ["Karar","Kabuller geldiğinde seçenekleri yan yana getiriyor, öğrencinin hedefini göz önünde tutarak birlikte son kararı veriyoruz."],
- ["Oryantasyon","Kabulle birlikte oryantasyon başlıyor. Öğrenciyi yeni şehrine, okul kültürüne ve ilk haftalarına hazırlıyoruz. Paketinize göre vize, konaklama ve yolculuk planlamaları da bu aşamada yer almaktadır."],
- ["Vardıktan sonra","Yeni bir şehrin ilk sabahları biraz yabancıdır. İlk haftanın sonunda öğrencimizle bir toplantı yapıyoruz: dersler, ev, yeni arkadaşlar, öneriler."]];
-const COUNTRIES=[["ABD","us"],["Kanada","ca"],["İngiltere","gb"],["İrlanda","ie"],["Hollanda","nl"],["Belçika","be"],["Fransa","fr"],["İspanya","es"],["Almanya","de"],["Avusturya","at"],["İsviçre","ch"],["İtalya","it"],["Macaristan","hu"],["Polonya","pl"],["Çekya","cz"],["Estonya","ee"],["Letonya","lv"],["Litvanya","lt"],["İsveç","se"],["Finlandiya","fi"],["Danimarka","dk"],["Japonya","jp"],["Avustralya","au"],["Yeni Zelanda","nz"],["Malta","mt"],["Dubai","ae"]];
-/* Blog yazıları eklendikçe bu listeye {baslik:"...", link:"..."} olarak girilir. */
-const BLOG=[];
-const AY=['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
-const GUN=['Pazar','Pazartesi','Salı','Çarşamba','Perşembe','Cuma','Cumartesi'];
-const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const low=s=>String(s||'').toLocaleLowerCase('tr');
-const pd=s=>{const [y,m,d]=s.split('-').map(Number);return new Date(y,m-1,d)};
-const today=new Date();today.setHours(0,0,0,0);
-
-/* ===== Adımlar ===== */
-document.getElementById('steps').innerHTML=STEPS.map((s,i)=>{const p=ORDER[i%4];
- return `<div class="step"><div class="dot" style="background:${PC[p]};color:${PON[p]}">${i+1}</div><div><h3>${s[0]}</h3><p>${s[1]}</p></div></div>`}).join('');
-
-/* ===== Üst şerit: açılış geçince beyaz zemin ve lacivert logo ===== */
-const topBar=document.getElementById('top'),heroEl=document.getElementById('giris');
-const onScroll=()=>topBar.classList.toggle('on',window.scrollY>heroEl.offsetHeight-80);
-addEventListener('scroll',onScroll,{passive:true});onScroll();
-
-/* ===== Menü ===== */
-const menuEl=document.getElementById('menu'),openBtn=document.getElementById('openMenu');
-const setMenu=o=>{menuEl.classList.toggle('open',o);menuEl.setAttribute('aria-hidden',!o);openBtn.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''};
-openBtn.onclick=()=>setMenu(true);
-document.getElementById('closeMenu').onclick=()=>setMenu(false);
-menuEl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
-
-/* ===== Sağ alt düğme ===== */
-const fabEl=document.getElementById('fab'),fabBtn=document.getElementById('fabBtn');
-fabBtn.onclick=()=>{const o=!fabEl.classList.contains('open');fabEl.classList.toggle('open',o);fabBtn.setAttribute('aria-expanded',o)};
-addEventListener('keydown',e=>{if(e.key==='Escape'){setMenu(false);fabEl.classList.remove('open')}});
-
-/* ===== Takvim (veri: takvim.json) ===== */
-let EV=[],shown=30,fP=new Set(),fC='';
-const calBox=document.getElementById('cal'),moreBtn=document.getElementById('calMore'),sel=document.getElementById('fCountry');
-function renderCal(){
- const list=EV.filter(e=>(!fC||e.ulke===fC)&&(!fP.size||(e.programlar||[]).some(p=>fP.has(p))));
- if(!list.length){calBox.innerHTML='<p class="empty">Bu seçim için tarih bulunamadı.</p>';moreBtn.hidden=true;return}
- let h='',lastM='';
- list.slice(0,shown).forEach(e=>{
-  const d=pd(e.baslangic),m=AY[d.getMonth()]+' '+d.getFullYear();
-  if(m!==lastM){h+=`<div class="month">${m}</div>`;lastM=m}
-  let range='';if(e.bitis){const b=pd(e.bitis);range=` · ${b.getDate()} ${AY[b.getMonth()]}${b.getFullYear()!==d.getFullYear()?' '+b.getFullYear():''} tarihine kadar`}
-  const dots=(e.programlar||[]).map(p=>`<i title="${p}" style="background:${PC[p]||'var(--ea-navy)'}"></i>`).join('');
-  h+=`<article class="ev" id="ev-${e.id}"><div class="d">${d.getDate()}<small>${GUN[d.getDay()].toLocaleUpperCase('tr')}</small></div>
-   <div><h3>${esc(e.etkinlik)}</h3><div class="meta"><span>${esc(e.ulke)}${e.kurum?' · '+esc(e.kurum):''}${range}</span><span class="pd">${dots}</span>${e.kaynak?`<a href="${esc(e.kaynak)}" target="_blank" rel="noopener" style="font-weight:700;color:var(--ea-navy)">Kaynak</a>`:''}</div>
-   </div></article>`});
- calBox.innerHTML=h;
- moreBtn.hidden=list.length<=shown;
-}
-moreBtn.onclick=()=>{shown+=30;renderCal()};
-document.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{const p=b.dataset.p;fP.has(p)?fP.delete(p):fP.add(p);b.setAttribute('aria-pressed',fP.has(p));shown=30;renderCal()});
-COUNTRIES.forEach(([n])=>sel.insertAdjacentHTML('beforeend',`<option>${n}</option>`));
-sel.insertAdjacentHTML('beforeend','<option>Türkiye</option>');
-sel.onchange=()=>{fC=sel.value;shown=30;renderCal()};
-function pickCountry(n){sel.value=n;fC=n;shown=30;renderCal();document.getElementById('takvim').scrollIntoView()}
-function openEvent(id){
- sel.value='';fC='';fP.clear();document.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed','false'));
- const i=EV.findIndex(x=>String(x.id)===String(id));shown=Math.max(30,i+5);renderCal();
- const el=document.getElementById('ev-'+id);if(el){el.classList.add('open');el.scrollIntoView({block:'center'})}}
-
-/* ===== Akan şerit: blog yazısı varsa başlıklar, yoksa yaklaşan tarihler ===== */
-function fillStrip(){
- let items=[];
- if(BLOG.length) items=BLOG.map((b,i)=>`<a href="${esc(b.link)}"><i style="background:${PC[ORDER[i%4]]}"></i>${esc(b.baslik)}</a>`);
- else items=EV.filter(e=>pd(e.baslangic)>=today).slice(0,10).map(e=>{const d=pd(e.baslangic),p=(e.programlar||[])[0];
-   return `<a href="#ev-${e.id}" data-ev="${e.id}"><i style="background:${PC[p]||'var(--ea-white)'}"></i>${d.getDate()} ${AY[d.getMonth()]} · ${esc(e.etkinlik)}</a>`});
- if(!items.length) return;
- const one=items.join('');
- document.getElementById('stripIn').innerHTML=one+one;
-}
-document.getElementById('stripIn').addEventListener('click',e=>{const a=e.target.closest('a[data-ev]');if(!a)return;e.preventDefault();openEvent(a.dataset.ev)});
-
-fetch('takvim.json').then(r=>r.json()).then(d=>{
- EV=d.filter(e=>pd(e.bitis||e.baslangic)>=today).sort((a,b)=>a.baslangic.localeCompare(b.baslangic));
- renderCal();fillStrip();
-}).catch(()=>{calBox.innerHTML='<p class="empty">Takvim şu anda yüklenemedi.</p>';fillStrip()});
-
-/* ===== Bayraklar: tıklanınca takvim o ülkeye süzülür ===== */
-document.getElementById('flags').innerHTML=COUNTRIES.map(([n,c])=>`<button type="button" data-c="${n}"><img src="https://flagcdn.com/w80/${c}.png" alt="" loading="lazy">${n}</button>`).join('');
-document.querySelectorAll('#flags button').forEach(b=>b.onclick=()=>pickCountry(b.dataset.c));
-
-/* ===== Site içi arama ===== */
-const SECTIONS=[...document.querySelectorAll('main section[id]')].map(s=>({id:s.id,title:(s.querySelector('h2,.pname')?.textContent||'').trim(),text:low(s.textContent)}));
-const qIn=document.getElementById('q'),resBox=document.getElementById('results');
-qIn.addEventListener('input',()=>{
- const v=low(qIn.value.trim());if(v.length<2){resBox.classList.remove('show');return}
- const out=[];
- COUNTRIES.forEach(([n])=>{if(low(n).includes(v))out.push(`<a href="#takvim" data-c="${n}">${n}<small>Bu ülkenin takvimi</small></a>`)});
- SECTIONS.forEach(s=>{if(s.title&&s.text.includes(v))out.push(`<a href="#${s.id}">${esc(s.title)}<small>Sayfadaki bölüm</small></a>`)});
- EV.filter(e=>low(e.etkinlik+' '+e.ulke+' '+e.kurum).includes(v)).slice(0,8).forEach(e=>{const d=pd(e.baslangic);
-  out.push(`<a href="#ev-${e.id}" data-ev="${e.id}">${esc(e.etkinlik)}<small>${d.getDate()} ${AY[d.getMonth()]} ${d.getFullYear()} · ${esc(e.ulke)}</small></a>`)});
- resBox.innerHTML=out.length?out.slice(0,12).join(''):'<div class="none">Sonuç bulunamadı.</div>';resBox.classList.add('show');
-});
-resBox.addEventListener('click',e=>{const a=e.target.closest('a');if(!a)return;resBox.classList.remove('show');
- if(a.dataset.c){e.preventDefault();pickCountry(a.dataset.c)}
- if(a.dataset.ev){e.preventDefault();openEvent(a.dataset.ev)}});
-document.addEventListener('click',e=>{if(!e.target.closest('.search'))resBox.classList.remove('show')});
-</script>
+<script src="site.js"></script>
 </body>
 </html>
