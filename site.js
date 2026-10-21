@@ -34,13 +34,12 @@ fb&&(fb.onclick=()=>{const o=!fab.classList.contains('open');fab.classList.toggl
 addEventListener('keydown',e=>{if(e.key==='Escape'){setMenu(false);fab&&fab.classList.remove('open')}});
 document.addEventListener('click',e=>{if(fab&&!e.target.closest('#fab'))fab.classList.remove('open')});
 
-/* ----- Açılış: farklı dillerde merhaba ----- */
+/* ----- Açılış: farklı dillerde merhaba (aynı anda birkaç kelime) ----- */
 const hello=document.querySelector('.hello');
-if(hello&&!RM){const sp=[...hello.children],cols=['#C13BFF','#FFA51E','#FF3B30','#00B4D8'];let k=0,prev=[];
-  const tick=()=>{prev.forEach(s=>s.classList.remove('lit'));prev=[];
-    const pick=k===0?[sp[0]]:[sp[1+Math.floor(Math.random()*(sp.length-1))]];
-    pick.forEach(s=>{s.style.setProperty('--c',cols[k%4]);s.classList.add('lit');prev.push(s)});k++};
-  tick();setInterval(tick,2600)}
+if(hello&&!RM){const sp=[...hello.children],cols=['#C13BFF','#FFA51E','#FF3B30','#00B4D8'];let k=0,on=new Set();
+  const light=s=>{s.style.setProperty('--c',cols[k++%4]);s.classList.add('lit');on.add(s);setTimeout(()=>{s.classList.remove('lit');on.delete(s)},2600)};
+  light(sp[0]);
+  setInterval(()=>{if(document.hidden)return;const free=sp.filter(x=>!on.has(x));light(free[Math.floor(Math.random()*free.length)])},700)}
 
 /* ----- Veri ----- */
 let TAKVIM=null,ARAMA=null;
@@ -66,7 +65,7 @@ function evHTML(e,day,kind){EVMAP[e.id]=e;
   const k=kind==='start'?'Başlıyor · ':kind==='end'?'Son gün · ':'';
   const meta=[esc(e.ulke),e.kurum?esc(e.kurum):'',e.bitis?rangeTxt(e):''].filter(Boolean).join(' · ');
   return `<div class="ev" id="ev-${esc(e.id)}"><div class="tag">${tags}</div><h4>${k}${esc(e.etkinlik)}</h4><div class="meta">${meta}</div>
-  <div class="acts">${IOS?`<button type="button" data-ics="${esc(e.id)}" data-day="${day}">${ICO.cal}Takvime ekle</button>`:`<a href="${gcal(e,day)}" target="_blank" rel="noopener">${ICO.cal}Takvime ekle</a>`}${e.kaynak?`<a href="${esc(e.kaynak)}" target="_blank" rel="noopener">${ICO.link}Kaynak</a>`:''}</div></div>`}
+  <div class="acts">${IOS?`<button type="button" data-ics="${esc(e.id)}" data-day="${day}">${ICO.cal}Takvime ekle</button>`:`<a href="${gcal(e,day)}" target="_blank" rel="noopener">${ICO.cal}Takvime ekle</a>`}${e.kaynak?`<a class="src" href="${esc(e.kaynak)}" target="_blank" rel="noopener">kaynak</a>`:''}</div></div>`}
 function miniHTML(e,day,kind){const d=pd(day),p=progs(e)[0];
   return `<button type="button" class="mini" data-go="${day}"><span class="d">${d.getDate()}<small>${AY[d.getMonth()].slice(0,3).toLocaleUpperCase('tr')} · ${GK[d.getDay()]}</small></span><span><i style="--c:${p?PC[p][0]:'var(--ea-navy)'}"></i>${kind==='end'?'Son gün · ':''}${esc(e.etkinlik)}<small>${esc(e.ulke)}</small></span></button>`}
 function rowHTML(e,day,kind){const d=pd(day);
@@ -80,6 +79,10 @@ document.querySelectorAll('[data-calgrid]').forEach(root=>{
   const grid=root.querySelector('.calg-days'),title=root.querySelector('.calg-head h3'),prevB=root.querySelector('[data-prev]'),nextB=root.querySelector('[data-next]');
   const panel=root.querySelector('.daypanel'),mlist=root.querySelector('.mlist'),sel=root.querySelector('select'),chips=[...root.querySelectorAll('.chip[data-p]')];
   const home=root.dataset.calgrid==='home';
+  const vbs=[...root.querySelectorAll('[data-view]')],wrapEl=root.querySelector('.cal-wrap'),all=root.querySelector('[data-alllink]');let view='ay';
+  const setView=v=>{view=v;vbs.forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===v));if(wrapEl)wrapEl.hidden=v==='liste';draw()};
+  vbs.forEach(b=>b.onclick=()=>setView(b.dataset.view));
+  const updAll=()=>{if(!all)return;all.parentElement.hidden=!fC;if(fC){all.href='takvim.html?ulke='+encodeURIComponent(fC);all.firstChild.textContent=fC+' için tüm tarihler '}};
   let EV=[],M={},month=new Date(today.getFullYear(),today.getMonth(),1),selDay=null,fP=new Set(),fC='',minM=new Date(month),maxM=new Date(month);
   const filt=()=>EV.filter(e=>(!fC||e.ulke===fC)&&(!fP.size||progs(e).some(p=>fP.has(p))));
   function draw(dir){
@@ -104,7 +107,11 @@ document.querySelectorAll('[data-calgrid]').forEach(root=>{
     const lim=home?5:4;let h=`<h3>${AY[month.getMonth()]} ayında</h3><p class="sub">Bir güne dokunun, o günün ayrıntısı açılsın.</p>`,n=0;
     for(const k of ks){for(const x of M[k]){if(n>=lim)break;h+=miniHTML(x.e,k,x.k);n++}}
     panel.innerHTML='<div class="minis">'+h+'</div>'}
-  function drawList(){if(!mlist)return;const ks=monthItems();
+  function drawList(){if(!mlist)return;
+    if(view==='liste'){const ks=Object.keys(M).sort();if(!ks.length){mlist.innerHTML='<p class="empty">Seçiminize uygun tarih yok.</p>';return}
+      let h='',last='';for(const k of ks){const d=pd(k),m=AY[d.getMonth()]+' '+d.getFullYear();if(m!==last){h+=(last?'</div>':'')+`<div class="month">${m}</div><div class="evlist">`;last=m}h+=M[k].map(x=>rowHTML(x.e,k,x.k)).join('')}
+      mlist.innerHTML=h+'</div>';return}
+    const ks=monthItems();
     mlist.innerHTML=ks.length?`<div class="month">${AY[month.getMonth()]} ${month.getFullYear()}: tüm tarihler</div><div class="evlist">`+ks.map(k=>M[k].map(x=>rowHTML(x.e,k,x.k)).join('')).join('')+'</div>':''}
   const go=dir=>{const n=new Date(month.getFullYear(),month.getMonth()+dir,1);if(n<minM||n>maxM)return;month=n;selDay=null;draw(dir)};
   prevB.onclick=()=>go(-1);nextB.onclick=()=>go(1);
@@ -115,11 +122,12 @@ document.querySelectorAll('[data-calgrid]').forEach(root=>{
   cg.addEventListener('touchstart',e=>{sx=e.touches[0].clientX;sy=e.touches[0].clientY},{passive:true});
   cg.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.3)go(dx<0?1:-1)},{passive:true});
   chips.forEach(b=>b.onclick=()=>{const p=b.dataset.p;fP.has(p)?fP.delete(p):fP.add(p);b.setAttribute('aria-pressed',fP.has(p));selDay=null;draw()});
-  sel&&(sel.onchange=()=>{fC=sel.value;selDay=null;jumpFirst();draw()});
+  sel&&(sel.onchange=()=>{fC=sel.value;selDay=null;jumpFirst();updAll();draw()});
   function jumpFirst(){const l=filt();if(!l.length)return;const f=pd(l[0].baslangic<TODAY?TODAY:l[0].baslangic);const n=new Date(f.getFullYear(),f.getMonth(),1);if(n>month||fC)month=n}
   loadTakvim().then(d=>{EV=d;if(d.length){const last=d.reduce((a,e)=>(e.bitis||e.baslangic)>a?(e.bitis||e.baslangic):a,'');const l=pd(last);maxM=new Date(l.getFullYear(),l.getMonth(),1)}
     const q=new URLSearchParams(location.search);
-    const u=q.get('ulke');if(u&&sel&&[...sel.options].some(o=>o.value===u)){sel.value=u;fC=u;jumpFirst()}
+    const u=q.get('ulke');if(u&&sel&&[...sel.options].some(o=>o.value===u)){sel.value=u;fC=u;jumpFirst();if(vbs.length){view='liste';vbs.forEach(b=>b.setAttribute('aria-pressed',b.dataset.view==='liste'));wrapEl.hidden=true}}
+    if(q.get('gorunum')==='liste'&&vbs.length){view='liste';vbs.forEach(b=>b.setAttribute('aria-pressed',b.dataset.view==='liste'));wrapEl.hidden=true}
     const p=q.get('p');if(p&&PC[p]){fP.add(p);chips.forEach(c=>c.setAttribute('aria-pressed',c.dataset.p===p))}
     const id=q.get('ev');let target=null;
     if(id){const e=d.find(x=>String(x.id)===id);if(e){const day=e.baslangic<TODAY&&e.bitis?e.bitis:e.baslangic;const dd=pd(day);month=new Date(dd.getFullYear(),dd.getMonth(),1);selDay=day;target=e.id}}
@@ -132,27 +140,6 @@ document.querySelectorAll('[data-evlist]').forEach(box=>{
   loadTakvim().then(d=>{const u=box.dataset.ulke,p=box.dataset.prog,n=+box.dataset.limit||6;
     const list=d.filter(e=>(!u||e.ulke===u)&&(!p||progs(e).includes(p))).slice(0,n);
     box.innerHTML=list.length?list.map(e=>{const day=e.baslangic<TODAY&&e.bitis?e.bitis:e.baslangic;return rowHTML(e,day,e.bitis?(day===e.bitis?'end':'start'):'')}).join(''):'<p class="empty">Yakın tarihli, teyitli bir tarih henüz yok.</p>'})});
-
-/* ----- Tarih şeridi: kendiliğinden akar, parmakla ya da fareyle iki yöne sürüklenir ----- */
-const strip=$('dstrip');
-if(strip){loadTakvim().then(d=>{
-  const items=d.filter(e=>e.baslangic>=TODAY).slice(0,12).map(e=>{const dd=pd(e.baslangic),p=progs(e)[0],c=p?PC[p]:['var(--ea-white)','var(--ea-navy)'];
-    return `<a class="dcard" draggable="false" href="takvim.html?ev=${encodeURIComponent(e.id)}" style="--c:${c[0]};--c-on:${c[1]}"><span class="dd"><b>${dd.getDate()}</b><small>${AY[dd.getMonth()].slice(0,3).toLocaleUpperCase('tr')}</small></span><span class="dt">${esc(e.etkinlik)}<small>${esc(e.ulke)}</small></span></a>`}).join('');
-  if(!items){strip.closest('.dstrip').hidden=true;return}
-  strip.innerHTML=items+items+items;
-  let third=strip.scrollWidth/3,pos=third,paused=false,timer=null,last=0;strip.scrollLeft=pos;
-  const wrap=()=>{third=strip.scrollWidth/3;if(strip.scrollLeft<third*.5)strip.scrollLeft+=third;else if(strip.scrollLeft>third*1.5)strip.scrollLeft-=third;pos=strip.scrollLeft};
-  const pause=()=>{paused=true;clearTimeout(timer)},resume=()=>{clearTimeout(timer);timer=setTimeout(()=>{pos=strip.scrollLeft;paused=false},2500)};
-  strip.addEventListener('scroll',()=>{if(paused)wrap()},{passive:true});
-  ['touchstart','pointerdown','mouseenter','focusin'].forEach(t=>strip.addEventListener(t,pause,{passive:true}));
-  ['touchend','mouseleave','focusout'].forEach(t=>strip.addEventListener(t,resume,{passive:true}));
-  let dx=null,sl=0,moved=false;
-  strip.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')return;dx=e.clientX;sl=strip.scrollLeft;moved=false});
-  addEventListener('pointermove',e=>{if(dx===null)return;const m=e.clientX-dx;if(Math.abs(m)>5){moved=true;strip.classList.add('drag')}strip.scrollLeft=sl-m;wrap();if(Math.abs(m)>5){dx=e.clientX;sl=strip.scrollLeft}});
-  addEventListener('pointerup',()=>{if(dx===null)return;dx=null;setTimeout(()=>strip.classList.remove('drag'),0);resume()});
-  strip.addEventListener('click',e=>{if(moved){e.preventDefault();moved=false}},true);
-  if(!RM){const step=t=>{if(!last)last=t;const dt=Math.min(64,t-last);last=t;if(!paused&&!document.hidden){pos+=dt*.03;strip.scrollLeft=pos;if(strip.scrollLeft>third*1.5){pos-=third;strip.scrollLeft=pos}}requestAnimationFrame(step)};requestAnimationFrame(step)}
-})}
 
 /* ----- Yatay kaydırma okları ve noktaları ----- */
 document.querySelectorAll('[data-hs]').forEach(h=>{const id=h.dataset.hs,box=$(id);if(!box)return;
