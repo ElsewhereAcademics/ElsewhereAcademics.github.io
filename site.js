@@ -148,10 +148,62 @@ document.querySelectorAll('[data-dots]').forEach(dots=>{const box=$(dots.dataset
   const f=()=>{const w=box.firstElementChild.getBoundingClientRect().width+14,i=Math.round(box.scrollLeft/w);[...dots.children].forEach((d,j)=>d.classList.toggle('on',j===i));dots.style.display=box.scrollWidth>box.clientWidth+4?'':'none'};
   box.addEventListener('scroll',f,{passive:true});addEventListener('resize',f);f()});
 
+/* ----- Dünya haritası: bölgelere yumuşak yakınlaşma, dokununca ülke kartı ----- */
+document.querySelectorAll('[data-wm]').forEach(async wm=>{
+  const D=JSON.parse(wm.dataset.wm),RN=JSON.parse(wm.dataset.regs),holder=wm.querySelector('.wm-svg'),card=wm.querySelector('.wm-card'),hint=wm.querySelector('.wm-hint');
+  let txt;try{txt=await (await fetch('harita.svg')).text()}catch(e){holder.innerHTML='';return}
+  holder.innerHTML=txt;const svg=holder.querySelector('svg');const V=JSON.parse(svg.dataset.views);
+  let cur=V.dunya.slice(),view='dunya',anim=null,sel=null;
+  const pins=[...svg.querySelectorAll('.pin')],cs=[...svg.querySelectorAll('.c')],chips=[...wm.querySelectorAll('.wm-chips a')];
+  // dünya görünümünde bölge kümeleri
+  const cl=svg.querySelector('.clusters'),NS='http://www.w3.org/2000/svg';
+  const groups={};pins.forEach(p=>{const r=p.dataset.r;(groups[r]=groups[r]||[]).push(p)});
+  const cnodes=Object.entries(groups).map(([r,ps])=>{const x=ps.reduce((a,p)=>a+ +p.getAttribute('cx'),0)/ps.length,y=ps.reduce((a,p)=>a+ +p.getAttribute('cy'),0)/ps.length;
+    const g=document.createElementNS(NS,'g');g.setAttribute('class','cluster');g.dataset.r=r;g.setAttribute('role','button');g.setAttribute('tabindex','0');g.setAttribute('aria-label',RN[r]+', '+ps.length+' ülke');
+    const c=document.createElementNS(NS,'circle'),t=document.createElementNS(NS,'text');c.setAttribute('cx',x);c.setAttribute('cy',y);t.setAttribute('x',x);t.setAttribute('y',y);t.textContent=ps.length;g.append(c,t);cl.append(g);return g});
+  const sizes=()=>{const R=svg.getBoundingClientRect();const k=Math.max(cur[2]/(R.width||1),cur[3]/(R.height||1));pins.forEach(p=>{p.setAttribute('r',(p.dataset.k===sel?8:5.5)*k);p.style.strokeWidth=2*k});
+    cnodes.forEach(g=>{g.firstChild.setAttribute('r',17*k);g.firstChild.style.strokeWidth=2.5*k;g.lastChild.style.fontSize=(15*k)+'px'});
+    svg.classList.toggle('world',view==='dunya')};
+  const set=v=>{cur=v;svg.setAttribute('viewBox',v.map(n=>n.toFixed(2)).join(' '));sizes()};
+  const go=k=>{view=k;const from=cur.slice(),to=V[k];cancelAnimationFrame(anim);const t0=performance.now(),dur=RM?0:550;
+    wm.querySelectorAll('[data-mview]').forEach(b=>{b.classList.toggle('on',b.dataset.mview===k);b.setAttribute('aria-pressed',b.dataset.mview===k)});
+    chips.forEach(c=>c.hidden=k!=='dunya'&&c.dataset.r!==k);
+    const step=t=>{const p=dur?Math.min(1,(t-t0)/dur):1,e=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;set(from.map((f,i)=>f+(to[i]-f)*e));if(p<1)anim=requestAnimationFrame(step);else sizes()};anim=requestAnimationFrame(step)};
+  const show=k=>{sel=k;const d=D[k];if(!d)return;
+    cs.forEach(c=>c.classList.toggle('on',c.dataset.k===k));pins.forEach(p=>p.classList.toggle('on',p.dataset.k===k));sizes();
+    card.querySelector('img').src='bayrak-'+d[1]+'.svg';card.querySelector('b').textContent=d[0];
+    card.querySelector('.pd').innerHTML=d[2].map(p=>`<i style="--c:${PC[p][0]}" title="${p}"></i>`).join('');card.querySelector('a').href='ulke-'+k+'.html';card.hidden=false;if(hint)hint.hidden=true};
+  svg.addEventListener('click',e=>{const cg=e.target.closest('.cluster');if(cg){go(cg.dataset.r);return}
+    const t=e.target.closest('[data-k]');if(!t)return;const k=t.dataset.k;
+    if(view==='dunya')go(t.dataset.r);show(k)});
+  svg.addEventListener('keydown',e=>{if(e.key==='Enter'){const cg=e.target.closest('.cluster');if(cg)go(cg.dataset.r)}});
+  svg.addEventListener('mouseover',e=>{const t=e.target.closest('[data-k]');if(t&&matchMedia('(hover:hover)').matches)show(t.dataset.k)});
+  card.querySelector('.wm-x').onclick=()=>{card.hidden=true;sel=null;cs.forEach(c=>c.classList.remove('on'));pins.forEach(p=>p.classList.remove('on'));sizes()};
+  wm.querySelectorAll('[data-mview]').forEach(b=>b.onclick=()=>go(b.dataset.mview));
+  chips.forEach(c=>{c.addEventListener('mouseenter',()=>{cs.forEach(x=>x.classList.toggle('on',x.dataset.k===c.dataset.k))});c.addEventListener('mouseleave',()=>{if(sel!==c.dataset.k)cs.forEach(x=>x.classList.toggle('on',x.dataset.k===sel))})});
+  addEventListener('resize',sizes,{passive:true});
+  set(V.dunya);
+});
+
+/* ----- Program sekmeleri (maliyet, çizelge) ----- */
+document.querySelectorAll('[data-ptabs]').forEach(t=>{const sec=t.parentElement,bs=[...t.querySelectorAll('[data-ptab]')];
+  bs.forEach(b=>b.onclick=()=>{bs.forEach(x=>{x.classList.toggle('on',x===b);x.setAttribute('aria-pressed',x===b)});sec.querySelectorAll('[data-ppan]').forEach(p=>p.hidden=p.dataset.ppan!==b.dataset.ptab)})});
+
 /* ----- Bölge sekmeleri (ana sayfa) ----- */
 document.querySelectorAll('[data-tabs]').forEach(t=>{const bs=[...t.querySelectorAll('[data-tab]')],sec=t.parentElement;
   bs.forEach(b=>b.onclick=()=>{bs.forEach(x=>{x.classList.toggle('on',x===b);x.setAttribute('aria-pressed',x===b)});
     sec.querySelectorAll('[data-panel]').forEach(p=>p.hidden=p.dataset.panel!==b.dataset.tab)})});
+
+/* ----- İletişim formu (Formspree) ----- */
+document.querySelectorAll('[data-cform]').forEach(f=>{
+  const msg=f.querySelector('.fmsg');let native=false;
+  f.addEventListener('submit',async e=>{if(native)return;e.preventDefault();
+    if(f._gotcha&&f._gotcha.value)return;
+    const b=f.querySelector('button[type=submit]');b.disabled=true;msg.className='fmsg';msg.textContent='Gönderiliyor…';
+    try{const r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}});
+      if(r.ok){f.classList.add('sent');msg.classList.add('ok');msg.textContent='Mesajınız bize ulaştı. En kısa sürede size dönüyoruz.';f.reset();return}
+      throw new Error(r.status)}
+    catch(err){native=true;msg.textContent='';b.disabled=false;f.submit()}})});
 
 /* ----- Arama ----- */
 document.querySelectorAll('[data-search]').forEach(inp=>{
