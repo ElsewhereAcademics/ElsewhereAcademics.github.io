@@ -5,12 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>KVKK aydınlatma metni · Elsewhere Academics</title>
 <meta name="description" content="KVKK aydınlatma metni">
+<link rel="canonical" href="https://elsewhereacademics.com/kvkk.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://elsewhereacademics.com/kvkk.html">
 <meta property="og:title" content="KVKK aydınlatma metni · Elsewhere Academics">
 <meta property="og:description" content="KVKK aydınlatma metni">
+<meta property="og:image" content="https://elsewhereacademics.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#080E36">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap&subset=latin-ext" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/outfit-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="site.css">
 </head>
 <body class="sub">
@@ -22,187 +28,80 @@
 </header>
 <nav class="menu" id="menu" aria-label="Ana menü" aria-hidden="true">
   <div class="menu-top">
-    <button class="menu-close" id="closeMenu" aria-label="Menüyü kapat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+    <button class="menu-close" id="closeMenu" aria-label="Menüyü kapat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
     <a href="index.html" class="brand" aria-label="Ana sayfa"><img src="elsewhere-logo-beyaz.svg" alt="Elsewhere Academics"></a>
   </div>
-  <div class="menu-search"><div class="search" role="search"><label for="mq" class="sr">Sitede ara</label><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="mq" data-search type="search" placeholder="Ülke, bölüm, sınav ara: Almanya, tıp, IELTS" autocomplete="off"><div class="results"></div></div></div>
-  <div class="menu-grid">
-    <div><h3>Elsewhere?</h3><ul>
-      <li><a href="index.html#biz-kimiz">Biz kimiz?</a></li>
-      <li><a href="index.html#inandiklarimiz">İnandıklarımız</a></li>
-      <li><a href="index.html#nasil-calisiriz">Nasıl çalışırız?</a></li>
-      <li><a href="index.html#tanisalim">Tanışalım mı?</a></li></ul></div>
-    <div><h3>Programlar</h3><ul class="mp">
-      <li><a href="index.html#prep"><i style="background:var(--ea-prep)"></i>ElsewherePrep</a></li>
-      <li><a href="index.html#summer"><i style="background:var(--ea-summer)"></i>ElsewhereSummer</a></li>
-      <li><a href="index.html#campus"><i style="background:var(--ea-campus)"></i>ElsewhereCampus</a></li>
-      <li><a href="index.html#next"><i style="background:var(--ea-next)"></i>ElsewhereNext</a></li></ul></div>
-    <div><h3><a href="kariyer.html">Kariyer</a></h3><h3><a href="ulkeler.html">Ülkeler</a></h3><h3><a href="index.html#takvim">Takvim</a></h3></div>
-    <div><h3><a href="seviye-tespiti.html">İngilizce Seviye Tespiti</a></h3><h3><a href="sss.html">SSS</a></h3><h3><a href="blog.html">Blog</a></h3><h3><a href="index.html#tanisalim">İletişim</a></h3></div>
+  <div class="menu-in">
+    <div class="search" role="search"><label for="mq" class="sr">Sitede ara</label><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="mq" data-search type="search" placeholder="Bir ülke, bölüm ya da sınav yazın" autocomplete="off"><div class="results"></div></div>
+    <div class="mnav">
+      <div><a class="big" href="elsewhere.html">Elsewhere?</a><div class="msub"><a href="elsewhere.html#biz-kimiz">Biz kimiz?</a><a href="elsewhere.html#nasil-calisiriz">Nasıl çalışırız?</a><a href="elsewhere.html#inandiklarimiz">İnandıklarımız</a></div></div>
+      <div><span class="big">Programlar</span><div class="mprog"><a href="prep.html" style="background:var(--ea-prep);color:var(--ea-on-prep)">ElsewherePrep</a><a href="summer.html" style="background:var(--ea-summer);color:var(--ea-on-summer)">ElsewhereSummer</a><a href="campus.html" style="background:var(--ea-campus);color:var(--ea-on-campus)">ElsewhereCampus</a><a href="next.html" style="background:var(--ea-next);color:var(--ea-on-next)">ElsewhereNext</a></div></div>
+      <div><a class="big" href="ulkeler.html">Ülkeler</a><div class="msub"><a href="ulkeler.html#kuzey-amerika">Kuzey Amerika</a><a href="ulkeler.html#avrupa">Avrupa ve Dubai</a><a href="ulkeler.html#asya-pasifik">Japonya, Avustralya ve Yeni Zelanda</a></div></div>
+      <div><a class="big" href="takvim.html">Takvim</a><div class="msub"><a href="takvim.html">Sınav ve başvuru tarihleri</a></div></div>
+      <div><a class="big" href="kariyer.html">Kariyer</a><div class="msub"><a href="kariyer.html">50 bölüm</a></div></div>
+      <div><a class="big" href="seviye-tespiti.html">İngilizce Seviye Tespiti</a></div>
+      <div><a class="big" href="sss.html">SSS</a></div>
+      <div><a class="big" href="blog.html">Blog</a></div>
+      <div><a class="big" href="index.html#tanisalim">İletişim</a><div class="msub"><a href="tel:+905015660808">+90 501 566 08 08</a><a href="mailto:hello@elsewhereacademics.com">hello@elsewhereacademics.com</a></div></div>
+    </div>
   </div>
   <div class="menu-foot">
-    <span>+90 501 566 08 08</span><span>hello@elsewhereacademics.com</span><span>@elsewhereacademics</span>
+    <a href="https://instagram.com/elsewhereacademics" target="_blank" rel="noopener">@elsewhereacademics</a>
     <a href="kvkk.html">KVKK aydınlatma metni</a><a href="cerez.html">Çerez politikası</a><a href="acik-riza.html">Açık rıza metni</a>
-    <span>© 2026 Elsewhere Academics. Tüm hakları saklıdır.</span>
+    <span>© 2026 Elsewhere Academics</span>
   </div>
 </nav>
-<main><section class="phero"><div class="wrap"><div class="crumb"><a href="index.html">Ana sayfa</a></div><h1>KVKK aydınlatma metni</h1><div class="bars"><i style="background:var(--ea-prep)"></i><i style="background:var(--ea-summer)"></i><i style="background:var(--ea-campus)"></i><i style="background:var(--ea-next)"></i></div></div></section>
-<section class="blk"><div class="wrap prose"><div class="draft">TASLAK: Bu metin avukat onayından sonra yayımlanacaktır.</div><blockquote class="draftq">
-<p><strong>TASLAK, avukat onayı gereklidir.</strong> Bu metin yayımlanmadan önce bir avukat tarafından incelenmeli ve onaylanmalıdır.</p>
-</blockquote>
-<h1>Kişisel Verilerin İşlenmesine İlişkin Aydınlatma Metni</h1>
-<p>Son güncelleme: [tarih]</p>
-<h2>1. Veri sorumlusu</h2>
-<p>6698 sayılı Kişisel Verilerin Korunması Kanunu ("Kanun") kapsamında kişisel verileriniz, veri sorumlusu sıfatıyla [Veri sorumlusu adı/unvanı] ("Elsewhere Academics") tarafından işlenmektedir.</p>
+<main><section class="phero"><div class="wrap"><div class="crumb"><a href="index.html">Ana sayfa</a> / KVKK aydınlatma metni</div><h1>KVKK aydınlatma metni</h1><div class="bars"><i style="background:var(--ea-prep)"></i><i style="background:var(--ea-summer)"></i><i style="background:var(--ea-campus)"></i><i style="background:var(--ea-next)"></i></div></div></section>
+<section class="blk"><div class="wrap prose"><p>Son güncelleme: 21 Ekim 2026</p>
+<p>Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu'nun 10. maddesi uyarınca sizi bilgilendirmek için hazırlanmıştır.</p>
+<h2>Veri sorumlusu</h2>
+<p>Elsewhere Academics
+E-posta: hello@elsewhereacademics.com
+Telefon: +90 501 566 08 08</p>
+<h2>Hangi verileri, nasıl topluyoruz?</h2>
 <ul>
-<li>Adres: [adres]</li>
-<li>E-posta: hello@elsewhereacademics.com</li>
+<li>Bize telefon, WhatsApp veya e-posta ile ulaştığınızda paylaştığınız ad, iletişim bilgileri ve mesaj içeriği.</li>
+<li>Siteyi ziyaret ettiğinizde, siteyi barındıran GitHub'ın güvenlik amacıyla kaydettiği IP adresi.</li>
 </ul>
-<p>Bu metin, Kanun'un 10. maddesi ve Aydınlatma Yükümlülüğünün Yerine Getirilmesinde Uyulacak Usul ve Esaslar Hakkında Tebliğ kapsamında sizi bilgilendirmek amacıyla hazırlanmıştır.</p>
-<h2>2. Hangi kişisel verileri, hangi yöntemle topluyoruz?</h2>
-<table>
-<thead>
-<tr>
-<th>Kanal</th>
-<th>Kişisel veriler</th>
-<th>Toplama yöntemi</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>İnternet sitesindeki iletişim formu</td>
-<td>Ad soyad, telefon numarası, e-posta adresi, mesaj içeriği</td>
-<td>Formu doldurmanızla, elektronik ortamda</td>
-</tr>
-<tr>
-<td>WhatsApp yazışmaları</td>
-<td>Ad, telefon numarası, mesaj içeriği</td>
-<td>Bize WhatsApp üzerinden yazmanızla, elektronik ortamda</td>
-</tr>
-<tr>
-<td>E-posta yazışmaları</td>
-<td>Ad soyad, e-posta adresi, mesaj içeriği</td>
-<td>Bize e-posta göndermenizle, elektronik ortamda</td>
-</tr>
-<tr>
-<td>İngilizce seviye tespiti (Jotform formu)</td>
-<td>Ad soyad, e-posta adresi, telefon numarası, sorulara verdiğiniz cevaplar, ses kaydı</td>
-<td>Formu doldurmanızla, elektronik ortamda</td>
-</tr>
-<tr>
-<td>Sunucu kayıtları</td>
-<td>IP adresi, erişim tarihi ve saati, ziyaret edilen sayfa, tarayıcı ve cihaz bilgisi [barındırma sağlayıcısının tuttuğu alanlar teyit edilmeli]</td>
-<td>Siteyi ziyaret etmenizle, otomatik yollarla</td>
-</tr>
-</tbody>
-</table>
-<p>Ses kaydınız yalnızca İngilizce konuşma becerinizin değerlendirilmesi için kullanılır; sizi tanımak veya kimliğinizi doğrulamak amacıyla kullanılmaz.</p>
-<h2>3. Kişisel verilerinizi hangi amaçlarla işliyoruz?</h2>
+<p>Bu veriler elektronik ortamda toplanır.</p>
+<h2>Hangi amaçlarla işliyoruz?</h2>
 <ul>
-<li>Sorularınıza ve taleplerinize cevap vermek, sizinle iletişime geçmek</li>
-<li>Talep ettiğiniz İngilizce seviye tespitini yapmak, sonucu size iletmek ve seviyenize uygun program seçeneklerini paylaşmak</li>
-<li>Danışmanlık hizmetine ilişkin ön görüşmeyi planlamak</li>
-<li>İnternet sitesinin güvenliğini sağlamak, teknik sorunları tespit etmek ve gidermek</li>
-<li>Hukuki yükümlülüklerimizi yerine getirmek ve olası uyuşmazlıklarda haklarımızı korumak</li>
+<li>Sorularınızı yanıtlamak ve sizinle iletişim kurmak</li>
+<li>İstediğiniz danışmanlık görüşmesini planlamak</li>
+<li>Sitenin güvenliğini sağlamak</li>
+<li>Hukuki yükümlülüklerimizi yerine getirmek</li>
 </ul>
-<h2>4. Hukuki sebepler</h2>
-<p>Kişisel verileriniz, Kanun'un 5. maddesinde sayılan şu hukuki sebeplere dayanılarak işlenir:</p>
-<ul>
-<li><strong>İletişim formu, WhatsApp ve e-posta yazışmaları; seviye tespiti formundaki ad, iletişim bilgileri ve cevaplar:</strong> Talep ettiğiniz hizmetin ve buna ilişkin bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması kaydıyla, sözleşmenin taraflarına ait kişisel verilerin işlenmesinin gerekli olması.</li>
-<li><strong>Sunucu kayıtları:</strong> Temel hak ve özgürlüklerinize zarar vermemek kaydıyla, site güvenliğinin sağlanmasına yönelik meşru menfaatimiz için veri işlenmesinin zorunlu olması ve [varsa] hukuki yükümlülüğümüzü yerine getirebilmemiz için zorunlu olması.</li>
-<li><strong>Uyuşmazlık halinde saklanan kayıtlar:</strong> Bir hakkın tesisi, kullanılması veya korunması için veri işlemenin zorunlu olması.</li>
-<li><strong>Ses kaydı:</strong> Açık rızanız. Açık rıza ayrı bir metinle ve ayrı bir onay kutusuyla istenir; vermemeniz halinde seviye tespitine [alternatif yöntem, ör. çevrim içi görüşme] ile devam edebilirsiniz.</li>
-</ul>
-<h2>5. Kişisel verilerinizi kimlere aktarıyoruz?</h2>
-<p>Kişisel verileriniz, yukarıdaki amaçlarla sınırlı olarak ve hizmet aldığımız şu sağlayıcılara aktarılabilir:</p>
-<table>
-<thead>
-<tr>
-<th>Alıcı</th>
-<th>Aktarım amacı</th>
-<th>Verinin bulunduğu yer</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Jotform Inc.</td>
-<td>Seviye tespiti formunun barındırılması ve cevapların saklanması</td>
-<td>[Avrupa Birliği, Frankfurt (Almanya) veri merkezi: Jotform sözleşmesinden teyit edilmeli]</td>
-</tr>
-<tr>
-<td>WhatsApp (Meta Platforms)</td>
-<td>WhatsApp üzerinden yazışma</td>
-<td>[Meta sunucuları: konum teyit edilmeli]</td>
-</tr>
-<tr>
-<td>Google (Google Workspace)</td>
-<td>E-posta yazışmalarının yürütülmesi ve saklanması</td>
-<td>[Google sunucuları: konum teyit edilmeli]</td>
-</tr>
-<tr>
-<td>[Barındırma sağlayıcısı adı]</td>
-<td>İnternet sitesinin barındırılması ve sunucu kayıtları</td>
-<td>[konum]</td>
-</tr>
-<tr>
-<td>Yetkili kamu kurum ve kuruluşları</td>
-<td>Kanuni bir talep olması halinde, hukuki yükümlülüğümüzün yerine getirilmesi</td>
-<td>Türkiye</td>
-</tr>
-</tbody>
-</table>
-<p>Bu sağlayıcıların sunucuları yurt dışında bulunduğundan, söz konusu aktarımlar Kanun'un 9. maddesi kapsamında yurt dışına aktarım niteliğindedir. Yurt dışına aktarım, Kanun'un 5. maddesindeki şartlardan birinin varlığı halinde ve Kanun'un 9. maddesinde öngörülen uygun güvencelerden biri sağlanarak yapılır. Bu kapsamda alıcılarla Kişisel Verileri Koruma Kurulu tarafından ilan edilen standart sözleşmeler imzalanır ve imzadan itibaren beş iş günü içinde Kişisel Verileri Koruma Kurumu'na bildirilir. [Standart sözleşmelerin imzalanıp bildirildiği teyit edilmeli.]</p>
-<h2>6. Saklama süresi</h2>
-<p>Kişisel verileriniz, işlenme amacı için gerekli olan süre boyunca ve ilgili mevzuatta öngörülen süreler kadar saklanır; bu sürelerin sonunda silinir, yok edilir veya anonim hale getirilir.</p>
-<ul>
-<li>İletişim ve yazışma kayıtları: [süre]</li>
-<li>Seviye tespiti cevapları: [süre]</li>
-<li>Ses kaydı: [süre]</li>
-<li>Sunucu kayıtları: [süre]</li>
-</ul>
-<h2>7. Haklarınız</h2>
-<p>Kanun'un 11. maddesi kapsamında veri sorumlusuna başvurarak şu haklarınızı kullanabilirsiniz:</p>
-<ul>
-<li>Kişisel verilerinizin işlenip işlenmediğini öğrenme, işlenmişse buna ilişkin bilgi talep etme</li>
-<li>İşlenme amacını ve verilerin amacına uygun kullanılıp kullanılmadığını öğrenme</li>
-<li>Yurt içinde veya yurt dışında verilerinizin aktarıldığı üçüncü kişileri bilme</li>
-<li>Eksik veya yanlış işlenmişse düzeltilmesini isteme</li>
-<li>Kanun'da öngörülen şartlar çerçevesinde silinmesini veya yok edilmesini isteme</li>
-<li>Düzeltme, silme veya yok etme işlemlerinin verilerin aktarıldığı üçüncü kişilere bildirilmesini isteme</li>
-<li>Münhasıran otomatik sistemlerle analiz edilmesi sonucunda aleyhinize bir sonuç çıkmasına itiraz etme</li>
-<li>Kanuna aykırı işleme nedeniyle zarara uğramanız halinde zararın giderilmesini talep etme</li>
-</ul>
-<h2>8. Başvuru yöntemi</h2>
-<p>Başvurunuzu, Veri Sorumlusuna Başvuru Usul ve Esasları Hakkında Tebliğ uyarınca şu yollardan biriyle iletebilirsiniz:</p>
-<ul>
-<li>Yazılı olarak ve ıslak imzalı şekilde [adres] adresine</li>
-<li>Kayıtlı elektronik posta (KEP), güvenli elektronik imza veya mobil imza ile</li>
-<li>Daha önce bize bildirdiğiniz ve sistemimizde kayıtlı bulunan e-posta adresinizden hello@elsewhereacademics.com adresine</li>
-</ul>
-<p>Başvurunuzda şu bilgilerin bulunması zorunludur: ad soyad (yazılı başvuruda imza), T.C. kimlik numarası (yabancılar için uyruk ile pasaport numarası veya kimlik numarası), tebligata esas yerleşim yeri veya iş yeri adresi, varsa bildirime esas e-posta adresi, telefon veya faks numarası ve talep konusu.</p>
-<p>Başvurunuzu, talebin niteliğine göre en kısa sürede ve en geç otuz gün içinde sonuçlandırırız. Kural olarak bu işlem için ücret alınmaz; işlemin ayrıca bir maliyet gerektirmesi halinde Tebliğ'de belirlenen tarife üzerinden ücret talep edilebilir.</p>
-<p>[Avukat teyidi: başvurunun reddedilmesi, cevabın yetersiz bulunması veya süresinde cevap verilmemesi hallerinde Kişisel Verileri Koruma Kurulu'na şikâyet hakkına ilişkin cümle ve madde numarası eklenmeli.]</p>
-<hr />
-<p><strong>Beyan:</strong> Aydınlatma metnini okudum ve anladım. ☐</p></div></section></main>
+<h2>Hukuki sebepler</h2>
+<p>Verileriniz Kanun'un 5. maddesinin 2. fıkrasındaki şu sebeplere dayanılarak işlenir: bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması, hukuki yükümlülüğümüzü yerine getirebilmemiz için zorunlu olması ve temel hak ve özgürlüklerinize zarar vermemek kaydıyla meşru menfaatimiz için zorunlu olması.</p>
+<h2>Kimlere aktarıyoruz?</h2>
+<p>Verileriniz yalnızca yukarıdaki amaçlarla sınırlı olarak hizmet aldığımız iletişim ve barındırma sağlayıcılarına (WhatsApp, e-posta hizmet sağlayıcımız ve GitHub) ve kanunen yetkili kamu kurumlarına aktarılabilir. Bu sağlayıcıların sunucuları yurt dışında bulunabilir.</p>
+<h2>Haklarınız</h2>
+<p>Kanun'un 11. maddesi uyarınca; verilerinizin işlenip işlenmediğini öğrenme, işlenmişse bilgi isteme, işlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme, aktarıldığı üçüncü kişileri bilme, eksik veya yanlış işlenmişse düzeltilmesini, Kanun'daki şartlar çerçevesinde silinmesini veya yok edilmesini ve bu işlemlerin aktarılan kişilere bildirilmesini isteme, münhasıran otomatik sistemlerle analiz edilmesi sonucu aleyhinize bir sonuca itiraz etme ve kanuna aykırı işleme nedeniyle zarara uğramanız hâlinde zararın giderilmesini talep etme haklarına sahipsiniz.</p>
+<p>Başvurularınızı hello@elsewhereacademics.com adresine iletebilirsiniz.</p></div></section></main>
 <footer>
   <div class="wrap">
     <div class="fgrid">
       <div><img class="flogo" src="elsewhere-logo-beyaz.svg" alt="Elsewhere Academics"><p class="fslogan">Study elsewhere.</p></div>
+      <div><h4>PROGRAMLAR</h4><ul><li><a href="prep.html">ElsewherePrep</a></li><li><a href="summer.html">ElsewhereSummer</a></li><li><a href="campus.html">ElsewhereCampus</a></li><li><a href="next.html">ElsewhereNext</a></li></ul></div>
+      <div><h4>KEŞFET</h4><ul>
+        <li><a href="elsewhere.html">Elsewhere?</a></li><li><a href="ulkeler.html">Ülkeler</a></li><li><a href="takvim.html">Takvim</a></li><li><a href="kariyer.html">Kariyer</a></li><li><a href="seviye-tespiti.html">İngilizce Seviye Tespiti</a></li><li><a href="sss.html">SSS</a></li><li><a href="blog.html">Blog</a></li></ul></div>
       <div><h4>İLETİŞİM</h4><ul>
         <li><a href="tel:+905015660808">+90 501 566 08 08</a></li>
         <li><a href="mailto:hello@elsewhereacademics.com">hello@elsewhereacademics.com</a></li>
-        <li><a href="https://instagram.com/elsewhereacademics" target="_blank" rel="noopener">@elsewhereacademics</a></li></ul></div>
-      <div><h4>KEŞFET</h4><ul>
-        <li><a href="ulkeler.html">Ülkeler</a></li><li><a href="kariyer.html">Kariyer</a></li><li><a href="seviye-tespiti.html">İngilizce Seviye Tespiti</a></li><li><a href="sss.html">SSS</a></li><li><a href="blog.html">Blog</a></li></ul></div>
-      <div><h4>YASAL</h4><ul>
+        <li><a href="https://instagram.com/elsewhereacademics" target="_blank" rel="noopener">@elsewhereacademics</a></li></ul>
+        <h4 style="margin-top:24px">YASAL</h4><ul>
         <li><a href="kvkk.html">KVKK aydınlatma metni</a></li><li><a href="cerez.html">Çerez politikası</a></li><li><a href="acik-riza.html">Açık rıza metni</a></li></ul></div>
     </div>
     <p class="copy">© 2026 Elsewhere Academics. Tüm hakları saklıdır.</p>
   </div>
 </footer>
 <div class="fab" id="fab">
-  <div class="fab-menu" id="fabMenu"><a href="https://wa.me/905015660808" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>WhatsApp</a></div>
-  <button class="fab-btn" id="fabBtn" aria-label="İletişim seçenekleri" aria-expanded="false" aria-controls="fabMenu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg></button>
+  <div class="fab-menu" id="fabMenu">
+    <a href="https://wa.me/905015660808" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>WhatsApp</a>
+    <a href="mailto:hello@elsewhereacademics.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 6.5l9 6.5 9-6.5"/></svg>E-posta</a>
+    <a href="tel:+905015660808"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Telefon</a>
+  </div>
+  <button class="fab-btn" id="fabBtn" aria-label="İletişim seçenekleri" aria-expanded="false" aria-controls="fabMenu"><span class="o"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/></svg></span><span class="x"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span></button>
 </div>
 <script src="site.js"></script>
 </body>
