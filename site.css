@@ -697,3 +697,26 @@ h2.big{font-size:var(--fs-h1);font-weight:900;letter-spacing:-.035em;line-height
 .lead7{font-size:1.25rem;line-height:1.55;font-weight:500;margin:0 0 10px}
 .relbtn{display:flex;gap:10px;flex-wrap:wrap}
 #ilgili .bchips a{background:var(--ea-white)}
+/* aşama 8: okul şeridi, yerleştirmeler, yorumlar */
+.schools{background:var(--ea-white)}
+.schools-in{gap:0;animation-duration:120s}
+.schools-in span{padding-right:44px}
+.schools-in .dupwrap{display:inline-flex;padding:0}
+.schools-in span span{font-weight:700;font-size:1.05rem;color:var(--ea-muted-on-white)}
+.schools:hover .schools-in{animation-play-state:paused}
+@media (prefers-reduced-motion:reduce){.schools-in{animation:none}}
+.ycards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.ycard{display:flex;flex-direction:column;gap:4px;background:var(--ea-white);border-radius:20px;padding:20px}
+.ycard img{width:40px;height:30px;border-radius:5px;object-fit:cover;margin-bottom:8px}
+.ycard b{font-size:1.1rem;line-height:1.25}
+.ycard small{color:var(--ea-muted-on-white)}
+.qcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.qcard{margin:0;background:var(--ea-navy);color:var(--ea-white);border-radius:24px;padding:28px}
+.qcard blockquote{margin:0 0 16px;font-size:1.1rem;line-height:1.55}
+.qcard figcaption{font-weight:700;opacity:.8}
+.schools-in .lg{display:inline-flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:8px;padding:0 26px;min-width:120px}
+.schools-in .lg img{height:48px;width:auto;max-width:170px;object-fit:contain;filter:grayscale(1);opacity:.7;transition:filter .3s,opacity .3s}
+.schools-in .lg:hover img{filter:none;opacity:1}
+.schools-in .lg small{font-size:.72rem;font-weight:600;color:var(--ea-muted-on-white);white-space:nowrap}
+.schools-in .dupwrap .lg{padding:0 26px}
+@media (max-width:700px){.schools-in .lg img{height:38px}.schools-in .lg{padding:0 18px;min-width:96px}}
