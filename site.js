@@ -1,11 +1,12 @@
 /* Elsewhere Academics · ortak betik (tüm sayfalar) */
 (function(){
 const PC={Prep:['var(--ea-prep)','var(--ea-on-prep)'],Summer:['var(--ea-summer)','var(--ea-on-summer)'],Campus:['var(--ea-campus)','var(--ea-on-campus)'],Next:['var(--ea-next)','var(--ea-on-next)']};
-const AY=['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
-const GUN=['Pazar','Pazartesi','Salı','Çarşamba','Perşembe','Cuma','Cumartesi'];
-const GK=['PZ','PT','SA','ÇA','PE','CU','CT'];
+const EN=document.documentElement.lang==='en';const L=(t,e)=>EN?e:t;const PG=u=>EN&&/^[a-z0-9-]+\.html/.test(u)?'en-'+u:u;const LC=EN?'en':'tr';
+const AY=EN?['January','February','March','April','May','June','July','August','September','October','November','December']:['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
+const GUN=EN?['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']:['Pazar','Pazartesi','Salı','Çarşamba','Perşembe','Cuma','Cumartesi'];
+const GK=EN?['SU','MO','TU','WE','TH','FR','SA']:['PZ','PT','SA','ÇA','PE','CU','CT'];
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const low=s=>String(s||'').toLocaleLowerCase('tr');
+const low=s=>String(s||'').toLocaleLowerCase(LC);
 const pd=s=>{const [y,m,d]=s.split('-').map(Number);return new Date(y,m-1,d)};
 const ds=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
 const today=new Date();today.setHours(0,0,0,0);const TODAY=ds(today);
@@ -43,8 +44,8 @@ if(hello&&!RM){const sp=[...hello.children],cols=['#C13BFF','#FFA51E','#FF3B30',
 
 /* ----- Veri ----- */
 let TAKVIM=null,ARAMA=null;
-const loadTakvim=()=>TAKVIM||(TAKVIM=fetch('takvim.json').then(r=>r.json()).then(d=>d.filter(e=>pd(e.bitis||e.baslangic)>=today).sort((a,b)=>a.baslangic.localeCompare(b.baslangic))).catch(()=>[]));
-const loadArama=()=>ARAMA||(ARAMA=fetch('arama.json').then(r=>r.json()).catch(()=>[]));
+const loadTakvim=()=>TAKVIM||(TAKVIM=fetch(EN?'takvim-en.json':'takvim.json').then(r=>r.json()).then(d=>d.filter(e=>pd(e.bitis||e.baslangic)>=today).sort((a,b)=>a.baslangic.localeCompare(b.baslangic))).catch(()=>[]));
+const loadArama=()=>ARAMA||(ARAMA=fetch(EN?'arama-en.json':'arama.json').then(r=>r.json()).catch(()=>[]));
 const progs=e=>(e.programlar&&e.programlar.length?e.programlar:[]);
 const trd=s=>{const d=pd(s);return d.getDate()+' '+AY[d.getMonth()]+' '+d.getFullYear()};
 
@@ -59,17 +60,17 @@ function ics(e,day){const st=new Date().toISOString().replace(/[-:]/g,'').replac
 let EVMAP={};
 document.addEventListener('click',ev=>{const b=ev.target.closest('[data-ics]');if(!b)return;const e=EVMAP[b.dataset.ics];if(e)ics(e,b.dataset.day)});
 
-function rangeTxt(e){if(!e.bitis)return '';return trd(e.baslangic)+' ile '+trd(e.bitis)+' arası'}
+function rangeTxt(e){if(!e.bitis)return '';return EN?trd(e.baslangic)+' to '+trd(e.bitis):trd(e.baslangic)+' ile '+trd(e.bitis)+' arası'}
 function evHTML(e,day,kind){EVMAP[e.id]=e;
-  const tags=progs(e).map(p=>`<span style="--c:${PC[p][0]};--c-on:${PC[p][1]}">${p.toLocaleUpperCase('tr')}</span>`).join('');
-  const k=kind==='start'?'Başlıyor · ':kind==='end'?'Son gün · ':'';
+  const tags=progs(e).map(p=>`<span style="--c:${PC[p][0]};--c-on:${PC[p][1]}">${p.toLocaleUpperCase(LC)}</span>`).join('');
+  const k=kind==='start'?L('Başlıyor · ','Starts · '):kind==='end'?L('Son gün · ','Deadline · '):'';
   const meta=[esc(e.ulke),e.kurum?esc(e.kurum):'',e.bitis?rangeTxt(e):''].filter(Boolean).join(' · ');
   return `<div class="ev" id="ev-${esc(e.id)}"><div class="tag">${tags}</div><h4>${k}${esc(e.etkinlik)}</h4><div class="meta">${meta}</div>
-  <div class="acts">${IOS?`<button type="button" data-ics="${esc(e.id)}" data-day="${day}">${ICO.cal}Takvime ekle</button>`:`<a href="${gcal(e,day)}" target="_blank" rel="noopener">${ICO.cal}Takvime ekle</a>`}${e.kaynak?`<a class="src" href="${esc(e.kaynak)}" target="_blank" rel="noopener">kaynak</a>`:''}</div></div>`}
+  <div class="acts">${IOS?`<button type="button" data-ics="${esc(e.id)}" data-day="${day}">${ICO.cal}${L('Takvime ekle','Add to calendar')}</button>`:`<a href="${gcal(e,day)}" target="_blank" rel="noopener">${ICO.cal}${L('Takvime ekle','Add to calendar')}</a>`}${e.kaynak?`<a class="src" href="${esc(e.kaynak)}" target="_blank" rel="noopener">${L('kaynak','source')}</a>`:''}</div></div>`}
 function miniHTML(e,day,kind){const d=pd(day),p=progs(e)[0];
-  return `<button type="button" class="mini" data-go="${day}"><span class="d">${d.getDate()}<small>${AY[d.getMonth()].slice(0,3).toLocaleUpperCase('tr')} · ${GK[d.getDay()]}</small></span><span><i style="--c:${p?PC[p][0]:'var(--ea-navy)'}"></i>${kind==='end'?'Son gün · ':''}${esc(e.etkinlik)}<small>${esc(e.ulke)}</small></span></button>`}
+  return `<button type="button" class="mini" data-go="${day}"><span class="d">${d.getDate()}<small>${AY[d.getMonth()].slice(0,3).toLocaleUpperCase(LC)} · ${GK[d.getDay()]}</small></span><span><i style="--c:${p?PC[p][0]:'var(--ea-navy)'}"></i>${kind==='end'?L('Son gün · ','Deadline · '):''}${esc(e.etkinlik)}<small>${esc(e.ulke)}</small></span></button>`}
 function rowHTML(e,day,kind){const d=pd(day);
-  return `<div class="ev"><div class="d">${d.getDate()}<small>${AY[d.getMonth()].slice(0,3).toLocaleUpperCase('tr')} · ${GK[d.getDay()]}</small></div>${evHTML(e,day,kind).replace('<div class="ev"','<div').replace(/ id="ev-[^"]*"/,'')}</div>`}
+  return `<div class="ev"><div class="d">${d.getDate()}<small>${AY[d.getMonth()].slice(0,3).toLocaleUpperCase(LC)} · ${GK[d.getDay()]}</small></div>${evHTML(e,day,kind).replace('<div class="ev"','<div').replace(/ id="ev-[^"]*"/,'')}</div>`}
 /* olayları günlere yerleştir: aralıklı olaylar başlangıç ve bitiş gününde görünür */
 function byDay(list){const m={};const add=(d,e,k)=>{if(d<TODAY)return;(m[d]=m[d]||[]).push({e,k})};
   list.forEach(e=>{if(e.bitis&&e.bitis!==e.baslangic){add(e.baslangic,e,'start');add(e.bitis,e,'end')}else add(e.baslangic,e,'')});return m}
@@ -82,7 +83,7 @@ document.querySelectorAll('[data-calgrid]').forEach(root=>{
   const vbs=[...root.querySelectorAll('[data-view]')],wrapEl=root.querySelector('.cal-wrap'),all=root.querySelector('[data-alllink]');let view='ay';
   const setView=v=>{view=v;vbs.forEach(b=>b.setAttribute('aria-pressed',b.dataset.view===v));if(wrapEl)wrapEl.hidden=v==='liste';draw()};
   vbs.forEach(b=>b.onclick=()=>setView(b.dataset.view));
-  const updAll=()=>{if(!all)return;all.parentElement.hidden=!fC;if(fC){all.href='takvim.html?ulke='+encodeURIComponent(fC);all.firstChild.textContent=fC+' için tüm tarihler '}};
+  const updAll=()=>{if(!all)return;all.parentElement.hidden=!fC;if(fC){all.href=PG('takvim.html')+'?ulke='+encodeURIComponent(fC);all.firstChild.textContent=EN?'All dates for '+fC+' ':fC+' için tüm tarihler '}};
   let EV=[],M={},month=new Date(today.getFullYear(),today.getMonth(),1),selDay=null,fP=new Set(),fC='',minM=new Date(month),maxM=new Date(month);
   const filt=()=>EV.filter(e=>(!fC||e.ulke===fC)&&(!fP.size||progs(e).some(p=>fP.has(p))));
   function draw(dir){
@@ -101,18 +102,18 @@ document.querySelectorAll('[data-calgrid]').forEach(root=>{
   function monthItems(){const y=month.getFullYear(),m=month.getMonth();return Object.keys(M).filter(k=>{const d=pd(k);return d.getFullYear()===y&&d.getMonth()===m}).sort()}
   function drawPanel(){if(!panel)return;
     if(selDay){const it=M[selDay]||[],d=pd(selDay);
-      panel.innerHTML=`<h3>${d.getDate()} ${AY[d.getMonth()]}, ${GUN[d.getDay()]}</h3>`+(it.length?it.map(x=>evHTML(x.e,selDay,x.k)).join(''):'<p class="empty">Bu gün için tarih yok.</p>');return}
+      panel.innerHTML=`<h3>${d.getDate()} ${AY[d.getMonth()]}, ${GUN[d.getDay()]}</h3>`+(it.length?it.map(x=>evHTML(x.e,selDay,x.k)).join(''):L('<p class="empty">Bu gün için tarih yok.</p>','<p class="empty">No dates on this day.</p>'));return}
     const ks=monthItems();
-    if(!ks.length){panel.innerHTML=`<h3>${AY[month.getMonth()]}</h3><p class="empty">Bu ay için seçiminize uygun tarih yok.</p>`;return}
-    const lim=home?5:4;let h=`<h3>${AY[month.getMonth()]} ayında</h3><p class="sub">Bir güne dokunun, o günün ayrıntısı açılsın.</p>`,n=0;
+    if(!ks.length){panel.innerHTML=`<h3>${AY[month.getMonth()]}</h3><p class="empty">${L('Bu ay için seçiminize uygun tarih yok.','No dates match your selection this month.')}</p>`;return}
+    const lim=home?5:4;let h=(EN?`<h3>In ${AY[month.getMonth()]}</h3><p class="sub">Tap a day to see its details.</p>`:`<h3>${AY[month.getMonth()]} ayında</h3><p class="sub">Bir güne dokunun, o günün ayrıntısı açılsın.</p>`),n=0;
     for(const k of ks){for(const x of M[k]){if(n>=lim)break;h+=miniHTML(x.e,k,x.k);n++}}
     panel.innerHTML='<div class="minis">'+h+'</div>'}
   function drawList(){if(!mlist)return;
-    if(view==='liste'){const ks=Object.keys(M).sort();if(!ks.length){mlist.innerHTML='<p class="empty">Seçiminize uygun tarih yok.</p>';return}
+    if(view==='liste'){const ks=Object.keys(M).sort();if(!ks.length){mlist.innerHTML=L('<p class="empty">Seçiminize uygun tarih yok.</p>','<p class="empty">No dates match your selection.</p>');return}
       let h='',last='';for(const k of ks){const d=pd(k),m=AY[d.getMonth()]+' '+d.getFullYear();if(m!==last){h+=(last?'</div>':'')+`<div class="month">${m}</div><div class="evlist">`;last=m}h+=M[k].map(x=>rowHTML(x.e,k,x.k)).join('')}
       mlist.innerHTML=h+'</div>';return}
     const ks=monthItems();
-    mlist.innerHTML=ks.length?`<div class="month">${AY[month.getMonth()]} ${month.getFullYear()}: tüm tarihler</div><div class="evlist">`+ks.map(k=>M[k].map(x=>rowHTML(x.e,k,x.k)).join('')).join('')+'</div>':''}
+    mlist.innerHTML=ks.length?`<div class="month">${AY[month.getMonth()]} ${month.getFullYear()}: ${L('tüm tarihler','all dates')}</div><div class="evlist">`+ks.map(k=>M[k].map(x=>rowHTML(x.e,k,x.k)).join('')).join('')+'</div>':''}
   const go=dir=>{const n=new Date(month.getFullYear(),month.getMonth()+dir,1);if(n<minM||n>maxM)return;month=n;selDay=null;draw(dir)};
   prevB.onclick=()=>go(-1);nextB.onclick=()=>go(1);
   panel&&panel.addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(!b)return;selDay=b.dataset.go;draw()});
@@ -139,7 +140,7 @@ document.querySelectorAll('[data-calgrid]').forEach(root=>{
 document.querySelectorAll('[data-evlist]').forEach(box=>{
   loadTakvim().then(d=>{const u=box.dataset.ulke,p=box.dataset.prog,n=+box.dataset.limit||6;
     const list=d.filter(e=>(!u||e.ulke===u)&&(!p||progs(e).includes(p))).slice(0,n);
-    box.innerHTML=list.length?list.map(e=>{const day=e.baslangic<TODAY&&e.bitis?e.bitis:e.baslangic;return rowHTML(e,day,e.bitis?(day===e.bitis?'end':'start'):'')}).join(''):'<p class="empty">Yakın tarihli, teyitli bir tarih henüz yok.</p>'})});
+    box.innerHTML=list.length?list.map(e=>{const day=e.baslangic<TODAY&&e.bitis?e.bitis:e.baslangic;return rowHTML(e,day,e.bitis?(day===e.bitis?'end':'start'):'')}).join(''):L('<p class="empty">Yakın tarihli, teyitli bir tarih henüz yok.</p>','<p class="empty">No confirmed upcoming dates yet.</p>')})});
 
 /* ----- Yatay kaydırma okları ve noktaları ----- */
 document.querySelectorAll('[data-hs]').forEach(h=>{const id=h.dataset.hs,box=$(id);if(!box)return;
@@ -151,7 +152,7 @@ document.querySelectorAll('[data-dots]').forEach(dots=>{const box=$(dots.dataset
 /* ----- Dünya haritası: bölgelere yumuşak yakınlaşma, dokununca ülke kartı ----- */
 document.querySelectorAll('[data-wm]').forEach(async wm=>{
   const D=JSON.parse(wm.dataset.wm),RN=JSON.parse(wm.dataset.regs),holder=wm.querySelector('.wm-svg'),card=wm.querySelector('.wm-card'),hint=wm.querySelector('.wm-hint');
-  let txt;try{txt=await (await fetch('harita.svg')).text()}catch(e){holder.innerHTML='';return}
+  let txt;try{txt=await (await fetch('harita.svg')).text();if(EN)txt=txt.replace('Elsewhere Academics ülkeleri dünya haritası','World map of Elsewhere Academics countries')}catch(e){holder.innerHTML='';return}
   holder.innerHTML=txt;const svg=holder.querySelector('svg');const V=JSON.parse(svg.dataset.views);
   let cur=V.dunya.slice(),view='dunya',anim=null,sel=null;
   const pins=[...svg.querySelectorAll('.pin')],cs=[...svg.querySelectorAll('.c')],chips=[...wm.querySelectorAll('.wm-chips a')];
@@ -159,7 +160,7 @@ document.querySelectorAll('[data-wm]').forEach(async wm=>{
   const cl=svg.querySelector('.clusters'),NS='http://www.w3.org/2000/svg';
   const groups={};pins.forEach(p=>{const r=p.dataset.r;(groups[r]=groups[r]||[]).push(p)});
   const cnodes=Object.entries(groups).map(([r,ps])=>{const x=ps.reduce((a,p)=>a+ +p.getAttribute('cx'),0)/ps.length,y=ps.reduce((a,p)=>a+ +p.getAttribute('cy'),0)/ps.length;
-    const g=document.createElementNS(NS,'g');g.setAttribute('class','cluster');g.dataset.r=r;g.setAttribute('role','button');g.setAttribute('tabindex','0');g.setAttribute('aria-label',RN[r]+', '+ps.length+' ülke');
+    const g=document.createElementNS(NS,'g');g.setAttribute('class','cluster');g.dataset.r=r;g.setAttribute('role','button');g.setAttribute('tabindex','0');g.setAttribute('aria-label',RN[r]+', '+ps.length+L(' ülke',' countries'));
     const c=document.createElementNS(NS,'circle'),t=document.createElementNS(NS,'text');c.setAttribute('cx',x);c.setAttribute('cy',y);t.setAttribute('x',x);t.setAttribute('y',y);t.textContent=ps.length;g.append(c,t);cl.append(g);return g});
   const sizes=()=>{const R=svg.getBoundingClientRect();const k=Math.max(cur[2]/(R.width||1),cur[3]/(R.height||1));pins.forEach(p=>{p.setAttribute('r',(p.dataset.k===sel?8:5.5)*k);p.style.strokeWidth=2*k});
     cnodes.forEach(g=>{g.firstChild.setAttribute('r',17*k);g.firstChild.style.strokeWidth=2.5*k;g.lastChild.style.fontSize=(15*k)+'px'});
@@ -172,7 +173,7 @@ document.querySelectorAll('[data-wm]').forEach(async wm=>{
   const show=k=>{sel=k;const d=D[k];if(!d)return;
     cs.forEach(c=>c.classList.toggle('on',c.dataset.k===k));pins.forEach(p=>p.classList.toggle('on',p.dataset.k===k));sizes();
     card.querySelector('img').src='bayrak-'+d[1]+'.svg';card.querySelector('b').textContent=d[0];
-    card.querySelector('.pd').innerHTML=d[2].map(p=>`<i style="--c:${PC[p][0]}" title="${p}"></i>`).join('');card.querySelector('a').href='ulke-'+k+'.html';card.hidden=false;if(hint)hint.hidden=true};
+    card.querySelector('.pd').innerHTML=d[2].map(p=>`<i style="--c:${PC[p][0]}" title="${p}"></i>`).join('');card.querySelector('a').href=PG('ulke-'+k+'.html');card.hidden=false;if(hint)hint.hidden=true};
   svg.addEventListener('click',e=>{const cg=e.target.closest('.cluster');if(cg){go(cg.dataset.r);return}
     const t=e.target.closest('[data-k]');if(!t)return;const k=t.dataset.k;
     if(view==='dunya')go(t.dataset.r);show(k)});
@@ -199,9 +200,9 @@ document.querySelectorAll('[data-cform]').forEach(f=>{
   const msg=f.querySelector('.fmsg');let native=false;
   f.addEventListener('submit',async e=>{if(native)return;e.preventDefault();
     if(f._gotcha&&f._gotcha.value)return;
-    const b=f.querySelector('button[type=submit]');b.disabled=true;msg.className='fmsg';msg.textContent='Gönderiliyor…';
+    const b=f.querySelector('button[type=submit]');b.disabled=true;msg.className='fmsg';msg.textContent=L('Gönderiliyor…','Sending…');
     try{const r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}});
-      if(r.ok){f.classList.add('sent');msg.classList.add('ok');msg.textContent='Mesajınız bize ulaştı. En kısa sürede size dönüyoruz.';f.reset();return}
+      if(r.ok){f.classList.add('sent');msg.classList.add('ok');msg.textContent=L('Mesajınız bize ulaştı. En kısa sürede size dönüyoruz.','Your message reached us. We will get back to you soon.');f.reset();return}
       throw new Error(r.status)}
     catch(err){native=true;msg.textContent='';b.disabled=false;f.submit()}})});
 
@@ -215,8 +216,8 @@ document.querySelectorAll('[data-search]').forEach(inp=>{
     A.filter(a=>low(a.t).includes(v)).concat(A.filter(a=>!low(a.t).includes(v)&&a.x.includes(v))).slice(0,8)
       .forEach(a=>out.push(`<a href="${a.u}">${esc(a.t)}<small>${esc(a.k)}</small></a>`));
     T.filter(e=>low(e.etkinlik+' '+e.ulke+' '+e.kurum).includes(v)).slice(0,6).forEach(e=>{
-      out.push(`<a href="takvim.html?ev=${encodeURIComponent(e.id)}">${esc(e.etkinlik)}<small>Takvim · ${trd(e.baslangic)} · ${esc(e.ulke)}</small></a>`)});
-    box.innerHTML=out.length?out.join(''):'<div class="none">Sonuç bulunamadı.</div>';box.classList.add('show')});
+      out.push(`<a href="${PG('takvim.html')}?ev=${encodeURIComponent(e.id)}">${esc(e.etkinlik)}<small>${L('Takvim','Calendar')} · ${trd(e.baslangic)} · ${esc(e.ulke)}</small></a>`)});
+    box.innerHTML=out.length?out.join(''):L('<div class="none">Sonuç bulunamadı.</div>','<div class="none">No results found.</div>');box.classList.add('show')});
 });
 document.addEventListener('click',e=>{if(!e.target.closest('.search'))document.querySelectorAll('.results').forEach(r=>r.classList.remove('show'))});
 
@@ -225,4 +226,9 @@ const bf=$('bFilter');
 if(bf){bf.addEventListener('input',()=>{const v=low(bf.value.trim());
   document.querySelectorAll('.blist a').forEach(a=>{a.style.display=!v||low(a.textContent).includes(v)?'':'none'});
   document.querySelectorAll('.group').forEach(g=>{g.style.display=[...g.querySelectorAll('.blist a')].some(a=>a.style.display!=='none')?'':'none'})})}
+
+/* ----- Blog kategori süzgeci ----- */
+document.querySelectorAll('[data-blogcat]').forEach(b=>b.addEventListener('click',()=>{const k=b.dataset.blogcat;
+  document.querySelectorAll('[data-blogcat]').forEach(x=>{const on=x===b;x.classList.toggle('on',on);x.setAttribute('aria-pressed',on)});
+  document.querySelectorAll('.blogcards [data-kat]').forEach(c=>c.hidden=!!k&&c.dataset.kat!==k)}));
 })();
