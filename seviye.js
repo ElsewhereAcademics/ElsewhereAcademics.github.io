@@ -62,8 +62,19 @@ function finish(){
     fd.append('dogru_sayisi',r.tot+' / '+order.length);fd.append('seviyelere_gore',LV.map(l=>l+' '+r.per[l]+'/8').join(', '));
     fd.append('sure_dakika',String(mins));fd.append('sayfadan_cikma',String(away));fd.append('suresi_dolan_soru',String(timeouts));fd.append('dil',EN?'EN':'TR');
     const b=f.querySelector('button[type=submit]');b.disabled=true;msg.className='fmsg';msg.textContent=L('Gönderiliyor…','Sending…');
-    try{const res=await fetch('https://formspree.io/f/mdeaybbn',{method:'POST',body:fd,headers:{Accept:'application/json'}});if(!res.ok)throw 0;result(r)}
-    catch(_){b.disabled=false;msg.className='fmsg err';msg.textContent=L('Gönderilemedi. İnternet bağlantınızı kontrol edip tekrar deneyin.','Could not send. Please check your connection and try again.')}
+    let why='';
+    try{const res=await fetch('https://formspree.io/f/mdeaybbn',{method:'POST',body:fd,headers:{Accept:'application/json'}});
+      if(res.ok){result(r);return}
+      try{const j=await res.json();why=(j.errors&&j.errors.map(x=>x.message).join(' '))||j.error||''}catch(_){}
+      why='HTTP '+res.status+(why?': '+why:'');}
+    catch(err){why='network'}
+    try{console.warn('Seviye formu gönderilemedi:',why)}catch(_){}
+    b.disabled=false;msg.className='fmsg err';
+    msg.innerHTML=esc(why==='network'?L('Gönderilemedi. İnternet bağlantınızı kontrol edip tekrar deneyin.','Could not send. Please check your connection and try again.'):L('Sonucunuz şu an gönderilemedi. Tekrar deneyebilir ya da bilgilerinizi WhatsApp ile iletip sonucunuzu görebilirsiniz.','Your result could not be sent right now. You can try again, or send your details on WhatsApp and see your result.'))
+      +` <button type="button" class="btn" id="ltWa" style="margin-top:12px">${L('WhatsApp ile gönder ve sonucu gör','Send on WhatsApp and see my result')}</button>`;
+    msg.querySelector('#ltWa').addEventListener('click',()=>{
+      const t=L('Merhaba, İngilizce seviye tespitini çözdüm.','Hello, I took the English level test.')+'\n'+L('Ad soyad','Name')+': '+fd.get('ad_soyad')+'\n'+L('Telefon','Phone')+': '+fd.get('telefon')+'\n'+L('E-posta','Email')+': '+fd.get('email')+'\n'+L('Tahmini seviye','Estimated level')+': '+fd.get('tahmini_seviye')+'\n'+L('Doğru','Correct')+': '+fd.get('dogru_sayisi')+' ('+fd.get('seviyelere_gore')+')';
+      window.open('https://wa.me/905015660808?text='+encodeURIComponent(t),'_blank','noopener');result(r)});
   });
 }
 function result(r){
