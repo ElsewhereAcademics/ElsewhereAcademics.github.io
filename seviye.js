@@ -8,7 +8,7 @@ const DATA=JSON.parse(decodeURIComponent(escape(s)));
 const LV=['A1','A2','B1','B2','C1'];const SEC=60;
 const esc=x=>String(x??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const shuf=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
-let order=[],cur=0,ans=[],timer=null,left=SEC,t0=0,away=0,timeouts=0,active=false;
+let order=[],cur=0,ans=[],timer=null,left=SEC,t0=0,away=0,timeouts=0,skipped=0,active=false;
 const DESC={
  'A1-':[L('A1 altı (başlangıç)','Below A1 (beginner)'),L('İngilizceye yeni başlıyorsunuz. Temel kelimeler ve basit cümle yapılarıyla başlamak iyi bir ilk adım olur.','You are just starting with English. Basic words and simple sentence patterns are a good first step.')],
  A1:[L('A1 (başlangıç)','A1 (beginner)'),L('Günlük hayattaki basit cümleleri anlıyor ve kurabiliyorsunuz. Düzenli bir dil programıyla bir sonraki seviyeye geçmek mümkün.','You can understand and use simple everyday sentences. With a regular language programme you can move to the next level.')],
@@ -19,7 +19,7 @@ const DESC={
 function start(){
   order=[];LV.forEach(l=>{order=order.concat(shuf(DATA.q.filter(q=>q.l===l)))});
   order=order.map(q=>{const idx=shuf([0,1,2,3]);return {...q,o:idx.map(i=>q.o[i]),a:idx.indexOf(q.a)}});
-  ans=new Array(order.length).fill(null);cur=0;t0=Date.now();active=true;show();
+  ans=new Array(order.length).fill(null);cur=0;skipped=0;timeouts=0;away=0;t0=Date.now();active=true;show();
 }
 function show(){
   const q=order[cur];left=SEC;
@@ -28,60 +28,62 @@ function show(){
   <div class="lt-bar"><i style="width:${cur/order.length*100}%"></i></div><div class="lt-tbar"><i></i></div>
   ${p}<p class="lt-q">${esc(q.q).replace('____','<span class="gap">______</span>')}</p>
   <div class="lt-opts">${q.o.map((o,i)=>`<button type="button" data-i="${i}"><span>${'ABCD'[i]}</span>${esc(o)}</button>`).join('')}</div>
-  <div class="lt-nav"><button type="button" class="btn solid" id="ltNext" disabled>${cur<order.length-1?L('Sonraki soru','Next question'):L('Testi bitir','Finish the test')}</button></div>`;
+  <div class="lt-nav"><button type="button" class="btn" id="ltSkip">${L('Bilmiyorum, geç','I don’t know, skip')}</button><button type="button" class="btn solid" id="ltNext" disabled>${cur<order.length-1?L('Sonraki soru','Next question'):L('Testi bitir','Finish the test')}</button></div>`;
   const tb=root.querySelector('.lt-tbar i');requestAnimationFrame(()=>{tb.style.transition=`width ${SEC}s linear`;tb.style.width='0%'});
   root.querySelectorAll('.lt-opts button').forEach(b=>b.addEventListener('click',()=>{ans[cur]=+b.dataset.i;root.querySelectorAll('.lt-opts button').forEach(x=>x.classList.toggle('on',x===b));root.querySelector('#ltNext').disabled=false}));
   root.querySelector('#ltNext').addEventListener('click',next);
+  root.querySelector('#ltSkip').addEventListener('click',()=>{ans[cur]=null;skipped++;next()});
   clearInterval(timer);timer=setInterval(()=>{left--;const t=root.querySelector('.lt-time b');if(t)t.textContent=left;if(left<=0){if(ans[cur]===null)timeouts++;next()}},1000);
   root.scrollIntoView({behavior:'smooth',block:'start'});
 }
 function next(){clearInterval(timer);if(cur<order.length-1){cur++;show()}else finish()}
 function score(){
-  const per={};LV.forEach(l=>per[l]=0);let tot=0;
-  order.forEach((q,i)=>{if(ans[i]===q.a){per[q.l]++;tot++}});
+  const per={},wr={},bl={};LV.forEach(l=>{per[l]=0;wr[l]=0;bl[l]=0});let tot=0,wrong=0,blank=0;
+  order.forEach((q,i)=>{if(ans[i]===null){bl[q.l]++;blank++}else if(ans[i]===q.a){per[q.l]++;tot++}else{wr[q.l]++;wrong++}});
   let lvl='A1-';for(const l of LV){if(per[l]>=6)lvl=l;else break}
   const ni=lvl==='A1-'?0:LV.indexOf(lvl)+1;const near=ni<LV.length&&per[LV[ni]]>=4;
-  return {per,tot,lvl,near};
+  return {per,wr,bl,tot,wrong,blank,lvl,near};
 }
 function finish(){
   active=false;const r=score();const mins=Math.round((Date.now()-t0)/60000);
-  root.innerHTML=`<div class="lt-done"><h3>${L('Test bitti.','The test is finished.')}</h3><p>${L('Sonucunuzu görmek için bilgilerinizi girin. Sonuç ekranda görünecek ve bize de ulaşacak.','Enter your details to see your result. It will appear on screen and also reach us.')}</p>
+  root.innerHTML=`<div class="lt-done"><h3>${L('Test bitti.','The test is finished.')}</h3><p>${L('Sonucunuzu size iletebilmemiz için bilgilerinizi girin. Sonucunuzu 24 saat içinde telefon ya da e-posta ile iletiyoruz.','Enter your details so we can send you your result. We will send your result by phone or email within 24 hours.')}</p>
   <form class="cform" id="ltForm" novalidate>
    <label>${L('Ad soyad','Full name')}<input name="ad_soyad" required autocomplete="name"></label>
    <label>${L('Telefon','Phone')}<input name="telefon" type="tel" required autocomplete="tel"></label>
    <label>${L('E-posta','Email')}<input name="email" type="email" required autocomplete="email"></label>
    <label class="chk"><input type="checkbox" name="aydinlatma" value="${L('Okudum ve anladım','I have read and understood')}" required> <span>${L('<a href="kvkk.html" target="_blank">KVKK aydınlatma metnini</a> okudum ve anladım.','I have read and understood the <a href="en-kvkk.html" target="_blank">KVKK privacy notice</a>.')}</span></label>
    <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off">
-   <button class="btn solid" type="submit">${L('Sonucumu göster','Show my result')}</button><p class="fmsg" role="status"></p></form></div>`;
+   <button class="btn solid" type="submit">${L('Testi gönder','Send my test')}</button><p class="fmsg" role="status"></p></form></div>`;
   root.scrollIntoView({behavior:'smooth',block:'start'});
   const f=root.querySelector('#ltForm'),msg=f.querySelector('.fmsg');
   f.addEventListener('submit',async e=>{e.preventDefault();
     if(!f.checkValidity()){msg.className='fmsg err';msg.textContent=L('Lütfen tüm alanları doldurun ve onay kutusunu işaretleyin.','Please fill in all fields and tick the box.');return}
     const fd=new FormData(f);fd.append('_subject',L('Seviye tespiti: ','Level test: ')+fd.get('ad_soyad')+' · '+DESC[r.lvl][0]);
     fd.append('tahmini_seviye',DESC[r.lvl][0]+(r.near?L(' (bir üst seviyeye yakın)',' (close to the next level)'):''));
-    fd.append('dogru_sayisi',r.tot+' / '+order.length);fd.append('seviyelere_gore',LV.map(l=>l+' '+r.per[l]+'/8').join(', '));
-    fd.append('sure_dakika',String(mins));fd.append('sayfadan_cikma',String(away));fd.append('suresi_dolan_soru',String(timeouts));fd.append('dil',EN?'EN':'TR');
+    fd.append('dogru_yanlis_bos',r.tot+' doğru, '+r.wrong+' yanlış, '+r.blank+' boş (toplam '+order.length+')');fd.append('seviyelere_gore',LV.map(l=>l+': '+r.per[l]+' doğru, '+r.wr[l]+' yanlış, '+r.bl[l]+' boş').join(' | '));
+    fd.append('ogrenciye_iletilecek_aciklama',DESC[r.lvl][1]);
+    fd.append('sure_dakika',String(mins));fd.append('sayfadan_cikma',String(away));fd.append('suresi_dolan_soru',String(timeouts));fd.append('bilmiyorum_denilen_soru',String(skipped));fd.append('dil',EN?'EN':'TR');
     const b=f.querySelector('button[type=submit]');b.disabled=true;msg.className='fmsg';msg.textContent=L('Gönderiliyor…','Sending…');
     let why='';
     try{const res=await fetch('https://formspree.io/f/mdeaybbn',{method:'POST',body:fd,headers:{Accept:'application/json'}});
-      if(res.ok){result(r);return}
+      if(res.ok){thanks();return}
       try{const j=await res.json();why=(j.errors&&j.errors.map(x=>x.message).join(' '))||j.error||''}catch(_){}
       why='HTTP '+res.status+(why?': '+why:'');}
     catch(err){why='network'}
     try{console.warn('Seviye formu gönderilemedi:',why)}catch(_){}
     b.disabled=false;msg.className='fmsg err';
-    msg.innerHTML=esc(why==='network'?L('Gönderilemedi. İnternet bağlantınızı kontrol edip tekrar deneyin.','Could not send. Please check your connection and try again.'):L('Sonucunuz şu an gönderilemedi. Tekrar deneyebilir ya da bilgilerinizi WhatsApp ile iletip sonucunuzu görebilirsiniz.','Your result could not be sent right now. You can try again, or send your details on WhatsApp and see your result.'))
-      +` <button type="button" class="btn" id="ltWa" style="margin-top:12px">${L('WhatsApp ile gönder ve sonucu gör','Send on WhatsApp and see my result')}</button>`;
+    msg.innerHTML=esc(why==='network'?L('Gönderilemedi. İnternet bağlantınızı kontrol edip tekrar deneyin.','Could not send. Please check your connection and try again.'):L('Testiniz şu an gönderilemedi. Tekrar deneyebilir ya da WhatsApp ile bize iletebilirsiniz.','Your test could not be sent right now. You can try again or send it to us on WhatsApp.'))
+      +` <button type="button" class="btn" id="ltWa" style="margin-top:12px">${L('WhatsApp ile gönder','Send on WhatsApp')}</button>`;
     msg.querySelector('#ltWa').addEventListener('click',()=>{
-      const t=L('Merhaba, İngilizce seviye tespitini çözdüm.','Hello, I took the English level test.')+'\n'+L('Ad soyad','Name')+': '+fd.get('ad_soyad')+'\n'+L('Telefon','Phone')+': '+fd.get('telefon')+'\n'+L('E-posta','Email')+': '+fd.get('email')+'\n'+L('Tahmini seviye','Estimated level')+': '+fd.get('tahmini_seviye')+'\n'+L('Doğru','Correct')+': '+fd.get('dogru_sayisi')+' ('+fd.get('seviyelere_gore')+')';
-      window.open('https://wa.me/905015660808?text='+encodeURIComponent(t),'_blank','noopener');result(r)});
+      const t=L('Merhaba, İngilizce seviye tespitini çözdüm.','Hello, I took the English level test.')+'\n'+L('Ad soyad','Name')+': '+fd.get('ad_soyad')+'\n'+L('Telefon','Phone')+': '+fd.get('telefon')+'\n'+L('E-posta','Email')+': '+fd.get('email')+'\n'+L('Test kodu','Test code')+': '+code(r);
+      window.open('https://wa.me/905015660808?text='+encodeURIComponent(t),'_blank','noopener');thanks(true)});
   });
 }
-function result(r){
-  const d=DESC[r.lvl];
-  root.innerHTML=`<div class="lt-res"><span class="eyebrow">${L('TAHMİNİ SEVİYENİZ','YOUR ESTIMATED LEVEL')}</span><div class="lt-big">${esc(d[0])}</div>
-  ${r.near?`<p class="lt-near">${L('Bir üst seviyeye yakınsınız.','You are close to the next level.')}</p>`:''}<p>${esc(d[1])}</p>
-  <p class="muted">${L('Bu sonuç yalnızca bir tahmindir ve resmi bir sınav sonucunun yerine geçmez. Bilgileriniz bize ulaştı, bir sonraki adımı birlikte konuşabiliriz.','This result is only an estimate and does not replace an official exam result. Your details reached us, and we can talk about the next step together.')}</p>
+/* sonuç öğrenciye gösterilmez; WhatsApp yedeğinde sonuç kodlanır (A1..C1 doğru/yanlış sayıları) */
+function code(r){let n=0;LV.forEach(l=>{n=n*9+r.per[l]});LV.forEach(l=>{n=n*9+r.wr[l]});const k=(n*7+3).toString(36).toUpperCase();return 'EA-'+k}
+function thanks(wa){
+  root.innerHTML=`<div class="lt-res"><span class="eyebrow">${L('TEŞEKKÜRLER','THANK YOU')}</span><div class="lt-big">${wa?L('WhatsApp mesajını gönderin.','Please send the WhatsApp message.'):L('Testiniz bize ulaştı.','Your test reached us.')}</div>
+  <p>${wa?L('Açılan WhatsApp mesajını gönderdiğinizde testiniz bize ulaşır. ',"When you send the WhatsApp message that opened, your test reaches us. "):''}${L('Sonucunuzu 24 saat içinde telefon ya da e-posta ile iletiyoruz. Sonuç yalnızca bir tahmindir ve resmi bir sınav sonucunun yerine geçmez.','We will send your result by phone or email within 24 hours. The result is only an estimate and does not replace an official exam result.')}</p>
   <div class="lt-acts"><a class="btn solid" href="https://wa.me/905015660808" target="_blank" rel="noopener">WhatsApp</a><a class="btn" href="${EN?'en-summer.html':'summer.html'}">ElsewhereSummer</a><a class="btn" href="${EN?'en-campus.html':'campus.html'}">ElsewhereCampus</a></div></div>`;
   root.scrollIntoView({behavior:'smooth',block:'start'});
 }

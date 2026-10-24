@@ -781,3 +781,4 @@ h2.big{font-size:var(--fs-h1);font-weight:900;letter-spacing:-.035em;line-height
 .lt .cform label.chk{display:flex!important;align-items:flex-start;gap:10px}.lt .cform label.chk input{width:22px;height:22px;flex:none;margin-top:2px}.lt .cform label.chk span{flex:1}
 .lt{scroll-margin-top:84px}
 .lt .cform input:not([type=checkbox]){color:var(--ea-navy);background:#fff}
+.lt .lt-nav{justify-content:space-between;gap:12px;flex-wrap:wrap}
