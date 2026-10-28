@@ -782,3 +782,25 @@ h2.big{font-size:var(--fs-h1);font-weight:900;letter-spacing:-.035em;line-height
 .lt{scroll-margin-top:84px}
 .lt .cform input:not([type=checkbox]){color:var(--ea-navy);background:#fff}
 .lt .lt-nav{justify-content:space-between;gap:12px;flex-wrap:wrap}
+/* 29.10.2026: geçmiş dönem öğrencilerimiz */
+#gecmis-donem .yt{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
+#gecmis-donem .yt .flagi{width:30px;height:22px;border-radius:4px;object-fit:cover;margin:0}
+.ytag{font-size:.72rem;font-weight:800;letter-spacing:.02em;border-radius:999px;padding:3px 10px;white-space:nowrap}
+#gecmis-donem .ycard span:not(.ytag){color:var(--ea-navy);font-weight:500;font-size:.95rem}
+.qhead{margin-top:48px}
+.qhs{grid-auto-columns:minmax(min(84vw,340px),360px)}
+.qhs .qcard{display:flex;flex-direction:column;justify-content:space-between;min-height:100%}
+.qhs .qcard blockquote{font-size:1.02rem}
+.qhs .qcard blockquote::before{content:"“";display:block;font-size:3rem;line-height:.6;color:var(--ea-summer);margin-bottom:10px}
+.qhs .qcard figcaption{display:flex;flex-direction:column;gap:2px;opacity:1}
+.qhs .qcard figcaption b{font-size:1.05rem}
+.qhs .qcard figcaption span{font-weight:500;opacity:.75;font-size:.9rem}
+@media (max-width:640px){
+ #gecmis-donem .ycards{grid-template-columns:1fr 1fr;gap:10px}
+ #gecmis-donem .ycard{padding:14px;border-radius:16px;gap:3px}
+ #gecmis-donem .ycard b{font-size:.92rem}
+ #gecmis-donem .ycard span:not(.ytag){font-size:.8rem}
+ #gecmis-donem .ycard small{font-size:.74rem}
+ .ytag{font-size:.62rem;padding:2px 7px}
+ #gecmis-donem .yt .flagi{width:24px;height:18px}
+}
