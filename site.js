@@ -328,7 +328,7 @@ document.querySelectorAll('.schools').forEach(s=>{const vp=s.querySelector('.sch
 /* ----- Canlılık: sayan rakamlar, okuma çubuğu ----- */
 const cnt=[...document.querySelectorAll('[data-count]')];
 if(cnt.length&&!RM&&'IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(en=>{if(!en.isIntersecting)return;io.unobserve(en.target);const el=en.target,n=+el.dataset.count,t0=performance.now(),dur=1300;
-  const st=t=>{const p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3);el.textContent=Math.round(n*e).toLocaleString(LC);if(p<1)requestAnimationFrame(st)};el.textContent='0';requestAnimationFrame(st)}),{threshold:.6});cnt.forEach(c=>io.observe(c))}
+  const st=t=>{const p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3);el.textContent=Math.round(n*e).toLocaleString(LC)+(el.dataset.suf||'');if(p<1)requestAnimationFrame(st)};el.textContent='0'+(el.dataset.suf||'');requestAnimationFrame(st)}),{threshold:.6});cnt.forEach(c=>io.observe(c))}
 const rp=document.querySelector('.rprog i');
 if(rp){const ph=document.querySelector('.phero[style*="--c:var(--ea-"]');if(ph){const m=/--c:(var\(--ea-[a-z]+\))/.exec(ph.getAttribute('style'));if(m)rp.style.background=m[1]}
   const f=()=>{const h=document.documentElement.scrollHeight-innerHeight;rp.style.transform=`scaleX(${h>0?Math.min(1,scrollY/h):0})`};addEventListener('scroll',f,{passive:true});addEventListener('resize',f);f()}
@@ -343,4 +343,9 @@ document.querySelectorAll('[data-fold]').forEach(box=>{const n=+box.dataset.fold
 const openHash=()=>{const h=location.hash.slice(1);if(!h)return;const d=document.getElementById(h);if(d&&d.tagName==='DETAILS'){d.open=true;setTimeout(()=>d.scrollIntoView({block:'start'}),60)}};
 openHash();addEventListener('hashchange',openHash);
 const upc=document.querySelector('[data-upcount]');if(upc)loadTakvim().then(d=>{if(d.length)upc.textContent=d.length.toLocaleString(LC)});
+/* ----- Ülke sayfası: program seçici, sekmeleri birlikte değiştirir ----- */
+document.querySelectorAll('[data-progsel]').forEach(b=>b.onclick=()=>{const p=b.dataset.progsel;
+  document.querySelectorAll('[data-progsel]').forEach(x=>x.classList.toggle('on',x===b));
+  let first=null;document.querySelectorAll('[data-ptabs]').forEach(t=>{const bt=[...t.querySelectorAll('[data-ptab]')].find(x=>x.dataset.ptab.slice(1)===p);if(bt){bt.click();first=first||t.closest('section')}});
+  if(first)first.scrollIntoView({behavior:RM?'auto':'smooth',block:'start'})});
 })();
