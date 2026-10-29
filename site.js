@@ -13,7 +13,7 @@ const today=new Date();today.setHours(0,0,0,0);const TODAY=ds(today);
 const $=id=>document.getElementById(id);
 const IOS=/iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent)&&!/Android/.test(navigator.userAgent);
 const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
-const ICO={cal:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg>',
+const ICO={chev:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>',cal:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg>',
  link:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>'};
 
 /* ----- Üst şerit ----- */
@@ -65,10 +65,11 @@ function evHTML(e,day,kind){EVMAP[e.id]=e;
   const tags=progs(e).map(p=>`<span style="--c:${PC[p][0]};--c-on:${PC[p][1]}">${p.toLocaleUpperCase(LC)}</span>`).join('');
   const k=kind==='start'?L('Başlıyor · ','Starts · '):kind==='end'?L('Son gün · ','Deadline · '):'';
   const meta=[esc(e.ulke),e.kurum?esc(e.kurum):'',e.bitis?rangeTxt(e):''].filter(Boolean).join(' · ');
-  return `<div class="ev" id="ev-${esc(e.id)}"><div class="tag">${tags}</div><h4>${k}${esc(e.etkinlik)}</h4><div class="meta">${meta}</div>
+  const soon=(pd(day)-today)/864e5<7?`<span class="soon">${L('Bu hafta','This week')}</span>`:'';
+  return `<div class="ev" id="ev-${esc(e.id)}"><div class="tag">${tags}${soon}</div><h4>${k}${esc(e.etkinlik)}</h4><div class="meta">${meta}</div>
   <div class="acts">${IOS?`<button type="button" data-ics="${esc(e.id)}" data-day="${day}">${ICO.cal}${L('Takvime ekle','Add to calendar')}</button>`:`<a href="${gcal(e,day)}" target="_blank" rel="noopener">${ICO.cal}${L('Takvime ekle','Add to calendar')}</a>`}${e.kaynak?`<a class="src" href="${esc(e.kaynak)}" target="_blank" rel="noopener">${L('kaynak','source')}</a>`:''}</div></div>`}
 function miniHTML(e,day,kind){const d=pd(day),p=progs(e)[0];
-  return `<button type="button" class="mini" data-go="${day}"><span class="d">${d.getDate()}<small>${AY[d.getMonth()].slice(0,3).toLocaleUpperCase(LC)} · ${GK[d.getDay()]}</small></span><span><i style="--c:${p?PC[p][0]:'var(--ea-navy)'}"></i>${kind==='end'?L('Son gün · ','Deadline · '):''}${esc(e.etkinlik)}<small>${esc(e.ulke)}</small></span></button>`}
+  return `<button type="button" class="mini${(d-today)/864e5<7?' soonm':''}" data-go="${day}"><span class="d">${d.getDate()}<small>${AY[d.getMonth()].slice(0,3).toLocaleUpperCase(LC)} · ${GK[d.getDay()]}</small></span><span><i style="--c:${p?PC[p][0]:'var(--ea-navy)'}"></i>${kind==='end'?L('Son gün · ','Deadline · '):''}${esc(e.etkinlik)}<small>${esc(e.ulke)}</small></span></button>`}
 function rowHTML(e,day,kind){const d=pd(day);
   return `<div class="ev"><div class="d">${d.getDate()}<small>${AY[d.getMonth()].slice(0,3).toLocaleUpperCase(LC)} · ${GK[d.getDay()]}</small></div>${evHTML(e,day,kind).replace('<div class="ev"','<div').replace(/ id="ev-[^"]*"/,'')}</div>`}
 /* olayları günlere yerleştir: aralıklı olaylar başlangıç ve bitiş gününde görünür */
@@ -207,18 +208,85 @@ document.querySelectorAll('[data-cform]').forEach(f=>{
       throw new Error(r.status)}
     catch(err){native=true;msg.textContent='';b.disabled=false;f.submit()}})});
 
-/* ----- Arama ----- */
+/* ----- Arama: Türkçe karakter katlama, eş anlamlılar, yazım hatası toleransı, gruplu sonuçlar ----- */
+const FOLD={'ı':'i','İ':'i','I':'i','ş':'s','Ş':'s','ğ':'g','Ğ':'g','ç':'c','Ç':'c','ö':'o','Ö':'o','ü':'u','Ü':'u','â':'a','î':'i','û':'u'};
+const fch=c=>FOLD[c]||(c.toLowerCase().normalize('NFD')[0]||c);
+const fold=s=>[...String(s||'')].map(fch).join('');
+const SYN=[['abd','amerika','usa','america','united states','birlesik devletler'],['birlesik krallik','ingiltere','britanya','united kingdom','england','londra','london','iskocya','scotland','uk'],
+ ['almanya','germany','deutschland','berlin','munih','munich'],['hollanda','netherlands','holland','amsterdam'],['isvicre','switzerland'],['isvec','sweden'],['italya','italy','milano','milan','roma','rome'],['ispanya','spain','madrid','barselona','barcelona'],['fransa','france','paris'],['irlanda','ireland','dublin'],['kanada','canada','toronto','vancouver'],['avustralya','australia','sidney','sydney','melbourne'],['yeni zelanda','new zealand'],['japonya','japan','tokyo'],['cekya','czechia','czech','cek cumhuriyeti','prag','prague'],['macaristan','hungary','budapeste','budapest'],['polonya','poland','varsova','warsaw'],['avusturya','austria','viyana','vienna'],['belcika','belgium'],['danimarka','denmark'],['finlandiya','finland'],['estonya','estonia'],['letonya','latvia'],['litvanya','lithuania'],['malta'],['dubai','bae','birlesik arap emirlikleri','uae','emirates'],
+ ['yuksek lisans','master','masters','mba','msc','elsewherenext','graduate','postgraduate','doktora','phd'],
+ ['lise','high school','yatili','boarding','elsewhereprep','ortaokul','kolej'],
+ ['yaz okulu','summer','dil okulu','language school','dil kursu','elsewheresummer','yaz programi'],
+ ['lisans','universite','bachelor','undergraduate','elsewherecampus','university','foundation'],
+ ['vize','visa','oturum izni','residence permit','study permit','pasaport','passport'],['burs','scholarship','bursu','indirimli'],
+ ['ucret','harc','tuition','maliyet','fiyat','fee','fees','butce','budget','cost','masraf','para'],
+ ['ielts','toefl','duolingo','pte','dil sinavi','ingilizce sinavi','english test','language test','cambridge'],['sat','act','psat'],['delf','dalf','dele','testdaf','goethe'],
+ ['tip','medicine','doktor','hekim','medical','dis hekimligi','dentistry'],['bilgisayar','yazilim','computer','software','kodlama','coding','yapay zeka','veri bilimi','data science'],
+ ['muhendislik','engineering','muhendis','engineer'],['isletme','business','yonetim','management','bba'],['psikoloji','psychology'],['hukuk','law','avukat'],['mimarlik','architecture','mimar'],['ekonomi','economics','iktisat'],
+ ['seviye','level','seviye testi','placement','seviye tespiti'],['iletisim','contact','telefon','whatsapp','e-posta','email','mail','phone'],
+ ['takvim','calendar','tarih','tarihler','deadline','son basvuru','son gun','dates','ne zaman'],['basvuru','application','apply','ucas','common app','kayit'],
+ ['konaklama','yurt','accommodation','housing','homestay','aile yaninda','ev kirasi','kira'],['calisma','part time','work','calismak','part-time'],
+ ['denklik','tanima','recognition','equivalence'],['sss','faq','sik sorulan'],['veli','parent','aile','anne','baba']];
+const SYNI=(()=>{const m=new Map();SYN.forEach(g=>g.forEach(w=>m.set(w,g)));return m})();
+const DISP={muhendislik:'mühendislik',muhendis:'mühendis',universite:'üniversite',isletme:'işletme',yazilim:'yazılım',ucret:'ücret',harc:'harç',basvuru:'başvuru',iletisim:'iletişim',calisma:'çalışma',isvicre:'İsviçre',isvec:'İsveç',cekya:'Çekya',ispanya:'İspanya',italya:'İtalya',irlanda:'İrlanda',mimarlik:'mimarlık',butce:'bütçe',yatili:'yatılı',ingiltere:'Birleşik Krallık',britanya:'Birleşik Krallık',londra:'Londra',almanya:'Almanya',hollanda:'Hollanda',fransa:'Fransa',kanada:'Kanada',avustralya:'Avustralya',japonya:'Japonya',macaristan:'Macaristan',polonya:'Polonya',avusturya:'Avusturya',belcika:'Belçika',danimarka:'Danimarka',finlandiya:'Finlandiya',estonya:'Estonya',letonya:'Letonya',litvanya:'Litvanya',malta:'Malta',dubai:'Dubai',amerika:'Amerika',psikoloji:'psikoloji',ekonomi:'ekonomi',konaklama:'konaklama',denklik:'denklik',seviye:'seviye',takvim:'takvim'};
+const PHRASES=[...SYNI.keys()].filter(w=>w.includes(' ')).sort((a,b)=>b.length-a.length);
+const GLBL={prog:L('Programlar','Programmes'),ulke:L('Ülkeler','Countries'),bolum:L('Bölümler','Subjects'),sss:L('Sık sorulanlar','FAQ'),blog:'Blog',sayfa:L('Sayfalar','Pages'),takvim:L('Takvim','Calendar')};
+const GORD=['prog','ulke','bolum','sss','blog','sayfa','takvim'];
+const gtype=u=>{u=u.replace(/^en-/,'');if(/^ulke-/.test(u))return'ulke';if(/^bolum-/.test(u)||/^kariyer/.test(u))return'bolum';if(/^yazi-|^blog/.test(u))return'blog';if(/^sss/.test(u))return'sss';if(/^(prep|summer|campus|next)\.html/.test(u))return'prog';return'sayfa'};
+const pkey=a=>{const m=/Elsewhere(Prep|Summer|Campus|Next)/.exec(a.k+' '+a.t)||/^(?:en-)?(prep|summer|campus|next)\.html/.exec(a.u);return m?m[1][0].toUpperCase()+m[1].slice(1):''};
+let SIDX=null,VOCAB=null;const ORIG=new Map();
+const prepIdx=A=>SIDX||(SIDX=A.map(a=>({a,t:fold(a.t),k:fold(a.k),x:fold(a.x),g:gtype(a.u)})));
+const reEsc=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+const wre=new Map();
+const has=(txt,w)=>{if(w.length>3)return txt.includes(w);let r=wre.get(w);if(!r){r=new RegExp('(^|[^a-z0-9])'+reEsc(w)+'($|[^a-z0-9])');wre.set(w,r)}return r.test(txt)};
+const lev=(a,b,max)=>{if(Math.abs(a.length-b.length)>max)return max+1;let p=[...Array(b.length+1).keys()];for(let i=1;i<=a.length;i++){const c=[i];let mn=i;for(let j=1;j<=b.length;j++){c[j]=Math.min(p[j]+1,c[j-1]+1,p[j-1]+(a[i-1]===b[j-1]?0:1));mn=Math.min(mn,c[j])}if(mn>max)return max+1;p=c}return p[b.length]};
+const vocab=()=>VOCAB||(VOCAB=(()=>{const m=new Map();SIDX.forEach(e=>String(e.a.t).split(/[^\p{L}\p{N}]+/u).forEach(o=>{const f=fold(o);if(f.length>=4&&!ORIG.has(f))ORIG.set(f,o.toLocaleLowerCase(LC))}));SIDX.forEach(e=>(e.t+' '+e.k+' '+e.x).split(/[^a-z0-9]+/).forEach(w=>{if(w.length>=4)m.set(w,(m.get(w)||0)+(e.t.includes(w)?5:1))}));SYNI.forEach((g,w)=>{if(!w.includes(' ')&&w.length>=4)m.set(w,(m.get(w)||0)+20)});return m})());
+const fix=w=>{const max=w.length>=7?2:1;let best=null,bd=9,bf=0;vocab().forEach((f,v)=>{if(v[0]!==w[0]&&max<2)return;const d=lev(w,v,max);if(d<=max&&(d<bd||(d===bd&&f>bf))){best=v;bd=d;bf=f}});return best};
+/* sorguyu terimlere ayır: her terim bir eş anlamlı kümesi */
+const parse=q=>{let s=' '+fold(q).replace(/[^a-z0-9\s'-]/g,' ').replace(/'/g,' ')+' ';const terms=[];
+  PHRASES.forEach(ph=>{if(s.includes(' '+ph+' ')){terms.push({w:ph,set:SYNI.get(ph)});s=s.replace(' '+ph+' ',' ')}});
+  s.split(/\s+/).filter(w=>w.length>=2&&!['ve','de','da','ile','icin','in','the','and','of','for','to','a'].includes(w)).forEach(w=>{
+    const st=w.replace(/(lerinde|larinda|lerde|larda|ler|lar|nde|nda|de|da|te|ta|ye|ya|yi|yu|i|u)$/,'');
+    const g=SYNI.get(w)||(st.length>=3&&SYNI.get(st));terms.push({w,set:g?[...new Set([w,...g])]:[w]})});
+  return terms};
+const nyl=(t,w)=>w==='lisans'?t.replace(/yuksek lisans/g,' '):t;
+const tscore=(e,set,ow)=>{let b=0;for(const w of set){const f=w===ow?1:.8,T_=nyl(e.t,w),K_=nyl(e.k,w),X_=nyl(e.x,w);if(has(T_,w))b=Math.max(b,((' '+T_).includes(' '+w)?10:7)*f);else if(has(K_,w))b=Math.max(b,4*f);else if(has(X_,w))b=Math.max(b,2*f)}return b};
+const search=(A,q)=>{prepIdx(A);let terms=parse(q),note='';if(!terms.length)return{res:[],terms,note};
+  terms.forEach(t=>{if(t.set.length===1&&t.w.length>=4&&!SIDX.some(e=>has(e.t,t.w)||has(e.k,t.w)||has(e.x,t.w))){const f=fix(t.w);if(f){note=f;t.fixed=f;t.set=[...new Set([f,...(SYNI.get(f)||[])])]}}});
+  const sc=SIDX.map(e=>{let s=0,n=0;terms.forEach(t=>{const v=tscore(e,t.set,t.fixed||t.w);if(v){s+=v;n++}});const fq=fold(q).replace(/[^a-z0-9]+/g,' ').trim();if(n&&e.t.replace(/[^a-z0-9]+/g,' ').trim()===fq)s+=20;if(n&&e.g==='prog'&&s>=10)s+=3;if(n&&e.g==='ulke'&&s>=10)s+=2;return{e,s,n}}).filter(r=>r.n);
+  const mx=Math.max(0,...sc.map(r=>r.n));const res=sc.filter(r=>r.n===mx).sort((a,b)=>b.s-a.s);
+  return{res,terms,note,partial:mx<terms.length}};
+const mark=(title,terms)=>{const f=fold(title),ch=[...title],fc=[...f];if(fc.length!==ch.length)return esc(title);const on=new Array(ch.length).fill(false);
+  terms.forEach(t=>t.set.forEach(w=>{if(w.length<2)return;let i=f.indexOf(w);while(i>-1){for(let k=i;k<i+w.length;k++)on[[...f.slice(0,k)].length]=true;i=f.indexOf(w,i+w.length)}}));
+  let o='',open=false;ch.forEach((c,i)=>{if(on[i]&&!open){o+='<mark>';open=true}if(!on[i]&&open){o+='</mark>';open=false}o+=esc(c)});return o+(open?'</mark>':'')};
+const POP=EN?['High school in the USA','Bachelor\'s in the UK','Master\'s in Germany','Language school in Malta','IELTS','SAT dates','Medicine','Computer engineering','Scholarship','Student visa']
+  :['ABD\'de lise','Birleşik Krallık lisans','Almanya yüksek lisans','Malta dil okulu','IELTS','SAT tarihleri','Tıp','Bilgisayar mühendisliği','Burs','Öğrenci vizesi'];
+const WAI='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>';
+const WA=`<a class="sr-cta" href="https://wa.me/905015660808" target="_blank" rel="noopener">${WAI}<span><b>${L('Aradığınızı bulamadınız mı?','Can\'t find what you are looking for?')}</b>${L('Sorunuzu WhatsApp\'tan yazın, birlikte bakalım.','Write to us on WhatsApp and we will look into it together.')}</span></a>`;
 document.querySelectorAll('[data-search]').forEach(inp=>{
-  const box=inp.parentElement.querySelector('.results');
-  inp.addEventListener('focus',()=>{loadArama();loadTakvim()},{once:true});
-  inp.addEventListener('input',async()=>{
-    const v=low(inp.value.trim());if(v.length<2){box.classList.remove('show');return}
-    const [A,T]=await Promise.all([loadArama(),loadTakvim()]);const out=[];
-    A.filter(a=>low(a.t).includes(v)).concat(A.filter(a=>!low(a.t).includes(v)&&a.x.includes(v))).slice(0,8)
-      .forEach(a=>out.push(`<a href="${a.u}">${esc(a.t)}<small>${esc(a.k)}</small></a>`));
-    T.filter(e=>low(e.etkinlik+' '+e.ulke+' '+e.kurum).includes(v)).slice(0,6).forEach(e=>{
-      out.push(`<a href="${PG('takvim.html')}?ev=${encodeURIComponent(e.id)}">${esc(e.etkinlik)}<small>${L('Takvim','Calendar')} · ${trd(e.baslangic)} · ${esc(e.ulke)}</small></a>`)});
-    box.innerHTML=out.length?out.join(''):L('<div class="none">Sonuç bulunamadı.</div>','<div class="none">No results found.</div>');box.classList.add('show')});
+  const box=inp.parentElement.querySelector('.results');let sel=-1;
+  const items=()=>[...box.querySelectorAll('a')];
+  const popular=()=>{box.innerHTML=`<div class="sr-h">${L('Öne çıkan aramalar','Suggested searches')}</div><div class="sr-pop">${POP.map(p=>`<button type="button" data-q="${esc(p)}">${esc(p)}</button>`).join('')}</div>`+WA;box.classList.add('show');sel=-1};
+  inp.addEventListener('focus',()=>{loadArama();loadTakvim();if(inp.value.trim().length<2)popular()});
+  box.addEventListener('click',e=>{const b=e.target.closest('[data-q]');if(b){inp.value=b.dataset.q;inp.focus();run()}});
+  const run=async()=>{
+    const q=inp.value.trim();if(q.length<2){popular();return}
+    const [A,T]=await Promise.all([loadArama(),loadTakvim()]);if(inp.value.trim()!==q)return;
+    const {res,terms,note,partial}=search(A,q);const groups={};
+    const gtop={};res.forEach(r=>{(groups[r.e.g]=groups[r.e.g]||[]).push(r.e.a);gtop[r.e.g]=Math.max(gtop[r.e.g]||0,r.s)});
+    if(terms.length){const ev=T.map(e=>({e,f:fold(e.etkinlik+' '+e.ulke+' '+(e.kurum||'')+' '+(e.programlar||[]).join(' '))})).filter(o=>terms.every(t=>t.set.some(w=>has(o.f,w)))).slice(0,4).map(o=>o.e);if(ev.length)groups.takvim=ev}
+    let h='';if(note)h+=`<div class="sr-note">${L('Bunu mu demek istediniz:','Did you mean:')} <b>${esc((EN?null:DISP[note])||ORIG.get(note)||note)}</b></div>`;
+    else if(partial&&res.length)h+=`<div class="sr-note">${L('Tüm kelimeleri içeren sonuç yok; en yakın sonuçlar:','No result has every word; closest matches:')}</div>`;
+    let n=0;const ord=GORD.filter(g=>g!=='takvim').sort((a,b)=>(gtop[b]||0)-(gtop[a]||0)||GORD.indexOf(a)-GORD.indexOf(b)).concat('takvim');ord.forEach(g=>{const L_=groups[g];if(!L_||!L_.length)return;h+=`<div class="sr-g"><div class="sr-h">${GLBL[g]}</div>`;
+      if(g==='takvim')L_.forEach(e=>{h+=`<a href="${PG('takvim.html')}?ev=${encodeURIComponent(e.id)}"><span class="sr-t">${mark(e.etkinlik,terms)}</span><small>${trd(e.baslangic)} · ${esc(e.ulke)}</small></a>`;n++});
+      else L_.slice(0,g==='prog'||g==='ulke'?5:4).forEach(a=>{const p=pkey(a);h+=`<a href="${a.u}">${p?`<i class="sr-dot" style="background:${PC[p][0]}"></i>`:''}<span class="sr-t">${mark(a.t,terms)}</span><small>${esc(a.k)}</small></a>`;n++});h+='</div>'});
+    if(!n)h+=`<div class="none">${L('Sonuç bulunamadı.','No results found.')}</div><div class="sr-h">${L('Bunları deneyin','Try these')}</div><div class="sr-pop">${POP.slice(0,6).map(p=>`<button type="button" data-q="${esc(p)}">${esc(p)}</button>`).join('')}</div>`;
+    box.innerHTML=h+WA;box.classList.add('show');sel=-1};
+  let tm;inp.addEventListener('input',()=>{clearTimeout(tm);tm=setTimeout(run,90)});
+  inp.addEventListener('keydown',e=>{const it=items();if(!box.classList.contains('show')||!it.length)return;
+    if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();sel=(sel+(e.key==='ArrowDown'?1:-1)+it.length)%it.length;it.forEach((a,i)=>a.classList.toggle('on',i===sel));it[sel].scrollIntoView({block:'nearest'})}
+    else if(e.key==='Enter'){e.preventDefault();const a=it[sel>-1?sel:0];if(a)a.click()}
+    else if(e.key==='Escape'){box.classList.remove('show')}});
 });
 document.addEventListener('click',e=>{if(!e.target.closest('.search'))document.querySelectorAll('.results').forEach(r=>r.classList.remove('show'))});
 
@@ -257,4 +325,22 @@ document.querySelectorAll('.schools').forEach(s=>{const vp=s.querySelector('.sch
     if(dir<0&&vp.scrollLeft<amt+2)vp.scrollLeft+=h;if(dir>0&&vp.scrollLeft+amt>=h-2)vp.scrollLeft-=h;
     hold=performance.now()+3000;s.dataset.nav=1;vp.scrollBy({left:dir*amt,behavior:RM?'auto':'smooth'});setTimeout(()=>{delete s.dataset.nav},700)});
 });
+/* ----- Canlılık: sayan rakamlar, okuma çubuğu ----- */
+const cnt=[...document.querySelectorAll('[data-count]')];
+if(cnt.length&&!RM&&'IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(en=>{if(!en.isIntersecting)return;io.unobserve(en.target);const el=en.target,n=+el.dataset.count,t0=performance.now(),dur=1300;
+  const st=t=>{const p=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-p,3);el.textContent=Math.round(n*e).toLocaleString(LC);if(p<1)requestAnimationFrame(st)};el.textContent='0';requestAnimationFrame(st)}),{threshold:.6});cnt.forEach(c=>io.observe(c))}
+const rp=document.querySelector('.rprog i');
+if(rp){const ph=document.querySelector('.phero[style*="--c:var(--ea-"]');if(ph){const m=/--c:(var\(--ea-[a-z]+\))/.exec(ph.getAttribute('style'));if(m)rp.style.background=m[1]}
+  const f=()=>{const h=document.documentElement.scrollHeight-innerHeight;rp.style.transform=`scaleX(${h>0?Math.min(1,scrollY/h):0})`};addEventListener('scroll',f,{passive:true});addEventListener('resize',f);f()}
+/* ----- Telefonda uzun listeler katlanır ----- */
+const MQF=matchMedia('(max-width:760px)');
+document.querySelectorAll('[data-fold]').forEach(box=>{const n=+box.dataset.fold,kids=[...box.children];if(kids.length<=n+2)return;
+  const b=document.createElement('button');b.type='button';b.className='foldbtn';let open=false;
+  const set=()=>{kids.forEach((k,i)=>k.classList.toggle('fhid',!open&&i>=n&&MQF.matches));b.hidden=!MQF.matches;
+    b.innerHTML=(open?L('Daha az göster','Show less'):L('Tümünü göster','Show all')+` <span>${kids.length}</span>`)+(ICO.chev||'');b.setAttribute('aria-expanded',open);b.classList.toggle('open',open)};
+  b.onclick=()=>{open=!open;set();if(!open)box.scrollIntoView({block:'start',behavior:RM?'auto':'smooth'})};box.after(b);set();MQF.addEventListener('change',set)});
+/* ----- SSS: bağlantıyla gelinen soruyu aç; takvim sayacı ----- */
+const openHash=()=>{const h=location.hash.slice(1);if(!h)return;const d=document.getElementById(h);if(d&&d.tagName==='DETAILS'){d.open=true;setTimeout(()=>d.scrollIntoView({block:'start'}),60)}};
+openHash();addEventListener('hashchange',openHash);
+const upc=document.querySelector('[data-upcount]');if(upc)loadTakvim().then(d=>{if(d.length)upc.textContent=d.length.toLocaleString(LC)});
 })();
