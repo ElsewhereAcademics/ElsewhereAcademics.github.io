@@ -176,6 +176,7 @@ document.querySelectorAll('[data-wm]').forEach(async wm=>{
     card.querySelector('.pd').innerHTML=d[2].map(p=>`<i style="--c:${PC[p][0]}" title="${p}"></i>`).join('');card.querySelector('a').href=PG('ulke-'+k+'.html');card.hidden=false;if(hint)hint.hidden=true};
   svg.addEventListener('click',e=>{const cg=e.target.closest('.cluster');if(cg){go(cg.dataset.r);return}
     const t=e.target.closest('[data-k]');if(!t)return;const k=t.dataset.k;
+    if(D[k]){location.href=PG('ulke-'+k+'.html');return}
     if(view==='dunya')go(t.dataset.r);show(k)});
   svg.addEventListener('keydown',e=>{if(e.key==='Enter'){const cg=e.target.closest('.cluster');if(cg)go(cg.dataset.r)}});
   svg.addEventListener('mouseover',e=>{const t=e.target.closest('[data-k]');if(t&&matchMedia('(hover:hover)').matches)show(t.dataset.k)});
@@ -231,4 +232,29 @@ if(bf){bf.addEventListener('input',()=>{const v=low(bf.value.trim());
 document.querySelectorAll('[data-blogcat]').forEach(b=>b.addEventListener('click',()=>{const k=b.dataset.blogcat;
   document.querySelectorAll('[data-blogcat]').forEach(x=>{const on=x===b;x.classList.toggle('on',on);x.setAttribute('aria-pressed',on)});
   document.querySelectorAll('.blogcards [data-kat]').forEach(c=>c.hidden=!!k&&c.dataset.kat!==k)}));
+/* ----- SSS: aynı anda tek cevap açık ----- */
+document.querySelectorAll('.faq').forEach(f=>f.addEventListener('toggle',e=>{const d=e.target;if(d.tagName!=='DETAILS'||!d.open||d.parentElement!==f)return;
+  f.querySelectorAll(':scope>details[open]').forEach(x=>{if(x!==d)x.open=false})},true));
+
+/* ----- Okul logoları: kendiliğinden kayar, sürüklenir, oklarla ileri geri ----- */
+document.querySelectorAll('.schools').forEach(s=>{const vp=s.querySelector('.schools-vp'),inn=s.querySelector('.schools-in');if(!vp||!inn)return;
+  s.classList.add('js');const speed=RM?0:38;let hold=0,drag=null,last=performance.now(),acc=0,hover=false;
+  const half=()=>inn.scrollWidth/2;
+  const wrap=()=>{const h=half();if(!h)return;let d=0;if(vp.scrollLeft>=h)d=-h;else if(vp.scrollLeft<=0)d=h;if(d){vp.scrollLeft+=d;if(drag)drag.l+=d}};
+  const tick=t=>{const dt=Math.min(64,t-last);last=t;
+    if(speed&&!hover&&!drag&&t>hold&&!document.hidden){acc+=speed*dt/1000;const st=Math.floor(acc);if(st){vp.scrollLeft+=st;acc-=st;wrap()}}
+    requestAnimationFrame(tick)};
+  vp.scrollLeft=1;requestAnimationFrame(tick);
+  s.addEventListener('mouseenter',()=>hover=true);s.addEventListener('mouseleave',()=>hover=false);
+  vp.addEventListener('touchstart',()=>{hold=performance.now()+1e9},{passive:true});
+  vp.addEventListener('touchend',()=>{hold=performance.now()+2500},{passive:true});
+  vp.addEventListener('scroll',()=>{if(hold>performance.now()&&!s.dataset.nav)wrap()},{passive:true});
+  vp.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse'||e.button)return;drag={x:e.clientX,l:vp.scrollLeft};vp.setPointerCapture(e.pointerId);vp.classList.add('drag')});
+  vp.addEventListener('pointermove',e=>{if(!drag)return;vp.scrollLeft=drag.l-(e.clientX-drag.x);wrap()});
+  const end=()=>{if(!drag)return;drag=null;vp.classList.remove('drag');hold=performance.now()+1500};
+  vp.addEventListener('pointerup',end);vp.addEventListener('pointercancel',end);
+  s.querySelectorAll('.sc-nav').forEach(b=>b.onclick=()=>{const dir=b.classList.contains('prev')?-1:1,amt=Math.max(200,vp.clientWidth*.6),h=half();
+    if(dir<0&&vp.scrollLeft<amt+2)vp.scrollLeft+=h;if(dir>0&&vp.scrollLeft+amt>=h-2)vp.scrollLeft-=h;
+    hold=performance.now()+3000;s.dataset.nav=1;vp.scrollBy({left:dir*amt,behavior:RM?'auto':'smooth'});setTimeout(()=>{delete s.dataset.nav},700)});
+});
 })();

@@ -6,7 +6,7 @@
   --ea-prep:#C13BFF; --ea-summer:#FFA51E; --ea-campus:#FF3B30; --ea-next:#00B4D8;
   --ea-on-prep:#FFFFFF; --ea-on-summer:#080E36; --ea-on-campus:#FFFFFF; --ea-on-next:#080E36;
   --ea-line-on-white:rgba(8,14,54,.12); --ea-line-on-navy:rgba(255,255,255,.14);
-  --ea-muted-on-white:rgba(8,14,54,.65); --ea-muted-on-navy:rgba(255,255,255,.75);
+  --ea-muted-on-white:rgba(8,14,54,.78); --ea-muted-on-navy:rgba(255,255,255,.86);
   --ea-tint:rgba(8,14,54,.04);
   --wrap:1180px; --pad:clamp(16px,5vw,56px);
   --fs-display:clamp(2.6rem,8vw,7rem); --fs-h1:clamp(2.1rem,5vw,4.5rem); --fs-h2:clamp(1.6rem,3.2vw,3rem);
@@ -804,3 +804,83 @@ h2.big{font-size:var(--fs-h1);font-weight:900;letter-spacing:-.035em;line-height
  .ytag{font-size:.62rem;padding:2px 7px}
  #gecmis-donem .yt .flagi{width:24px;height:18px}
 }
+
+/* 29.10.2026 · Aşama 12 */
+/* okul logoları: sürüklenebilir şerit */
+.schools{position:relative}
+.schools.js .schools-in{animation:none}
+.schools-vp{overflow-x:auto;scrollbar-width:none;cursor:grab;user-select:none;-webkit-user-select:none;touch-action:pan-x pan-y}
+.schools-vp::-webkit-scrollbar{display:none}
+.schools-vp.drag{cursor:grabbing}
+.schools-vp img{pointer-events:none;-webkit-user-drag:none}
+.sc-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:42px;height:42px;border-radius:50%;background:var(--ea-white);color:var(--ea-navy);border:1.5px solid var(--ea-line-on-white);box-shadow:0 6px 18px rgba(8,14,54,.14);display:none;align-items:center;justify-content:center;cursor:pointer}
+.schools.js .sc-nav{display:flex}
+.sc-nav svg{width:20px;height:20px}
+.sc-nav:hover{background:var(--ea-navy);color:var(--ea-white)}
+.sc-nav.prev{left:10px}.sc-nav.next{right:10px}
+/* SSS: başlık sabit menünün altında kalmasın, cevaplar geniş, yönlendirmeler */
+.faqsec,#sss,[id^="k-"]{scroll-margin-top:150px}
+.faq .ans{max-width:none}
+.faq .ans p{max-width:76ch}
+.qcta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.qcta a{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:999px;border:1.5px solid var(--ea-line-on-white);text-decoration:none;font-weight:700;font-size:.9rem;background:var(--ea-white)}
+.qcta a svg{width:16px;height:16px}
+.qcta a:hover{border-color:var(--ea-navy)}
+.qcta a.qwa{background:var(--ea-next);color:var(--ea-on-next);border-color:var(--ea-next)}
+.navy .qcta a,.on-navy .qcta a{color:var(--ea-navy)}
+/* sağ alttaki iletişim düğmesi: etiketli */
+.fab-btn{width:auto;min-width:58px;padding:0 20px 0 16px;gap:10px;border-radius:999px}
+.fab-lbl{font-weight:800;font-size:1rem;white-space:nowrap}
+.fab.open .fab-lbl{display:none}
+.fab.open .fab-btn{padding:0;width:58px}
+@media (max-width:640px){.fab-btn{height:52px;padding:0 16px 0 13px}.fab-lbl{font-size:.92rem}}
+/* takvim: araştırma kaynakları */
+.rsgs{display:grid;gap:10px}
+.rsg{background:var(--ea-white);border-radius:16px;border:1.5px solid var(--ea-line-on-white)}
+.rsg summary{cursor:pointer;list-style:none;padding:16px 20px;font-weight:800;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.rsg summary::-webkit-details-marker{display:none}
+.rsg summary small{font-weight:700;color:var(--ea-muted-on-white);background:var(--ea-tint);border-radius:999px;padding:2px 10px}
+.rsg[open] summary{border-bottom:1.5px solid var(--ea-line-on-white)}
+.srcl{columns:2 280px;column-gap:28px;padding:16px 20px 18px 40px;font-size:.88rem}
+.srcl li{break-inside:avoid;margin-bottom:4px}
+.srcl a{color:var(--ea-navy);text-decoration-color:var(--ea-line-on-white)}
+/* iletişim sayfası */
+.chgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.chcard{position:relative;display:flex;flex-direction:column;gap:6px;padding:26px 24px 60px;border-radius:24px;background:var(--c);color:var(--on);text-decoration:none;min-height:250px;transition:transform .2s}
+.chcard:hover{transform:translateY(-4px)}
+.chcard .chi svg{width:38px;height:38px}
+.chcard b{font-size:1.6rem;font-weight:900;margin-top:10px}
+.chcard .chv{font-weight:700}
+.chcard p{font-size:.95rem;opacity:.92}
+.chcard .cha{position:absolute;right:20px;bottom:20px;width:40px;height:40px;border-radius:50%;background:var(--ea-navy);color:var(--ea-white);display:flex;align-items:center;justify-content:center}
+.chcard[style*="--on:#080E36"] .cha{background:var(--ea-white);color:var(--ea-navy)}
+.chcard .cha svg{width:18px;height:18px}
+.ctph{margin-top:28px;border-radius:24px;overflow:hidden}
+.ctph img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}
+.chsteps{list-style:none;display:grid;gap:14px}
+.chsteps li{display:flex;gap:18px;align-items:flex-start;padding:20px;border-radius:20px;border:1.5px solid var(--ea-line-on-white);border-left:6px solid var(--c)}
+.chsteps .sn{flex:none;width:40px;height:40px;border-radius:50%;background:var(--c);color:var(--ea-white);font-weight:900;display:flex;align-items:center;justify-content:center}
+.chsteps b{font-size:1.1rem}
+@media (max-width:980px){.chgrid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.chgrid{grid-template-columns:1fr}.chcard{min-height:0}}
+.rstat{display:flex;align-items:baseline;gap:10px;margin-top:18px}.rstat .rn{font-size:clamp(2.4rem,5vw,3.6rem);font-weight:900;color:var(--ea-next);line-height:1}.rstat span:last-child{font-weight:800}
+/* program kartı: ElsewhereSummer / ElsewhereCampus kart dışına taşmasın */
+.pcard{container-type:inline-size}
+.pcard .pn{font-size:min(2.1rem,9.4cqi);white-space:nowrap}
+.chero.phbg{background-position:0 0,var(--hx,50%) 50%}
+.fab-btn{font-family:inherit}
+.note img{height:auto}
+.ctph img{display:block}
+.srcl a{display:inline}.srcl b{font-weight:700}.srcl span{color:var(--ea-navy)}.srcl small{display:block;color:var(--ea-muted-on-white);font-size:.78rem;overflow-wrap:anywhere;margin-bottom:6px}
+.schools-vp{-webkit-mask-image:linear-gradient(90deg,transparent,#000 70px,#000 calc(100% - 70px),transparent);mask-image:linear-gradient(90deg,transparent,#000 70px,#000 calc(100% - 70px),transparent)}
+.schools .lg:hover img{filter:none;opacity:1}
+/* kontrast: açık zeminde marka renklerinin yazı tonu (okunurluk için koyulaştırılmış) */
+:root{--ink-prep:#AC00FB;--ink-summer:#9D5E00;--ink-campus:#D40B00;--ink-next:#00758C}
+.eyebrow{color:var(--ink-campus)}
+.eyebrow[data-ink=prep]{color:var(--ink-prep)}.eyebrow[data-ink=summer]{color:var(--ink-summer)}.eyebrow[data-ink=campus]{color:var(--ink-campus)}.eyebrow[data-ink=next]{color:var(--ink-next)}
+.navy .eyebrow[data-ink=prep],.on-navy.eyebrow[data-ink=prep]{color:var(--ea-prep)}.navy .eyebrow[data-ink=summer],.on-navy.eyebrow[data-ink=summer]{color:var(--ea-summer)}.navy .eyebrow[data-ink=campus],.on-navy.eyebrow[data-ink=campus]{color:var(--ea-campus)}.navy .eyebrow[data-ink=next],.on-navy.eyebrow[data-ink=next]{color:var(--ea-next)}
+.navy .eyebrow:not([data-ink]):not(.on-navy){color:var(--ea-campus)}
+.exam dt{color:color-mix(in srgb,var(--c) 62%,#000)}
+.rstat .rn{color:var(--ea-navy);box-shadow:inset 0 -.18em 0 var(--ea-next)}
+.nn{opacity:.55}
+.chcard p{opacity:1}
