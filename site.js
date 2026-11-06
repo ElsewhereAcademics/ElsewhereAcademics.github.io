@@ -349,3 +349,8 @@ document.querySelectorAll('[data-progsel]').forEach(b=>b.onclick=()=>{const p=b.
   let first=null;document.querySelectorAll('[data-ptabs]').forEach(t=>{const bt=[...t.querySelectorAll('[data-ptab]')].find(x=>x.dataset.ptab.slice(1)===p);if(bt){bt.click();first=first||t.closest('section')}});
   if(first)first.scrollIntoView({behavior:RM?'auto':'smooth',block:'start'})});
 })();
+
+/* Benim Yerim menü bağlantısı (eski sayfalar için) */
+(function(){var en=document.documentElement.lang==='en',href=en?'en-benim-yerim.html':'benim-yerim.html',lab=en?'My Place':'Benim Yerim';
+document.querySelectorAll('.mnav').forEach(function(m){if(m.querySelector('a[href="'+href+'"]'))return;var s=m.querySelector('a[href="'+(en?'en-':'')+'seviye-tespiti.html"]');if(!s)return;var d=document.createElement('div');d.innerHTML='<a class="big" href="'+href+'">'+lab+'</a>';s.parentNode.parentNode.insertBefore(d,s.parentNode)});
+document.querySelectorAll('footer a[href="'+(en?'en-':'')+'seviye-tespiti.html"]').forEach(function(a){var ul=a.closest('li');if(!ul||ul.parentNode.querySelector('a[href="'+href+'"]'))return;var li=document.createElement('li');li.innerHTML='<a href="'+href+'">'+lab+'</a>';ul.parentNode.insertBefore(li,ul)});})();

@@ -1191,3 +1191,19 @@ a.c:hover{text-decoration:underline}
 .supc p{margin-top:12px;color:var(--ea-muted-on-white)}
 .supc .btn svg{width:18px;height:18px}
 @media (max-width:760px){.sup2{grid-template-columns:1fr}}
+.percountry a.rk{display:flex;align-items:center;justify-content:center;width:34px;height:34px;flex:0 0 34px;border-radius:50%;background:rgba(8,14,54,.06);color:inherit}
+.percountry a.rk svg{width:18px;height:18px}
+.scb{margin-top:18px}.scb-h{display:flex;align-items:center;gap:10px;font-size:1.05rem;font-weight:800}.scb .percountry{margin-top:10px}
+.scgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:8px 18px;align-items:start}.scgrid .scb .percountry{grid-template-columns:1fr}
+/* v2: dış bağlantı yok, bölüm köprüleri */
+.xl{color:inherit;text-decoration:none}
+span.school{cursor:default}span.school:hover{transform:none}
+.srcl .srcx{display:block}
+.bstat{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:6px 0 22px}
+.bstat div{padding:14px 16px;border-radius:16px;background:var(--ea-white);border:1.5px solid var(--ea-line-on-white)}
+.bstat b{display:block;font-size:1.6rem;font-weight:900;line-height:1.1}.bstat span{color:var(--ea-muted-on-white);font-weight:600}
+@media (max-width:640px){.bstat{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.bgq{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.bgq a{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;border:1.5px solid var(--ea-line-on-white);font-weight:700;text-decoration:none;color:inherit;background:var(--ea-white)}
+.bgq a i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.bgq a:hover{border-color:var(--ea-navy)}
