@@ -1207,3 +1207,15 @@ span.school{cursor:default}span.school:hover{transform:none}
 .bgq a{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;border:1.5px solid var(--ea-line-on-white);font-weight:700;text-decoration:none;color:inherit;background:var(--ea-white)}
 .bgq a i{width:10px;height:10px;border-radius:50%;display:inline-block}
 .bgq a:hover{border-color:var(--ea-navy)}
+/* v3: bölüm sayfası ülke bilgileri ve iletişim kutusu */
+.cfrs{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));gap:14px;margin-top:8px}
+.cfr{background:var(--ea-white);border:1.5px solid var(--ea-line-on-white);border-radius:20px;padding:16px 18px;display:flex;flex-direction:column;gap:12px}
+.cfr-h{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.cfr-h b{font-size:1.1rem}.cfr-n{font-weight:700;color:var(--ea-muted-on-white)}
+.cfr-l{margin-left:auto;display:inline-flex;align-items:center;gap:6px;font-weight:700;color:inherit;text-decoration:none;font-size:.9rem}.cfr-l svg{width:16px;height:16px}
+.cfr-b{display:grid;gap:10px}.cfr .mcard{margin:0;padding:12px 14px;border-radius:14px;background:rgba(8,14,54,.04);display:flex;flex-direction:column;gap:2px}
+.cfr .mcard small{color:var(--ea-muted-on-white)}.cfr .mcard b{font-size:1.25rem}.cfr .mcard em{font-style:normal;font-weight:600}
+.cfz{list-style:none;margin:0;padding:0}.cfz li{padding-left:12px;border-left:3px solid var(--ea-campus)}.cfz .tz{font-weight:800;font-size:.9rem}.cfz p{margin:2px 0 0;font-size:.92rem}
+.bcta{display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:center;background:var(--ea-navy);color:#fff;border-radius:28px;padding:34px}
+.bcta h2{color:#fff}.bcta-l{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px}.bcta-l li{display:flex;gap:10px;align-items:flex-start}.bcta-l svg{width:18px;height:18px;flex:0 0 18px;margin-top:3px;color:var(--ea-summer)}
+.bcta-a{display:grid;gap:10px}.bcta-a .btn{justify-content:center}
+@media (max-width:760px){.bcta{grid-template-columns:1fr;padding:24px}}
